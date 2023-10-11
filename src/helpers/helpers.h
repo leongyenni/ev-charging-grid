@@ -1,0 +1,50 @@
+#ifndef _HELPERS_H_
+#define _HELPERS_H_
+
+#include <stdbool.h>
+#include "mpi.h"
+
+#define TERMINATION_TAG 10
+#define ALERT_TAG 20
+
+#define CYCLE_INTERVAL_S 5
+#define RESET_INTERVAL_S 20
+#define NUM_PORTS 2
+#define MAX_NUM_NEIGHBOURS 4
+#define N_DIMS 2
+#define REORDER 1
+
+#define BASE_STATION_RANK 0
+#define SHIFT_ROW 0
+#define SHIFT_COL 1
+#define DISP 1
+
+#define TIMESTAMP_LEN 20
+
+extern const char *direction[MAX_NUM_NEIGHBOURS];
+extern int m;
+extern int n;
+
+
+struct AlertMessage
+{
+    char timestamp[TIMESTAMP_LEN];
+    int reporting_node;
+    int neighbouring_nodes[MAX_NUM_NEIGHBOURS];
+    int num_neighbours;
+};
+
+struct AvailableNodes
+{
+    char timestamp[TIMESTAMP_LEN];
+    int size;
+    int *nodes;
+};
+
+void define_mpi_alert_message(MPI_Datatype *MPI_ALERT_MESSAGE);
+void define_mpi_available_nodes(MPI_Datatype *MPI_AVAILABLE_NODES);
+void get_timestamp(char *curentTimestamp);
+float rand_float(float min, float max);
+bool rand_bool();
+
+#endif

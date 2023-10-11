@@ -1,0 +1,174 @@
+[94881284838624] grid size=9, total alerts=22091, total sent messages=0
+[94881284846000] grid size=9, total alerts=22091, total sent messages=0
+[94881284899952] grid size=9, total alerts=22091, total sent messages=0
+[94881284900000] grid size=9, total alerts=22091, total sent messages=0
+[94881284900048] grid size=9, total alerts=22091, total sent messages=0
+[94881284900096] grid size=9, total alerts=22091, total sent messages=0
+[94881284900144] grid size=9, total alerts=22091, total sent messages=0
+[94881284900192] grid size=9, total alerts=22091, total sent messages=0
+[94881284900240] grid size=9, total alerts=22091, total sent messages=0
+[94881284900288] grid size=9, total alerts=22091, total sent messages=0
+[94881284900336] grid size=9, total alerts=22091, total sent messages=0
+[94881284900384] grid size=9, total alerts=22091, total sent messages=0
+[94881284900432] grid size=9, total alerts=22091, total sent messages=0
+[94881284900480] grid size=9, total alerts=22091, total sent messages=0
+[94881284900528] grid size=9, total alerts=22091, total sent messages=0
+[94881284900576] grid size=9, total alerts=22091, total sent messages=0
+[94489845003488] grid size=9, total alerts=136077110, total sent messages=0
+[94489845010864] grid size=9, total alerts=136077110, total sent messages=0
+[94489845064816] grid size=9, total alerts=136077110, total sent messages=0
+[94489845064864] grid size=9, total alerts=136077110, total sent messages=0
+[94489845064912] grid size=9, total alerts=136077110, total sent messages=0
+[94489845064960] grid size=9, total alerts=136077110, total sent messages=0
+[94489845065008] grid size=9, total alerts=136077110, total sent messages=0
+[94489845065056] grid size=9, total alerts=136077110, total sent messages=0
+[94007695909392] grid size=9, total alerts=21887, total sent messages=0
+[94007695916768] grid size=9, total alerts=21887, total sent messages=0
+[94007695970720] grid size=9, total alerts=21887, total sent messages=0
+[94007695970768] grid size=9, total alerts=21887, total sent messages=0
+[94007695970816] grid size=9, total alerts=21887, total sent messages=0
+[94007695970864] grid size=9, total alerts=21887, total sent messages=0
+[94007695970912] grid size=9, total alerts=21887, total sent messages=0
+[9400769[94334340547696] grid size=9, total alerts=21963, total sent messages=0
+[94334340555072] grid size=9, total alerts=21963, total sent messages=0
+[94334340609024] grid size=9, total alerts=21963, total sent messages=0
+[94334340609072] grid size=9, total alerts=21963, total sent messages=0
+[94334340609120] grid size=9, total alerts=21963, total sent messages=0
+[94334340609168] grid size=9, total alerts=21963, total sent messages=0
+[94334340609216] grid size=9, total alerts=21963, total sent messages=0
+[94334340609264] grid size=9, total alerts=21963, total sent messages=0
+[94334340609312] grid size=9, total alerts=21963, total sent messages=0
+[94334340609360] grid size=9, total alerts=21963, total sent messages=0
+[94334340609408] grid size=9, total alerts=21963, total sent messages=0
+[94334340609456] grid size=9, total alerts=21963, total sent messages=0
+[94317348394256] grid size=9, total alerts=3432, total sent messages=0
+[94317348401168] grid size=9, total alerts=3432, total sent messages=0
+[94317348455120] grid size=9, total alerts=3432, total sent messages=0
+[94317348455168] grid size=9, total alerts=3433, total sent messages=0
+[94317348455216] grid size=9, total alerts=3434, total sent messages=0
+[94317348455264] grid size=9, total alerts=3435, total sent messages=0
+[94317348455312] grid size=9, total alerts=3436, total sent messages=0
+[94317348455360] grid size=9, total alerts=3437, total sent messages=0
+[94317348455408] grid size=9, total alerts=3438, total sent messages=0
+[94317348455456] grid size=9, total alerts=3439, total sent messages=0
+[94317348455504] grid size=9, total alerts=3440, total sent messages=0
+[94317348455552] grid size=9, total alerts=3441, total sent messages=0
+[94317348455600] grid size=9, total alerts=3441, total sent messages=0
+[94317348455648] grid size=9, total alerts=3442, total sent messages=0
+[94317348455696] grid size=9, total alerts=3443, total sent messages=0
+[94317348455744] grid size=9, total alerts=3444, total sent messages=0
+[94317348455792] grid size=9, total alerts=3445, total sent messages=0
+[94776684691920] grid size=9, total alerts=-1246419916, total sent messages=0
+[94776684698976] grid size=9, total alerts=-1246419916, total sent messages=0
+[94776684752576] grid size=9, total alerts=-1246419916, total sent messages=0
+[94776684752624] grid size=9, total alerts=-1246419915, total sent messages=0
+[94776684752672] grid size=9, total alerts=-1246419914, total sent messages=0
+[94776684752720] grid size=9, total alerts=-1246419913, total sent messages=0
+[94776684752768] grid size=9, total alerts=-1246419912, total sent messages=0
+[94776684752816] grid size=9, total alerts=-1246419911, total sent messages=0
+[94776684753216] grid size=9, total alerts=-1246419911, total sent messages=0
+[94776684753264] grid size=9, total alerts=-1246419910, total sent messages=0
+[94776684753312] grid size=9, total alerts=-1246419909, total sent messages=0
+[94776684753360] grid size=9, total alerts=-1246419908, total sent messages=0
+[94776684753408] grid size=9, total alerts=-1246419907, total sent messages=0
+[94776684753456] grid size=9, total alerts=-1246419906, total sent messages=0
+[94776684753504] grid size=9, total alerts=-1246419905, total sent messages=0
+[94776684753552] grid size=9, total alerts=-1246419904, total sent messages=0
+[94776684753600] grid size=9, total alerts=-1246419903, total sent messages=0
+[94776684753648] grid size=9, total alerts=-1246419902, total sent messages=0
+[94776684753696] grid size=9, total alerts=-1246419901, total sent messages=0
+[94776684753744] grid size=9, total alerts=-1246419900, total sent messages=0
+[94776684753792] grid size=9, total alerts=-1246419899, total sent messages=0
+[94776684753840] grid size=9, total alerts=-1246419898, total sent messages=0
+[94776684753888] grid size=9, total alerts=-1246419897, total sent messages=0
+[94776684753936] grid size=9, total alerts=-1246419896, total sent messages=0
+[94776684170752] grid size=9, total alerts=-1246419895, total sent messages=0
+[94776684170800] grid size=9, total alerts=-1246419894, total sent messages=0
+[94776684170848] grid size=9, total alerts=-1246419893, total sent messages=0
+[94776684170896] grid size=9, total alerts=-1246419893, total sent messages=0
+[94776684170944] grid size=9, total alerts=-1246419892, total sent messages=0
+[94776684170992] grid size=9, total alerts=-1246419891, total sent messages=0
+[94776684171040] grid size=9, total alerts=-1246419890, total sent messages=0
+[94776684171088] grid size=9, total alerts=-1246419889, total sent messages=0
+[94776684171136] grid size=9, total alerts=-1246419888, total se[94813696090624] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696097872] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696097920] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696097968] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098016] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098064] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098112] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098160] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098208] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098256] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098304] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098352] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098400] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098448] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098496] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098544] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098592] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098640] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098688] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098736] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098784] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098832] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098880] grid size=9, total alerts=-183358230, total sent messages=0
+[94813696098928] grid size=9, total alerts=-183358230, total sent messages=0
+[94813695569408] grid size=9, total alerts=-183358230, total sent messages=0
+[94813695569456] grid size=9, total alerts=-183358230, total sent messages=0
+[94813695570032] grid size=9, total alerts=-18[2023-10-11 07:33:22] grid size=9, total alerts=446607592, total sent messages=0
+[2023-10-11 07:33:27] grid size=9, total alerts=446607592, total sent messages=0
+[2023-10-11 07:33:32] grid size=9, total alerts=446607592, total sent messages=0
+[2023-10-11 07:33:37] grid size=9, total alerts=446607592, total sent messages=0
+[2023-10-11 07:33:42] grid size=9, total alerts=446607592, total sent messages=0
+[2023-10-11 07:33:47] grid size=9, total alerts=446607592, total sent messages=0
+[2023-10-11 07:33:52] grid size=9, total alerts=446607592, total sent messages=0
+[2023-10-11 07:33:57] grid size=9, total alerts=446607592, total sent messages=0
+[2023-10-11 07:34:02] grid size=9, total alerts=446607592, total sent messages=0
+[2023-10-11 07:34:07] grid size=9, total alerts=446607592, total sent messages=0
+[2023-10-11 07:34:12] grid size=9, total alerts=446607592, total sent messages=0
+[2023-10-11 07:34:17] grid size=9, total alerts=446607592, total sent messages=0
+2023-10-11 07:48:28                (Ã<wþ                Ð±Æ  <*Ž        07:48:25] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:27] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:29] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:31] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:33] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:35] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:43                                        äN¾þ  à3÷+ñU     07:48:39] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:41] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:43] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:45] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:47] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:49] grid size=4, total alerts=0, total sent messages=0
+[22023-10-11 07:48:43                (Ã<wþ                Ð±Æ  <*Ž       7:48:53] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:55] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:57] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:48:59] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:49:01] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:49:03] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:49:05] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:49:07] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:49:09] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:49:11] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:49:13] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:49:15] grid size=4, total alerts=0, total sent messages=0
+2023-10-11 07:50:11                @°*€                dÐ;ÿ  ð¨8        07:50:11] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:50:16] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:50:21] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:50:26] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:50:31] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:50:36] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:50:26                  èœ‹²ý                ÐD‘+q  <*Ž       07:50:46] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:50:51] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:50:56] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:51:01] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:51:06] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:51:11] grid size=4, total alerts=0, total sent messages=0
+[22023-10-11 07:51:17                                        )ôEæU  @D
+FæU     7:51:21] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:51:26] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:51:32] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:51:37] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:51:42] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:51:47] grid size=4, total alerts=0, total sent messages=0
+[2023-10-11 07:51:52] grid size=4, total alerts=0, total sent messages=0
