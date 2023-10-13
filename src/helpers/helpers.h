@@ -6,10 +6,11 @@
 
 #define TERMINATION_TAG 10
 #define ALERT_TAG 20
+#define REPORT_TAG 30
 
 #define CYCLE_INTERVAL_S 5
 #define RESET_INTERVAL_S 20
-#define NUM_PORTS 2
+#define NUM_PORTS 3
 #define MAX_NUM_NEIGHBOURS 4
 #define N_DIMS 2
 #define REORDER 1
@@ -25,12 +26,13 @@ extern const char *direction[MAX_NUM_NEIGHBOURS];
 extern int m;
 extern int n;
 
-
 struct AlertMessage
 {
     char timestamp[TIMESTAMP_LEN];
     int reporting_node;
+    int reporting_node_coord[N_DIMS];
     int neighbouring_nodes[MAX_NUM_NEIGHBOURS];
+    int neighbouring_nodes_coord[MAX_NUM_NEIGHBOURS][N_DIMS];
     int num_neighbours;
 };
 

@@ -9,16 +9,18 @@ const char *direction[] = {"top", "bottom", "left", "right"};
 
 void define_mpi_alert_message(MPI_Datatype *CUSTOM_MPI_ALERT_MESSAGE)
 {
-	const int fields = 4;
-	int blocklengths[4] = {TIMESTAMP_LEN, 1, MAX_NUM_NEIGHBOURS, 1};
+	const int fields = 6;
+	int blocklengths[6] = {TIMESTAMP_LEN, 1, N_DIMS, MAX_NUM_NEIGHBOURS, MAX_NUM_NEIGHBOURS * N_DIMS, 1};
 
-	MPI_Datatype types[4] = {MPI_CHAR, MPI_INT, MPI_INT, MPI_INT};
-	MPI_Aint offsets[4];
+	MPI_Datatype types[6] = {MPI_CHAR, MPI_INT, MPI_INT, MPI_INT, MPI_INT, MPI_INT};
+	MPI_Aint offsets[6];
 
 	offsets[0] = offsetof(struct AlertMessage, timestamp);
 	offsets[1] = offsetof(struct AlertMessage, reporting_node);
-	offsets[2] = offsetof(struct AlertMessage, neighbouring_nodes);
-	offsets[3] = offsetof(struct AlertMessage, num_neighbours);
+	offsets[2] = offsetof(struct AlertMessage, reporting_node_coord);
+	offsets[3] = offsetof(struct AlertMessage, neighbouring_nodes);
+	offsets[4] = offsetof(struct AlertMessage, neighbouring_nodes_coord);
+	offsets[5] = offsetof(struct AlertMessage, num_neighbours);
 
 	MPI_Type_create_struct(fields, blocklengths, offsets, types, CUSTOM_MPI_ALERT_MESSAGE);
 	MPI_Type_commit(CUSTOM_MPI_ALERT_MESSAGE);

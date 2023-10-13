@@ -37,7 +37,7 @@ void start_charging_port(struct ChargingPort *port)
 
   printf("terminating charging port %d on node %d \n", port->id, port->parent_node->id);
 
-  // free(port);
+  free(port);
 }
 
 bool is_available(struct ChargingPort *port)

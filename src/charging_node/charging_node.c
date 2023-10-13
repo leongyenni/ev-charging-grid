@@ -205,8 +205,8 @@ void start_charging_node(struct ChargingNode *node)
 
                 strcpy(alert_message.timestamp, currentTimestamp);
                 alert_message.reporting_node = node->id;
-                // alert_message.reporting_node_coord[0] = node->node_coord[0];
-                // alert_message.reporting_node_coord[1] = node->node_coord[1];
+                alert_message.reporting_node_coord[0] = node->node_coord[0];
+                alert_message.reporting_node_coord[1] = node->node_coord[1];
 
                 int num_neighbours = 0;
 
@@ -215,8 +215,8 @@ void start_charging_node(struct ChargingNode *node)
                     if (node->available_neighbour_nodes[i].num_ports == 0)
                     {
                         alert_message.neighbouring_nodes[num_neighbours] = node->available_neighbour_nodes[i].id;
-                        // alert_message.neighbouring_nodes_coord[num_neighbours][0] = node->available_neighbour_nodes[i].coord[0];
-                        // alert_message.neighbouring_nodes_coord[num_neighbours][1] = node->available_neighbour_nodes[i].coord[1];
+                        alert_message.neighbouring_nodes_coord[num_neighbours][0] = node->available_neighbour_nodes[i].coord[0];
+                        alert_message.neighbouring_nodes_coord[num_neighbours][1] = node->available_neighbour_nodes[i].coord[1];
                         num_neighbours += 1;
                     }
                 }
@@ -224,8 +224,8 @@ void start_charging_node(struct ChargingNode *node)
                 alert_message.num_neighbours = num_neighbours;
 
                 char alert_message_buf[1024];
-                sprintf(alert_message_buf, "ALERT MESSAGE = { timestamp: %s, reporting node: %d, neighbouring nodes: [",
-                        alert_message.timestamp, alert_message.reporting_node);
+                sprintf(alert_message_buf, "ALERT MESSAGE = { timestamp: %s, reporting node: %d (%d, %d), neighbouring nodes: [",
+                        alert_message.timestamp, alert_message.reporting_node, alert_message.reporting_node_coord[0], alert_message.reporting_node_coord[1]);
 
                 int first_entry = 1;
                 for (int i = 0; i < num_neighbours; i++)
@@ -235,7 +235,8 @@ void start_charging_node(struct ChargingNode *node)
                         strcat(alert_message_buf, ", ");
                     else
                         first_entry = 0;
-                    sprintf(neighbour_info, "node %d", alert_message.neighbouring_nodes[i]);
+                    sprintf(neighbour_info, "node %d (%d, %d)", alert_message.neighbouring_nodes[i],
+                            alert_message.neighbouring_nodes_coord[i][0], alert_message.neighbouring_nodes_coord[i][1]);
                     strcat(alert_message_buf, neighbour_info);
                 };
 
@@ -254,13 +255,16 @@ void start_charging_node(struct ChargingNode *node)
                 log_charging_node_event(node, "sent alert message to base station");
 
                 // TODO: (1g) MPI_Recv base station nearest available node
-                // log_charging_node_event(node, "receiving available nodes from base station");
+                log_charging_node_event(node, "receiving available nodes from base station");
+
+                char received_message[100];
+                MPI_Recv(available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, ALERT_TAG, node->world_comm, MPI_STATUS_IGNORE);
 
                 // struct AvailableNodes *available_nodes;
 
                 // MPI_Recv(available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, ALERT_TAG, node->world_comm, MPI_STATUS_IGNORE);
 
-                // log_charging_node_event(node, "received available nodes from base station");
+                log_charging_node_event(node, "received available nodes from base station");
 
                 // int size = available_nodes->size;
                 // int nearby_nodes[size];
@@ -308,10 +312,13 @@ void start_charging_node(struct ChargingNode *node)
         pthread_join(charging_port_t[i], NULL);
     }
 
+    free(node->ports);
+
     MPI_Type_free(&MPI_ALERT_MESSAGE);
     MPI_Type_free(&MPI_AVAILABLE_NODES);
 
     printf("[Node %d] terminating \n", node->id);
+    free(node);
 }
 
 int get_availability(struct ChargingNode *node)
