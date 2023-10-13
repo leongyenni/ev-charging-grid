@@ -13,8 +13,9 @@ struct BaseStation
   // MPI_Comm grid_comm_cart; // read-only
   int grid_size;
   float listen_frequency_s;
-  pthread_t t;
+  pthread_t base_station_t;
   int *node_availabilities;
+  struct AlertMessage *alert_messages;
   FILE *log_file_handler;
 };
 

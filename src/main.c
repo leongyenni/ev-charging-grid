@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 		MPI_Comm_size(node_comm_cart, &grid_size);
 
 		struct ChargingNode *node = new_charging_node(NUM_PORTS, CYCLE_INTERVAL_S, node_rank, world_comm, node_comm_cart);
-		//start_charging_node(node);
+		start_charging_node(node);
 	}
 
 cleanup_and_exit:
