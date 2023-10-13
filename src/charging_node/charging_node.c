@@ -263,8 +263,7 @@ void start_charging_node(struct ChargingNode *node)
                 double timeout = 10;
                 double start_time = MPI_Wtime();
 
-                // char received_message[15];
-                struct AvailableNodes *available_nodes;
+                struct AvailableNodes available_nodes;
                 MPI_Irecv(&available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, REPORT_TAG, node->world_comm, &report_request);
 
                 int flag;
@@ -274,7 +273,7 @@ void start_charging_node(struct ChargingNode *node)
 
                     if (flag)
                     {
-                        printf("[Node %d] Received data: %d\n", node->id, available_nodes->size);
+                        printf("[Node %d] Received data: %d\n", node->id, available_nodes.size);
                         
                         break;
                     }
@@ -287,7 +286,7 @@ void start_charging_node(struct ChargingNode *node)
                     }
                 }
 
-                if (flag)
+                /*if (flag)
                 {
                     char received_message_buf[200];
                     sprintf(received_message_buf, "REPORT MESSAGE: { timestamp: %s, node %d, available nearby nodes: [ ",
@@ -311,40 +310,40 @@ void start_charging_node(struct ChargingNode *node)
                     strcat(received_message_buf, "]} ");
                     log_charging_node_event(node, received_message_buf);
 
-                    // struct AvailableNodes *available_nodes;
+                    struct AvailableNodes *available_nodes;
 
-                    // MPI_Recv(available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, ALERT_TAG, node->world_comm, MPI_STATUS_IGNORE);
+                    MPI_Recv(available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, ALERT_TAG, node->world_comm, MPI_STATUS_IGNORE);
 
                     log_charging_node_event(node, "received available nodes from base station");
+                } 
+
+                int size = available_nodes->size;
+                int nearby_nodes[size];
+
+                for (int i = 0; i < size; i++)
+                {
+                    nearby_nodes[i] = available_nodes->nodes[i];
                 }
 
-                // int size = available_nodes->size;
-                // int nearby_nodes[size];
+                char report_message_buf[256];
+                sprintf(report_message_buf, "REPORT MESSAGE: { timestamp: %s, no. of available nearby nodes: %d, nearby nodes: [",
+                        available_nodes->timestamp, available_nodes->size);
 
-                // for (int i = 0; i < size; i++)
-                // {
-                //     nearby_nodes[i] = available_nodes->nodes[i];
-                // }
+                first_entry = 1;
+                for (int i = 0; i < available_nodes->size; i++)
+                {
+                    char nearby_node_info[64];
+                    if (!first_entry)
+                        strcat(report_message_buf, ", ");
+                    else
+                        first_entry = 0;
 
-                // char report_message_buf[256];
-                // sprintf(report_message_buf, "REPORT MESSAGE: { timestamp: %s, no. of available nearby nodes: %d, nearby nodes: [",
-                //         available_nodes->timestamp, available_nodes->size);
+                    sprintf(nearby_node_info, "node %d", available_nodes->nodes[i]);
+                    strcat(report_message_buf, nearby_node_info);
+                }
 
-                // first_entry = 1;
-                // for (int i = 0; i < available_nodes->size; i++)
-                // {
-                //     char nearby_node_info[64];
-                //     if (!first_entry)
-                //         strcat(report_message_buf, ", ");
-                //     else
-                //         first_entry = 0;
-
-                //     sprintf(nearby_node_info, "node %d", available_nodes->nodes[i]);
-                //     strcat(report_message_buf, nearby_node_info);
-                // }
-
-                // strcat(report_message_buf, "] }");
-                // log_charging_node_event(node, report_message_buf);
+                strcat(report_message_buf, "] }");
+                log_charging_node_event(node, report_message_buf); */
             }
             else
             {

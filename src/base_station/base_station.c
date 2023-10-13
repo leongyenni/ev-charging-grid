@@ -77,10 +77,11 @@ void start_base_station(struct BaseStation *base_station)
         checkResetTimer(base_station);
         int num_alert_messages = 0;
 
+        char currentTimestamp[TIMESTAMP_LEN];
+
         for (int i = 1; i <= base_station->grid_size; i++)
         {
             int has_alert = 0;
-            char currentTimestamp[TIMESTAMP_LEN];
             get_timestamp(currentTimestamp);
 
             char listening_message_buf[100];
@@ -90,7 +91,8 @@ void start_base_station(struct BaseStation *base_station)
             MPI_Iprobe(i, ALERT_TAG, base_station->world_comm, &has_alert, &probe_status);
             if (has_alert == 1)
             {
-                num_alert_messages += 1;
+                get_timestamp(currentTimestamp);
+                printf("[Base Station] timestamp %s %d ALERT MESSAGES READ\n", currentTimestamp, num_alert_messages);
 
                 int alert_source_rank = i;
 
@@ -145,51 +147,68 @@ void start_base_station(struct BaseStation *base_station)
 
                 base_station->alert_messages[num_alert_messages] = alert_message;
                 base_station->node_availabilities[alert_message.reporting_node] = 0;
+
+                printf("node %d\n", base_station->alert_messages[num_alert_messages].reporting_node);
+
+                num_alert_messages += 1;
             }
         }
 
         MPI_Request report_request[num_alert_messages];
         MPI_Status report_status[num_alert_messages];
 
+        get_timestamp(currentTimestamp);
+        printf("[Base Station] timestamp %s %d ALERT MESSAGES READ. DONE READING.\n", currentTimestamp, num_alert_messages);
+
         for (int i = 0; i < num_alert_messages; i++)
         {
-            int num_neighbours = base_station->alert_messages->num_neighbours;
-            int max_nearby_nodes = num_neighbours * 4;
+            printf("[Base Station] AFTER node %d \n", base_station->alert_messages[i].reporting_node);
+        }
 
-            char currentTimestamp[TIMESTAMP_LEN];
+        for (int i = 0; i < num_alert_messages; i++)
+        {
             get_timestamp(currentTimestamp);
 
-            struct AvailableNodes *available_nodes;
+            printf("[Base Station] timestamp %s\n", currentTimestamp);
+            printf("node %d\n", base_station->alert_messages[i].reporting_node);
+
+            int num_neighbours = base_station->alert_messages[i].num_neighbours;
+            int max_nearby_nodes = num_neighbours * 4;
+
+            printf("num neighbours %d\n", num_neighbours);
+
+            struct AvailableNodes *available_nodes = malloc(sizeof(struct AvailableNodes));
             strcpy(available_nodes->timestamp, currentTimestamp);
             available_nodes->size = 0;
             available_nodes->nodes = (int *)malloc(max_nearby_nodes * sizeof(int));
 
-            for (int i = 0; i < num_neighbours; i++)
+            for (int j = 0; j < num_neighbours; j++)
             {
 
-                int neighbouring_node_rank = base_station->alert_messages->neighbouring_nodes[i];
+                int neighbouring_node_rank = base_station->alert_messages[i].neighbouring_nodes[j];
+                printf("neighbouring node %d ", neighbouring_node_rank);
 
                 if (base_station->node_availabilities[neighbouring_node_rank] == 1)
                 {
-                    int row = base_station->alert_messages->neighbouring_nodes_coord[0];
-                    int col = base_station->alert_messages->neighbouring_nodes_coord[1];
+                    int row = base_station->alert_messages[i].neighbouring_nodes_coord[j][0];
+                    int col = base_station->alert_messages[i].neighbouring_nodes_coord[j][1];
 
                     get_neighbours(base_station, row, col, available_nodes);
                 }
             }
-            char received_message_buf[200];
-            sprintf(received_message_buf, "REPORT MESSAGE: { timestamp: %s, node %d, available nearby nodes: [ ",
+            char received_message_buf[5000];
+            sprintf(received_message_buf, "REPORT MESSAGE: { timestamp: %s, node size: %d, available nearby nodes: [ ",
                     available_nodes->timestamp, available_nodes->size);
 
-            int first_entry = 0;
+            int first_entry = 1;
             for (int i = 0; i < available_nodes->size; i++)
             {
 
-                char node_info[100];
+                char node_info[2000];
 
                 if (!first_entry)
                 {
-                    strcat(node_info, ", ");
+                    strcat(received_message_buf, ", ");
                 }
                 else
                 {
@@ -203,16 +222,21 @@ void start_base_station(struct BaseStation *base_station)
             strcat(received_message_buf, "]} ");
             log_base_station_event(base_station, received_message_buf);
 
+            printf("reporting to node %d\n", base_station->alert_messages[i].reporting_node + 1);
+
+
             MPI_Isend(&available_nodes, 1, MPI_AVAILABLE_NODES, base_station->alert_messages[i].reporting_node + 1, REPORT_TAG, base_station->world_comm, &report_request[i]);
 
-            log_base_station_event(base_station, received_message_buf);
+            // log_base_station_event(base_station, received_message_buf);
+            free(available_nodes->nodes);
+            free(available_nodes);
         }
 
         MPI_Waitall(num_alert_messages, report_request, report_status);
 
-        // log_base_station_event(base_station, "sent termination messages to charging grid \n");
+        log_base_station_event(base_station, "sent report messages to all nodes \n");
 
-        sleep(base_station->listen_frequency_s);
+        sleep(2);
     }
 
     MPI_Type_free(&MPI_ALERT_MESSAGE);
@@ -230,7 +254,7 @@ void close_base_station(struct BaseStation *base_station)
 
     char currentTimestamp[TIMESTAMP_LEN];
     get_timestamp(currentTimestamp);
-    printf("[Base Station] %s sending termination messages to charging grid \n", currentTimestamp);
+    printf("[Base Station] %s sending termination messages to charging nodes \n", currentTimestamp);
 
     int sig_term = 1;
     for (int world_rank = 1; world_rank < base_station->grid_size + 1; world_rank++)
