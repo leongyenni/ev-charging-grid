@@ -43,7 +43,7 @@ struct BaseStation *new_base_station(MPI_Comm world_comm, int grid_size, float l
         base_station->node_availabilities[i] = 1;
     }
 
-    base_station->reporting_nodes = malloc(sizeof(struct ChargingNode) * base_station->grid_size);
+    base_station->alert_messages = malloc(sizeof(struct AlertMessage) * base_station->grid_size);
 
     // MPI_Comm_size(grid_comm, &base_station->grid_size);
     return base_station;
@@ -75,6 +75,7 @@ void start_base_station(struct BaseStation *base_station)
         // }
 
         checkResetTimer(base_station);
+        int num_alert_messages = 0;
 
         for (int i = 1; i <= base_station->grid_size; i++)
         {
@@ -89,6 +90,8 @@ void start_base_station(struct BaseStation *base_station)
             MPI_Iprobe(i, ALERT_TAG, base_station->world_comm, &has_alert, &probe_status);
             if (has_alert == 1)
             {
+                num_alert_messages += 1;
+
                 int alert_source_rank = i;
 
                 char rev_message_buf[1024];
@@ -140,22 +143,75 @@ void start_base_station(struct BaseStation *base_station)
 
                 total_alerts++;
 
-                base_station->reportingNode[num_reportingNode] = 
+                base_station->alert_messages[num_alert_messages] = alert_message;
+                base_station->node_availabilities[alert_message.reporting_node] = 0;
+            }
+        }
 
-                char message[100];
-                sprintf(message, "sending node availabilities to node %d", alert_source_rank);
-                log_base_station_event(base_station, message);
+        MPI_Request report_request[num_alert_messages];
+        MPI_Status report_status[num_alert_messages];
 
-                char received_message[] = "RECEIVE MESSAGE";
-                MPI_Send(&received_message, 1, MPI_CHAR, alert_source_rank, REPORT_TAG, base_station->world_comm);
+        for (int i = 0; i < num_alert_messages; i++)
+        {
+            int num_neighbours = base_station->alert_messages->num_neighbours;
+            int max_nearby_nodes = num_neighbours * 4;
 
-                log_base_station_event(base_station, received_message);
+            char currentTimestamp[TIMESTAMP_LEN];
+            get_timestamp(currentTimestamp);
 
-                sprintf(message, "sent node availabilities to node %d", alert_source_rank);
-                log_base_station_event(base_station, message);
+            struct AvailableNodes *available_nodes;
+            strcpy(available_nodes->timestamp, currentTimestamp);
+            available_nodes->size = 0;
+            available_nodes->nodes = (int *)malloc(max_nearby_nodes * sizeof(int));
+
+            for (int i = 0; i < num_neighbours; i++)
+            {
+
+                int neighbouring_node_rank = base_station->alert_messages->neighbouring_nodes[i];
+
+                if (base_station->node_availabilities[neighbouring_node_rank] == 1)
+                {
+                    int row = base_station->alert_messages->neighbouring_nodes_coord[0];
+                    int col = base_station->alert_messages->neighbouring_nodes_coord[1];
+
+                    get_neighbours(base_station, row, col, available_nodes);
+                }
+            }
+            char received_message_buf[200];
+            sprintf(received_message_buf, "REPORT MESSAGE: { timestamp: %s, node %d, available nearby nodes: [ ",
+                    available_nodes->timestamp, available_nodes->size);
+
+            int first_entry = 0;
+            for (int i = 0; i < available_nodes->size; i++)
+            {
+
+                char node_info[100];
+
+                if (!first_entry)
+                {
+                    strcat(node_info, ", ");
+                }
+                else
+                {
+                    first_entry = 0;
+                }
+
+                sprintf(node_info, "node %d", available_nodes->nodes[i]);
+                strcat(received_message_buf, node_info);
             }
 
+            strcat(received_message_buf, "]} ");
+            log_base_station_event(base_station, received_message_buf);
+
+            MPI_Isend(&available_nodes, 1, MPI_AVAILABLE_NODES, base_station->alert_messages[i].reporting_node + 1, REPORT_TAG, base_station->world_comm, &report_request[i]);
+
+            log_base_station_event(base_station, received_message_buf);
         }
+
+        MPI_Waitall(num_alert_messages, report_request, report_status);
+
+        // log_base_station_event(base_station, "sent termination messages to charging grid \n");
+
         sleep(base_station->listen_frequency_s);
     }
 
@@ -172,19 +228,23 @@ void close_base_station(struct BaseStation *base_station)
     MPI_Request send_request[base_station->grid_size];
     MPI_Status send_status[base_station->grid_size];
 
-    printf("sending termination messages to charging grid \n");
+    char currentTimestamp[TIMESTAMP_LEN];
+    get_timestamp(currentTimestamp);
+    printf("[Base Station] %s sending termination messages to charging grid \n", currentTimestamp);
 
     int sig_term = 1;
-    for (int world_rank = 0; world_rank < base_station->grid_size + 1; world_rank++)
+    for (int world_rank = 1; world_rank < base_station->grid_size + 1; world_rank++)
     {
         int i = get_index(world_rank);
         MPI_Isend(&sig_term, 1, MPI_INT, world_rank, TERMINATION_TAG, base_station->world_comm, &send_request[i]);
     }
 
     MPI_Waitall(base_station->grid_size, send_request, send_status);
-    printf("sent termination messages to charging grid \n");
+    get_timestamp(currentTimestamp);
+    printf("[Base Station] %s sent termination messages to charging grid \n", currentTimestamp);
 
     free(base_station->node_availabilities);
+    free(base_station->alert_messages);
     free(base_station);
 }
 
@@ -312,6 +372,5 @@ void checkResetTimer(struct BaseStation *base_station)
 
         strcat(reset_message_buf, " }");
         log_base_station_event(base_station, reset_message_buf);
-        // printf('\n');
     }
 }
