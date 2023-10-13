@@ -9,9 +9,9 @@
 #define REPORT_TAG 30
 
 #define CYCLE_INTERVAL_S 5
-#define RESET_INTERVAL_S 20
+#define RESET_INTERVAL_S 10
 
-#define ITERATION 10
+#define ITERATION 5
 
 #define DEFAULT_ROW 3
 #define DEFAULT_COL 3

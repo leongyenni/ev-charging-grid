@@ -106,7 +106,7 @@ void start_charging_node(struct ChargingNode *node)
 
     MPI_Status probe_status, status;
     int has_alert = 0;
-    int sig_term;
+    int sig_term = 1;
 
     MPI_Datatype MPI_ALERT_MESSAGE;
     define_mpi_alert_message(&MPI_ALERT_MESSAGE);
@@ -114,9 +114,8 @@ void start_charging_node(struct ChargingNode *node)
     MPI_Datatype MPI_AVAILABLE_NODES;
     define_mpi_available_nodes(&MPI_AVAILABLE_NODES);
 
-    while (1)
+    while (sig_term)
     {
-
         MPI_Iprobe(BASE_STATION_RANK, TERMINATION_TAG, node->world_comm, &has_alert, &probe_status);
         if (has_alert == 1)
         {
@@ -160,7 +159,7 @@ void start_charging_node(struct ChargingNode *node)
 
         int availabilities[MAX_NUM_NEIGHBOURS] = {top_availability, bottom_availability, left_availability, right_availability};
 
-        char neighbour_message_buf[1024];
+        char neighbour_message_buf[2024];
         sprintf(neighbour_message_buf, "%s available neighbour nodes: [", currentTimestamp);
 
         int first_entry = 1;
@@ -174,7 +173,7 @@ void start_charging_node(struct ChargingNode *node)
             {
                 node->available_neighbour_nodes[i].num_ports = availabilities[i];
 
-                char neighbour_info[256];
+                char neighbour_info[516];
                 if (!first_entry)
                     strcat(neighbour_message_buf, ", ");
                 else
@@ -225,14 +224,14 @@ void start_charging_node(struct ChargingNode *node)
 
                 alert_message.num_neighbours = num_neighbours;
 
-                char alert_message_buf[1024];
+                char alert_message_buf[2024];
                 sprintf(alert_message_buf, "ALERT MESSAGE = { timestamp: %s, reporting node: %d (%d, %d), neighbouring nodes: [",
                         alert_message.timestamp, alert_message.reporting_node, alert_message.reporting_node_coord[0], alert_message.reporting_node_coord[1]);
 
                 int first_entry = 1;
                 for (int i = 0; i < num_neighbours; i++)
                 {
-                    char neighbour_info[256];
+                    char neighbour_info[516];
                     if (!first_entry)
                         strcat(alert_message_buf, ", ");
                     else
@@ -260,7 +259,7 @@ void start_charging_node(struct ChargingNode *node)
                 log_charging_node_event(node, "receiving available nodes from base station");
 
                 MPI_Request report_request;
-                double timeout = 10;
+                double timeout = 20;
                 double start_time = MPI_Wtime();
 
                 struct AvailableNodes available_nodes;
@@ -274,7 +273,7 @@ void start_charging_node(struct ChargingNode *node)
                     if (flag)
                     {
                         printf("[Node %d] Received data: %d\n", node->id, available_nodes.size);
-                        
+
                         break;
                     }
 
@@ -286,69 +285,49 @@ void start_charging_node(struct ChargingNode *node)
                     }
                 }
 
-                /*if (flag)
+                if (flag)
                 {
-                    char received_message_buf[200];
-                    sprintf(received_message_buf, "REPORT MESSAGE: { timestamp: %s, node %d, available nearby nodes: [ ",
-                    available_nodes->timestamp, available_nodes->size);
+                   
 
-                    first_entry = 0;
-                    for (int i = 0; i < available_nodes->size; i++){
+                    // struct AvailableNodes *available_nodes;
 
-                        char node_info[100];
+                    // MPI_Recv(available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, ALERT_TAG, node->world_comm, MPI_STATUS_IGNORE);
 
-                        if (!first_entry) {
-                            strcat(node_info, ", ");
-                        } else {
-                            first_entry = 0;
-                        }
+                    //log_charging_node_event(node, "received available nodes from base station");
 
-                        sprintf(node_info, "node %d", available_nodes->nodes[i]);
-                        strcat(received_message_buf, node_info);
+                    int size = available_nodes.size;
+                    int nearby_nodes[size];
+
+                    for (int i = 0; i < size; i++)
+                    {
+                        nearby_nodes[i] = available_nodes.nodes[i];
                     }
 
-                    strcat(received_message_buf, "]} ");
-                    log_charging_node_event(node, received_message_buf);
+                    char report_message_buf[1000];
+                    sprintf(report_message_buf, "REPORT MESSAGE: { timestamp: %s, no. of available nearby nodes: %d, nearby nodes: [",
+                            available_nodes.timestamp, available_nodes.size);
 
-                    struct AvailableNodes *available_nodes;
+                    first_entry = 1;
+                    for (int i = 0; i < available_nodes.size; i++)
+                    {
+                        char nearby_node_info[64];
+                        if (!first_entry)
+                            strcat(report_message_buf, ", ");
+                        else
+                            first_entry = 0;
 
-                    MPI_Recv(available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, ALERT_TAG, node->world_comm, MPI_STATUS_IGNORE);
+                        sprintf(nearby_node_info, "node %d", available_nodes.nodes[i]);
+                        strcat(report_message_buf, nearby_node_info);
+                    }
 
-                    log_charging_node_event(node, "received available nodes from base station");
-                } 
-
-                int size = available_nodes->size;
-                int nearby_nodes[size];
-
-                for (int i = 0; i < size; i++)
-                {
-                    nearby_nodes[i] = available_nodes->nodes[i];
+                    strcat(report_message_buf, "] }");
+                    log_charging_node_event(node, report_message_buf);
                 }
-
-                char report_message_buf[256];
-                sprintf(report_message_buf, "REPORT MESSAGE: { timestamp: %s, no. of available nearby nodes: %d, nearby nodes: [",
-                        available_nodes->timestamp, available_nodes->size);
-
-                first_entry = 1;
-                for (int i = 0; i < available_nodes->size; i++)
-                {
-                    char nearby_node_info[64];
-                    if (!first_entry)
-                        strcat(report_message_buf, ", ");
-                    else
-                        first_entry = 0;
-
-                    sprintf(nearby_node_info, "node %d", available_nodes->nodes[i]);
-                    strcat(report_message_buf, nearby_node_info);
-                }
-
-                strcat(report_message_buf, "] }");
-                log_charging_node_event(node, report_message_buf); */
             }
             else
             {
                 // TODO: prettify message
-                char message[100];
+                char message[2000];
                 sprintf(message, "Node %d top_availability: %d, bottom_availability: %d, left_availability: %d, right_availability: %d",
                         node->id, top_availability, bottom_availability, left_availability, right_availability);
                 log_charging_node_event(node, message);
