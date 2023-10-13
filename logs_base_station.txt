@@ -65955,3 +65955,562 @@
 [Base Station] 2023-10-13 14:02:54 listening to node 3
 [Base Station] sent report messages to all nodes 
 
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1  }
+[Base Station] 2023-10-13 14:21:27 listening to node 0
+[Base Station] 2023-10-13 14:21:27 listening to node 1
+[Base Station] 2023-10-13 14:21:27 listening to node 2
+[Base Station] 2023-10-13 14:21:27 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:21:29 listening to node 0
+[Base Station] 2023-10-13 14:21:29 listening to node 1
+[Base Station] 2023-10-13 14:21:29 listening to node 2
+[Base Station] 2023-10-13 14:21:29 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:21:31 listening to node 0
+[Base Station] 2023-10-13 14:21:31 listening to node 1
+[Base Station] 2023-10-13 14:21:31 listening to node 2
+[Base Station] 2023-10-13 14:21:31 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:21:33 listening to node 0
+[Base Station] 2023-10-13 14:21:33 listening to node 1
+[Base Station] receiving alert message from charging node 1
+[Base Station] received alert message from charging node 1
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:21:32, reporting node: 1 (0, 1), neighbouring nodes: [node 3 (1, 1), node 0 (0, 0)] }
+[Base Station] 2023-10-13 14:21:33 listening to node 2
+[Base Station] receiving alert message from charging node 2
+[Base Station] received alert message from charging node 2
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:21:32, reporting node: 2 (1, 0), neighbouring nodes: [node 0 (0, 0), node 3 (1, 1)] }
+[Base Station] 2023-10-13 14:21:33 listening to node 3
+[Base Station] receiving alert message from charging node 3
+[Base Station] received alert message from charging node 3
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:21:32, reporting node: 3 (1, 1), neighbouring nodes: [node 1 (0, 1), node 2 (1, 0)] }
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:21:34, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:21:34, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:21:34, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:21:36 listening to node 0
+[Base Station] receiving alert message from charging node 0
+[Base Station] received alert message from charging node 0
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:21:32, reporting node: 0 (0, 0), neighbouring nodes: [node 2 (1, 0), node 1 (0, 1)] }
+[Base Station] 2023-10-13 14:21:36 listening to node 1
+[Base Station] 2023-10-13 14:21:36 listening to node 2
+[Base Station] 2023-10-13 14:21:36 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:21:36, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:21:38 listening to node 0
+[Base Station] 2023-10-13 14:21:38 listening to node 1
+[Base Station] 2023-10-13 14:21:38 listening to node 2
+[Base Station] 2023-10-13 14:21:38 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:21:40 listening to node 0
+[Base Station] 2023-10-13 14:21:40 listening to node 1
+[Base Station] 2023-10-13 14:21:40 listening to node 2
+[Base Station] 2023-10-13 14:21:40 listening to node 3
+[Base Station] receiving alert message from charging node 3
+[Base Station] received alert message from charging node 3
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:21:39, reporting node: 3 (1, 1), neighbouring nodes: [node 1 (0, 1), node 2 (1, 0)] }
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:21:40, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:21:42 listening to node 0
+[Base Station] 2023-10-13 14:21:42 listening to node 1
+[Base Station] receiving alert message from charging node 1
+[Base Station] received alert message from charging node 1
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:21:39, reporting node: 1 (0, 1), neighbouring nodes: [node 3 (1, 1), node 0 (0, 0)] }
+[Base Station] 2023-10-13 14:21:42 listening to node 2
+[Base Station] receiving alert message from charging node 2
+[Base Station] received alert message from charging node 2
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:21:39, reporting node: 2 (1, 0), neighbouring nodes: [node 0 (0, 0), node 3 (1, 1)] }
+[Base Station] 2023-10-13 14:21:42 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:21:42, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:21:42, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:21:44 listening to node 0
+[Base Station] receiving alert message from charging node 0
+[Base Station] received alert message from charging node 0
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:21:41, reporting node: 0 (0, 0), neighbouring nodes: [node 2 (1, 0), node 1 (0, 1)] }
+[Base Station] 2023-10-13 14:21:44 listening to node 1
+[Base Station] 2023-10-13 14:21:44 listening to node 2
+[Base Station] 2023-10-13 14:21:44 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:21:44, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:21:46 listening to node 0
+[Base Station] 2023-10-13 14:21:46 listening to node 1
+[Base Station] 2023-10-13 14:21:46 listening to node 2
+[Base Station] 2023-10-13 14:21:46 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1  }
+[Base Station] 2023-10-13 14:26:36 listening to node 0
+[Base Station] 2023-10-13 14:26:36 listening to node 1
+[Base Station] 2023-10-13 14:26:36 listening to node 2
+[Base Station] 2023-10-13 14:26:36 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:26:38 listening to node 0
+[Base Station] 2023-10-13 14:26:38 listening to node 1
+[Base Station] 2023-10-13 14:26:38 listening to node 2
+[Base Station] 2023-10-13 14:26:38 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:26:40 listening to node 0
+[Base Station] 2023-10-13 14:26:40 listening to node 1
+[Base Station] 2023-10-13 14:26:40 listening to node 2
+[Base Station] 2023-10-13 14:26:40 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:26:42 listening to node 0
+[Base Station] 2023-10-13 14:26:42 listening to node 1
+[Base Station] receiving alert message from charging node 1
+[Base Station] received alert message from charging node 1
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:26:41, reporting node: 1 (0, 1), neighbouring nodes: [node 3 (1, 1), node 0 (0, 0)] }
+[Base Station] 2023-10-13 14:26:42 listening to node 2
+[Base Station] receiving alert message from charging node 2
+[Base Station] received alert message from charging node 2
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:26:41, reporting node: 2 (1, 0), neighbouring nodes: [node 0 (0, 0), node 3 (1, 1)] }
+[Base Station] 2023-10-13 14:26:42 listening to node 3
+[Base Station] receiving alert message from charging node 3
+[Base Station] received alert message from charging node 3
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:26:41, reporting node: 3 (1, 1), neighbouring nodes: [node 1 (0, 1), node 2 (1, 0)] }
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:26:42, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:26:42, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:26:42, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:26:44 listening to node 0
+[Base Station] receiving alert message from charging node 0
+[Base Station] received alert message from charging node 0
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:26:41, reporting node: 0 (0, 0), neighbouring nodes: [node 2 (1, 0), node 1 (0, 1)] }
+[Base Station] 2023-10-13 14:26:44 listening to node 1
+[Base Station] 2023-10-13 14:26:44 listening to node 2
+[Base Station] 2023-10-13 14:26:44 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:26:44, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:26:46 listening to node 0
+[Base Station] 2023-10-13 14:26:46 listening to node 1
+[Base Station] 2023-10-13 14:26:46 listening to node 2
+[Base Station] 2023-10-13 14:26:46 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:26:48 listening to node 0
+[Base Station] 2023-10-13 14:26:48 listening to node 1
+[Base Station] 2023-10-13 14:26:48 listening to node 2
+[Base Station] 2023-10-13 14:26:49 listening to node 3
+[Base Station] receiving alert message from charging node 3
+[Base Station] received alert message from charging node 3
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:26:47, reporting node: 3 (1, 1), neighbouring nodes: [node 1 (0, 1), node 2 (1, 0)] }
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:26:49, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:26:51 listening to node 0
+[Base Station] 2023-10-13 14:26:51 listening to node 1
+[Base Station] receiving alert message from charging node 1
+[Base Station] received alert message from charging node 1
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:26:47, reporting node: 1 (0, 1), neighbouring nodes: [node 3 (1, 1), node 0 (0, 0)] }
+[Base Station] 2023-10-13 14:26:51 listening to node 2
+[Base Station] receiving alert message from charging node 2
+[Base Station] received alert message from charging node 2
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:26:47, reporting node: 2 (1, 0), neighbouring nodes: [node 0 (0, 0), node 3 (1, 1)] }
+[Base Station] 2023-10-13 14:26:51 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:26:51, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:26:51, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:26:53 listening to node 0
+[Base Station] receiving alert message from charging node 0
+[Base Station] received alert message from charging node 0
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:26:49, reporting node: 0 (0, 0), neighbouring nodes: [node 2 (1, 0), node 1 (0, 1)] }
+[Base Station] 2023-10-13 14:26:53 listening to node 1
+[Base Station] 2023-10-13 14:26:53 listening to node 2
+[Base Station] 2023-10-13 14:26:53 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:26:53, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:26:55 listening to node 0
+[Base Station] 2023-10-13 14:26:55 listening to node 1
+[Base Station] 2023-10-13 14:26:55 listening to node 2
+[Base Station] 2023-10-13 14:26:55 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1  }
+[Base Station] 2023-10-13 14:29:48 listening to node 0
+[Base Station] 2023-10-13 14:29:48 listening to node 1
+[Base Station] 2023-10-13 14:29:48 listening to node 2
+[Base Station] 2023-10-13 14:29:48 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:29:50 listening to node 0
+[Base Station] 2023-10-13 14:29:50 listening to node 1
+[Base Station] 2023-10-13 14:29:50 listening to node 2
+[Base Station] 2023-10-13 14:29:50 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:29:52 listening to node 0
+[Base Station] 2023-10-13 14:29:52 listening to node 1
+[Base Station] 2023-10-13 14:29:52 listening to node 2
+[Base Station] 2023-10-13 14:29:52 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:29:54 listening to node 0
+[Base Station] 2023-10-13 14:29:54 listening to node 1
+[Base Station] receiving alert message from charging node 1
+[Base Station] received alert message from charging node 1
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:29:53, reporting node: 1 (0, 1), neighbouring nodes: [node 3 (1, 1), node 0 (0, 0)] }
+[Base Station] 2023-10-13 14:29:54 listening to node 2
+[Base Station] receiving alert message from charging node 2
+[Base Station] received alert message from charging node 2
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:29:53, reporting node: 2 (1, 0), neighbouring nodes: [node 0 (0, 0), node 3 (1, 1)] }
+[Base Station] 2023-10-13 14:29:55 listening to node 3
+[Base Station] receiving alert message from charging node 3
+[Base Station] received alert message from charging node 3
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:29:53, reporting node: 3 (1, 1), neighbouring nodes: [node 1 (0, 1), node 2 (1, 0)] }
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:29:55, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:29:55, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:29:55, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:29:57 listening to node 0
+[Base Station] receiving alert message from charging node 0
+[Base Station] received alert message from charging node 0
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:29:53, reporting node: 0 (0, 0), neighbouring nodes: [node 2 (1, 0), node 1 (0, 1)] }
+[Base Station] 2023-10-13 14:29:57 listening to node 1
+[Base Station] 2023-10-13 14:29:57 listening to node 2
+[Base Station] 2023-10-13 14:29:57 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:29:57, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:29:59 listening to node 0
+[Base Station] 2023-10-13 14:29:59 listening to node 1
+[Base Station] 2023-10-13 14:29:59 listening to node 2
+[Base Station] 2023-10-13 14:29:59 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:30:01 listening to node 0
+[Base Station] 2023-10-13 14:30:01 listening to node 1
+[Base Station] 2023-10-13 14:30:01 listening to node 2
+[Base Station] 2023-10-13 14:30:01 listening to node 3
+[Base Station] receiving alert message from charging node 3
+[Base Station] received alert message from charging node 3
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:30:00, reporting node: 3 (1, 1), neighbouring nodes: [node 1 (0, 1), node 2 (1, 0)] }
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:30:01, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:30:03 listening to node 0
+[Base Station] 2023-10-13 14:30:03 listening to node 1
+[Base Station] receiving alert message from charging node 1
+[Base Station] received alert message from charging node 1
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:30:00, reporting node: 1 (0, 1), neighbouring nodes: [node 3 (1, 1), node 0 (0, 0)] }
+[Base Station] 2023-10-13 14:30:03 listening to node 2
+[Base Station] receiving alert message from charging node 2
+[Base Station] received alert message from charging node 2
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:30:00, reporting node: 2 (1, 0), neighbouring nodes: [node 0 (0, 0), node 3 (1, 1)] }
+[Base Station] 2023-10-13 14:30:03 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:30:03, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:30:03, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:30:05 listening to node 0
+[Base Station] receiving alert message from charging node 0
+[Base Station] received alert message from charging node 0
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:30:02, reporting node: 0 (0, 0), neighbouring nodes: [node 2 (1, 0), node 1 (0, 1)] }
+[Base Station] 2023-10-13 14:30:06 listening to node 1
+[Base Station] 2023-10-13 14:30:06 listening to node 2
+[Base Station] 2023-10-13 14:30:06 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:30:06, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1  }
+[Base Station] 2023-10-13 14:30:08 listening to node 0
+[Base Station] 2023-10-13 14:30:08 listening to node 1
+[Base Station] 2023-10-13 14:30:08 listening to node 2
+[Base Station] 2023-10-13 14:30:08 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1  }
+[Base Station] 2023-10-13 14:30:25 listening to node 0
+[Base Station] 2023-10-13 14:30:25 listening to node 1
+[Base Station] 2023-10-13 14:30:25 listening to node 2
+[Base Station] 2023-10-13 14:30:25 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:30:27 listening to node 0
+[Base Station] 2023-10-13 14:30:27 listening to node 1
+[Base Station] 2023-10-13 14:30:27 listening to node 2
+[Base Station] 2023-10-13 14:30:27 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:30:29 listening to node 0
+[Base Station] 2023-10-13 14:30:29 listening to node 1
+[Base Station] 2023-10-13 14:30:29 listening to node 2
+[Base Station] 2023-10-13 14:30:29 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:30:31 listening to node 0
+[Base Station] 2023-10-13 14:30:31 listening to node 1
+[Base Station] receiving alert message from charging node 1
+[Base Station] received alert message from charging node 1
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:30:30, reporting node: 1 (0, 1), neighbouring nodes: [node 3 (1, 1), node 0 (0, 0)] }
+[Base Station] 2023-10-13 14:30:31 listening to node 2
+[Base Station] receiving alert message from charging node 2
+[Base Station] received alert message from charging node 2
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:30:30, reporting node: 2 (1, 0), neighbouring nodes: [node 0 (0, 0), node 3 (1, 1)] }
+[Base Station] 2023-10-13 14:30:31 listening to node 3
+[Base Station] receiving alert message from charging node 3
+[Base Station] received alert message from charging node 3
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:30:30, reporting node: 3 (1, 1), neighbouring nodes: [node 1 (0, 1), node 2 (1, 0)] }
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:30:31, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:30:31, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:30:31, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:30:33 listening to node 0
+[Base Station] receiving alert message from charging node 0
+[Base Station] received alert message from charging node 0
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:30:30, reporting node: 0 (0, 0), neighbouring nodes: [node 2 (1, 0), node 1 (0, 1)] }
+[Base Station] 2023-10-13 14:30:33 listening to node 1
+[Base Station] 2023-10-13 14:30:33 listening to node 2
+[Base Station] 2023-10-13 14:30:33 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:30:33, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:30:35 listening to node 0
+[Base Station] 2023-10-13 14:30:35 listening to node 1
+[Base Station] 2023-10-13 14:30:35 listening to node 2
+[Base Station] 2023-10-13 14:30:35 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:30:37 listening to node 0
+[Base Station] 2023-10-13 14:30:37 listening to node 1
+[Base Station] 2023-10-13 14:30:37 listening to node 2
+[Base Station] 2023-10-13 14:30:37 listening to node 3
+[Base Station] receiving alert message from charging node 3
+[Base Station] received alert message from charging node 3
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:30:36, reporting node: 3 (1, 1), neighbouring nodes: [node 1 (0, 1), node 2 (1, 0)] }
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:30:37, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:30:39 listening to node 0
+[Base Station] 2023-10-13 14:30:39 listening to node 1
+[Base Station] receiving alert message from charging node 1
+[Base Station] received alert message from charging node 1
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:30:36, reporting node: 1 (0, 1), neighbouring nodes: [node 3 (1, 1), node 0 (0, 0)] }
+[Base Station] 2023-10-13 14:30:40 listening to node 2
+[Base Station] receiving alert message from charging node 2
+[Base Station] received alert message from charging node 2
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:30:36, reporting node: 2 (1, 0), neighbouring nodes: [node 0 (0, 0), node 3 (1, 1)] }
+[Base Station] 2023-10-13 14:30:40 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:30:40, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:30:40, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:30:42 listening to node 0
+[Base Station] receiving alert message from charging node 0
+[Base Station] received alert message from charging node 0
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:30:38, reporting node: 0 (0, 0), neighbouring nodes: [node 2 (1, 0), node 1 (0, 1)] }
+[Base Station] 2023-10-13 14:30:42 listening to node 1
+[Base Station] 2023-10-13 14:30:42 listening to node 2
+[Base Station] 2023-10-13 14:30:42 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:30:42, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:30:44 listening to node 0
+[Base Station] 2023-10-13 14:30:44 listening to node 1
+[Base Station] 2023-10-13 14:30:44 listening to node 2
+[Base Station] 2023-10-13 14:30:44 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1  }
+[Base Station] 2023-10-13 14:31:32 listening to node 0
+[Base Station] 2023-10-13 14:31:32 listening to node 1
+[Base Station] 2023-10-13 14:31:32 listening to node 2
+[Base Station] 2023-10-13 14:31:32 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:31:34 listening to node 0
+[Base Station] 2023-10-13 14:31:34 listening to node 1
+[Base Station] 2023-10-13 14:31:34 listening to node 2
+[Base Station] 2023-10-13 14:31:34 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:31:36 listening to node 0
+[Base Station] 2023-10-13 14:31:36 listening to node 1
+[Base Station] 2023-10-13 14:31:36 listening to node 2
+[Base Station] 2023-10-13 14:31:36 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:31:38 listening to node 0
+[Base Station] 2023-10-13 14:31:38 listening to node 1
+[Base Station] receiving alert message from charging node 1
+[Base Station] received alert message from charging node 1
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:31:37, reporting node: 1 (0, 1), neighbouring nodes: [node 3 (1, 1), node 0 (0, 0)] }
+[Base Station] 2023-10-13 14:31:38 listening to node 2
+[Base Station] receiving alert message from charging node 2
+[Base Station] received alert message from charging node 2
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:31:37, reporting node: 2 (1, 0), neighbouring nodes: [node 0 (0, 0), node 3 (1, 1)] }
+[Base Station] 2023-10-13 14:31:38 listening to node 3
+[Base Station] receiving alert message from charging node 3
+[Base Station] received alert message from charging node 3
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:31:37, reporting node: 3 (1, 1), neighbouring nodes: [node 1 (0, 1), node 2 (1, 0)] }
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:31:38, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:31:38, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:31:38, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:31:40 listening to node 0
+[Base Station] receiving alert message from charging node 0
+[Base Station] received alert message from charging node 0
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:31:37, reporting node: 0 (0, 0), neighbouring nodes: [node 2 (1, 0), node 1 (0, 1)] }
+[Base Station] 2023-10-13 14:31:40 listening to node 1
+[Base Station] 2023-10-13 14:31:40 listening to node 2
+[Base Station] 2023-10-13 14:31:40 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:31:40, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:31:42 listening to node 0
+[Base Station] 2023-10-13 14:31:42 listening to node 1
+[Base Station] 2023-10-13 14:31:42 listening to node 2
+[Base Station] 2023-10-13 14:31:42 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:31:44 listening to node 0
+[Base Station] 2023-10-13 14:31:44 listening to node 1
+[Base Station] 2023-10-13 14:31:44 listening to node 2
+[Base Station] 2023-10-13 14:31:44 listening to node 3
+[Base Station] receiving alert message from charging node 3
+[Base Station] received alert message from charging node 3
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:31:43, reporting node: 3 (1, 1), neighbouring nodes: [node 1 (0, 1), node 2 (1, 0)] }
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:31:44, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:31:46 listening to node 0
+[Base Station] 2023-10-13 14:31:46 listening to node 1
+[Base Station] receiving alert message from charging node 1
+[Base Station] received alert message from charging node 1
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:31:43, reporting node: 1 (0, 1), neighbouring nodes: [node 3 (1, 1), node 0 (0, 0)] }
+[Base Station] 2023-10-13 14:31:46 listening to node 2
+[Base Station] receiving alert message from charging node 2
+[Base Station] received alert message from charging node 2
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:31:43, reporting node: 2 (1, 0), neighbouring nodes: [node 0 (0, 0), node 3 (1, 1)] }
+[Base Station] 2023-10-13 14:31:46 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:31:46, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:31:46, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:31:48 listening to node 0
+[Base Station] receiving alert message from charging node 0
+[Base Station] received alert message from charging node 0
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:31:45, reporting node: 0 (0, 0), neighbouring nodes: [node 2 (1, 0), node 1 (0, 1)] }
+[Base Station] 2023-10-13 14:31:48 listening to node 1
+[Base Station] 2023-10-13 14:31:48 listening to node 2
+[Base Station] 2023-10-13 14:31:48 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:31:48, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:31:50 listening to node 0
+[Base Station] 2023-10-13 14:31:50 listening to node 1
+[Base Station] 2023-10-13 14:31:50 listening to node 2
+[Base Station] 2023-10-13 14:31:50 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1  }
+[Base Station] 2023-10-13 14:33:27 listening to node 0
+[Base Station] 2023-10-13 14:33:27 listening to node 1
+[Base Station] 2023-10-13 14:33:27 listening to node 2
+[Base Station] 2023-10-13 14:33:27 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:33:29 listening to node 0
+[Base Station] 2023-10-13 14:33:29 listening to node 1
+[Base Station] 2023-10-13 14:33:29 listening to node 2
+[Base Station] 2023-10-13 14:33:29 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:33:31 listening to node 0
+[Base Station] 2023-10-13 14:33:31 listening to node 1
+[Base Station] 2023-10-13 14:33:31 listening to node 2
+[Base Station] 2023-10-13 14:33:31 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:33:33 listening to node 0
+[Base Station] 2023-10-13 14:33:33 listening to node 1
+[Base Station] receiving alert message from charging node 1
+[Base Station] received alert message from charging node 1
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:33:32, reporting node: 1 (0, 1), neighbouring nodes: [node 3 (1, 1), node 0 (0, 0)] }
+[Base Station] 2023-10-13 14:33:33 listening to node 2
+[Base Station] receiving alert message from charging node 2
+[Base Station] received alert message from charging node 2
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:33:32, reporting node: 2 (1, 0), neighbouring nodes: [node 0 (0, 0), node 3 (1, 1)] }
+[Base Station] 2023-10-13 14:33:33 listening to node 3
+[Base Station] receiving alert message from charging node 3
+[Base Station] received alert message from charging node 3
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:33:32, reporting node: 3 (1, 1), neighbouring nodes: [node 1 (0, 1), node 2 (1, 0)] }
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:33:33, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:33:33, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:33:33, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:33:35 listening to node 0
+[Base Station] receiving alert message from charging node 0
+[Base Station] received alert message from charging node 0
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:33:32, reporting node: 0 (0, 0), neighbouring nodes: [node 2 (1, 0), node 1 (0, 1)] }
+[Base Station] 2023-10-13 14:33:35 listening to node 1
+[Base Station] 2023-10-13 14:33:35 listening to node 2
+[Base Station] 2023-10-13 14:33:35 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:33:35, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:33:38 listening to node 0
+[Base Station] 2023-10-13 14:33:38 listening to node 1
+[Base Station] 2023-10-13 14:33:38 listening to node 2
+[Base Station] 2023-10-13 14:33:38 listening to node 3
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:33:40 listening to node 0
+[Base Station] 2023-10-13 14:33:40 listening to node 1
+[Base Station] 2023-10-13 14:33:40 listening to node 2
+[Base Station] 2023-10-13 14:33:40 listening to node 3
+[Base Station] receiving alert message from charging node 3
+[Base Station] received alert message from charging node 3
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:33:38, reporting node: 3 (1, 1), neighbouring nodes: [node 1 (0, 1), node 2 (1, 0)] }
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:33:40, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:33:42 listening to node 0
+[Base Station] 2023-10-13 14:33:42 listening to node 1
+[Base Station] receiving alert message from charging node 1
+[Base Station] received alert message from charging node 1
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:33:38, reporting node: 1 (0, 1), neighbouring nodes: [node 3 (1, 1), node 0 (0, 0)] }
+[Base Station] 2023-10-13 14:33:42 listening to node 2
+[Base Station] receiving alert message from charging node 2
+[Base Station] received alert message from charging node 2
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:33:38, reporting node: 2 (1, 0), neighbouring nodes: [node 0 (0, 0), node 3 (1, 1)] }
+[Base Station] 2023-10-13 14:33:42 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:33:42, node size: 0, available nearby nodes: [ ]} 
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:33:42, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:33:44 listening to node 0
+[Base Station] receiving alert message from charging node 0
+[Base Station] received alert message from charging node 0
+[Base Station] ALERT MESSAGE = { timestamp: 2023-10-13 14:33:41, reporting node: 0 (0, 0), neighbouring nodes: [node 2 (1, 0), node 1 (0, 1)] }
+[Base Station] 2023-10-13 14:33:44 listening to node 1
+[Base Station] 2023-10-13 14:33:44 listening to node 2
+[Base Station] 2023-10-13 14:33:44 listening to node 3
+[Base Station] REPORT MESSAGE: { timestamp: 2023-10-13 14:33:44, node size: 0, available nearby nodes: [ ]} 
+[Base Station] sent report messages to all nodes 
+
+[Base Station] 2023-10-13 14:33:46 listening to node 0
+[Base Station] 2023-10-13 14:33:46 listening to node 1
+[Base Station] 2023-10-13 14:33:46 listening to node 2
+[Base Station] 2023-10-13 14:33:46 listening to node 3
+[Base Station] sent report messages to all nodes 
+
