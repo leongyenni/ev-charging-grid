@@ -10,7 +10,13 @@
 
 #define CYCLE_INTERVAL_S 5
 #define RESET_INTERVAL_S 20
-#define NUM_PORTS 3
+
+#define ITERATION 5
+
+#define DEFAULT_ROW 3
+#define DEFAULT_COL 3
+
+#define NUM_PORTS 2
 #define MAX_NUM_NEIGHBOURS 4
 #define N_DIMS 2
 #define REORDER 1

@@ -61979,3 +61979,37 @@
 [Base Station] 2023-10-13 05:04:22 listening to node 6
 [Base Station] 2023-10-13 05:04:22 listening to node 7
 [Base Station] 2023-10-13 05:04:22 listening to node 8
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1 node 4: 1 node 5: 1 node 6: 1 node 7: 1 node 8: 1  }
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1 node 4: 1 node 5: 1 node 6: 1 node 7: 1 node 8: 1  }
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1 node 4: 1 node 5: 1 node 6: 1 node 7: 1 node 8: 1  }
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1 node 4: 1 node 5: 1 node 6: 1 node 7: 1 node 8: 1  }
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1 node 4: 1 node 5: 1 node 6: 1 node 7: 1 node 8: 1  }
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1 node 4: 1 node 5: 1 node 6: 1 node 7: 1 node 8: 1  }
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1 node 4: 1 node 5: 1 node 6: 1 node 7: 1 node 8: 1  }
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1 node 4: 1 node 5: 1 node 6: 1 node 7: 1 node 8: 1  }
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1  }
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1  }
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1  }
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1  }
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1  }
+[Base Station] RESET MESSAGE: { available nodes: node 0: 1 node 1: 1 node 2: 1 node 3: 1  }
+[Base Station] 2023-10-13 06:45:37 listening to node 0
+[Base Station] 2023-10-13 06:45:37 listening to node 1
+[Base Station] 2023-10-13 06:45:37 listening to node 2
+[Base Station] 2023-10-13 06:45:37 listening to node 3
+[Base Station] 2023-10-13 06:45:42 listening to node 0
+[Base Station] 2023-10-13 06:45:42 listening to node 1
+[Base Station] 2023-10-13 06:45:42 listening to node 2
+[Base Station] 2023-10-13 06:45:42 listening to node 3
+[Base Station] 2023-10-13 06:45:47 listening to node 0
+[Base Station] 2023-10-13 06:45:47 listening to node 1
+[Base Station] 2023-10-13 06:45:47 listening to node 2
+[Base Station] 2023-10-13 06:45:47 listening to node 3
+[Base Station] 2023-10-13 06:45:52 listening to node 0
+[Base Station] 2023-10-13 06:45:52 listening to node 1
+[Base Station] 2023-10-13 06:45:52 listening to node 2
+[Base Station] 2023-10-13 06:45:52 listening to node 3
+[Base Station] 2023-10-13 06:45:57 listening to node 0
+[Base Station] 2023-10-13 06:45:57 listening to node 1
+[Base Station] 2023-10-13 06:45:57 listening to node 2
+[Base Station] 2023-10-13 06:45:57 listening to node 3

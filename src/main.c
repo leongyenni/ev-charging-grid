@@ -30,13 +30,13 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		if (world_rank == 0)
-			printf("RUNTIME ERROR: specify m and n as the second and third argument \n");
-		goto cleanup_and_exit;
+		m = DEFAULT_ROW;
+		n = DEFAULT_COL;
+	} else {
+		m = atoi(argv[1]);
+		n = atoi(argv[2]);
 	}
-
-	m = atoi(argv[1]);
-	n = atoi(argv[2]);
+	
 
 	// Split into base station and node
 	MPI_Comm_split(world_comm, world_rank == 0, 0, &node_comm);
@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 		MPI_Comm_size(node_comm_cart, &grid_size);
 
 		struct ChargingNode *node = new_charging_node(NUM_PORTS, CYCLE_INTERVAL_S, node_rank, world_comm, node_comm_cart);
-		start_charging_node(node);
+		//start_charging_node(node);
 	}
 
 cleanup_and_exit:

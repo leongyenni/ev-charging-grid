@@ -52,8 +52,7 @@ void start_base_station(struct BaseStation *base_station)
     printf("starting base station \n");
 
     MPI_Status probe_status, status;
-    int has_alert = 0;
-    int sig_term;
+    int num_iter = 0;
 
     MPI_Datatype MPI_ALERT_MESSAGE;
     define_mpi_alert_message(&MPI_ALERT_MESSAGE);
@@ -62,20 +61,22 @@ void start_base_station(struct BaseStation *base_station)
     define_mpi_available_nodes(&MPI_AVAILABLE_NODES);
 
     // TODO: (2f)  send or receive MPI messages using POSIX thread
-    while (1)
+    while (num_iter < ITERATION)
     {
         int total_alerts, total_sent_messages = 0;
 
-        int sig_term = get_sig_term();
-        if (sig_term == 1)
-        {
-            break;
-        }
+        num_iter += 1;
+        // int sig_term = get_sig_term();
+        // if (sig_term == 1)
+        // {
+        //     break;
+        // }
 
-        checkResetTimer(base_station);
+        //checkResetTimer(base_station);
 
         for (int i = 1; i <= base_station->grid_size; i++)
         {
+            int has_alert = 0;
             char currentTimestamp[TIMESTAMP_LEN];
             get_timestamp(currentTimestamp);
 
@@ -94,18 +95,6 @@ void start_base_station(struct BaseStation *base_station)
 
                 struct AlertMessage alert_message;
                 MPI_Recv(&alert_message, 1, MPI_ALERT_MESSAGE, alert_source_rank, ALERT_TAG, base_station->world_comm, &status);
-
-                int count;
-                MPI_Get_count(&status, MPI_INT, &count);
-
-                if (count != MPI_UNDEFINED)
-                {
-                    printf("Received %d elements from rank %d with tag %d\n", count, status.MPI_SOURCE, status.MPI_TAG);
-                }
-                else
-                {
-                    printf("Error receiving message\n");
-                }
 
                 sprintf(rev_message_buf, "received alert message from charging node %d", alert_source_rank - 1);
                 log_base_station_event(base_station, rev_message_buf);
@@ -149,19 +138,19 @@ void start_base_station(struct BaseStation *base_station)
 
                 total_alerts++;
 
-                char sending_message_buf[64];
-                sprintf(sending_message_buf, "sending node availabilities to node %d", alert_source_rank - 1);
-                log_base_station_event(base_station, sending_message_buf);
+                // char sending_message_buf[64];
+                // sprintf(sending_message_buf, "sending node availabilities to node %d", alert_source_rank - 1);
+                // log_base_station_event(base_station, sending_message_buf);
 
                 // MPI_Send(&available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, 0, base_station->world_comm);
 
-                char message[] = "REPORT MESSAGE";
-                MPI_Send(&message, 1, MPI_CHAR, reporting_node + 1, REPORT_TAG, node->world_comm);
+                // char message[] = "REPORT MESSAGE";
+                // MPI_Send(&message, 1, MPI_CHAR, reporting_node + 1, REPORT_TAG, base_station->world_comm);
                 
-                MPI_Send(&available_nodes, 1, MPI_CHAR, BASE_STATION_RANK, 0, base_station->world_comm);
+                // MPI_Send(&available_nodes, 1, MPI_CHAR, BASE_STATION_RANK, 0, base_station->world_comm);
 
-                sprintf(sending_message_buf, "sent node availabilities to node %d", alert_source_rank - 1);
-                log_base_station_event(base_station, sending_message_buf);
+                // sprintf(sending_message_buf, "sent node availabilities to node %d", alert_source_rank - 1);
+                // log_base_station_event(base_station, sending_message_buf);
             }
         }
 
@@ -224,7 +213,7 @@ void start_base_station(struct BaseStation *base_station)
             //  sleep(2);
 
             // free(available_nodes->nodes);
-        }
+        // }
 
         sleep(base_station->listen_frequency_s);
     }

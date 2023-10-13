@@ -255,16 +255,16 @@ void start_charging_node(struct ChargingNode *node)
                 log_charging_node_event(node, "sent alert message to base station");
 
                 // TODO: (1g) MPI_Recv base station nearest available node
-                log_charging_node_event(node, "receiving available nodes from base station");
+                //log_charging_node_event(node, "receiving available nodes from base station");
 
-                char received_message[100];
-                MPI_Recv(available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, ALERT_TAG, node->world_comm, MPI_STATUS_IGNORE);
+//                char received_message[100];
+ //               MPI_Recv(&received_message, 1, MPI_CHAR, BASE_STATION_RANK, REPORT_TAG, node->world_comm, MPI_STATUS_IGNORE);
 
                 // struct AvailableNodes *available_nodes;
 
                 // MPI_Recv(available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, ALERT_TAG, node->world_comm, MPI_STATUS_IGNORE);
 
-                log_charging_node_event(node, "received available nodes from base station");
+   //             log_charging_node_event(node, "received available nodes from base station");
 
                 // int size = available_nodes->size;
                 // int nearby_nodes[size];

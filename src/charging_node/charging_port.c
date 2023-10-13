@@ -23,14 +23,14 @@ void start_charging_port(struct ChargingPort *port)
   printf("starting charging port %d on node %d \n", port->id, port->parent_node->id);
   // printf("Node, ")
 
-  while (1)
+  while (port->sig_term)
   {
     // TODO: handle terminating signal (DONE)
-    int sig_term = port->sig_term;
-    if (!sig_term)
-    {
-      break;
-    }
+    // int sig_term = port->sig_term;
+    // if (!sig_term)
+    // {
+    //   break;
+    // }
     port->is_available = rand_bool();
     sleep(port->parent_node->cycle_interval);
   }
