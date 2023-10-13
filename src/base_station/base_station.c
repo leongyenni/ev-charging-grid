@@ -237,7 +237,7 @@ void start_base_station(struct BaseStation *base_station)
             //  sleep(2);
         }
 
-        sleep(5);
+        sleep(2);
     }
 
     MPI_Type_free(&MPI_ALERT_MESSAGE);
