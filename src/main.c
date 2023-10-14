@@ -13,6 +13,9 @@
 
 int m,n;
 
+MPI_Datatype MPI_ALERT_MESSAGE;
+MPI_Datatype MPI_AVAILABLE_NODES;
+
 int main(int argc, char *argv[])
 {
 	FILE *log_file_handler = fopen("logs.txt", "a");
@@ -25,6 +28,10 @@ int main(int argc, char *argv[])
 	MPI_Comm node_comm_cart;
 
 	MPI_Init_thread(&argc, &argv, MPI_THREAD_MULTIPLE, &provided);
+
+	define_mpi_alert_message(&MPI_ALERT_MESSAGE);
+	define_mpi_available_nodes(&MPI_AVAILABLE_NODES);
+
 	MPI_Comm_rank(world_comm, &world_rank);
 	MPI_Comm_size(world_comm, &total_processes); // m * n + 1
 
@@ -76,6 +83,8 @@ int main(int argc, char *argv[])
 
 cleanup_and_exit:
 	fclose(log_file_handler);
+	MPI_Type_free(&MPI_ALERT_MESSAGE);
+	MPI_Type_free(&MPI_AVAILABLE_NODES);
 	MPI_Finalize();
 	return 0;
 }

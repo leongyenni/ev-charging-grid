@@ -32,6 +32,9 @@ extern const char *direction[MAX_NUM_NEIGHBOURS];
 extern int m;
 extern int n;
 
+extern MPI_Datatype MPI_ALERT_MESSAGE;
+extern MPI_Datatype MPI_AVAILABLE_NODES;
+
 struct AlertMessage
 {
     char timestamp[TIMESTAMP_LEN];
