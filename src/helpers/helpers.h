@@ -2,6 +2,7 @@
 #define _HELPERS_H_
 
 #include <stdbool.h>
+#include <time.h>
 #include "mpi.h"
 
 #define TERMINATION_TAG 10
@@ -9,7 +10,7 @@
 #define REPORT_TAG 30
 
 #define CYCLE_INTERVAL_S 10
-#define RESET_INTERVAL_S 40
+#define RESET_INTERVAL_S 45
 
 #define ITERATION 20
 
@@ -56,6 +57,7 @@ struct AvailableNodes
 void define_mpi_alert_message(MPI_Datatype *MPI_ALERT_MESSAGE);
 void define_mpi_available_nodes(MPI_Datatype *MPI_AVAILABLE_NODES);
 void get_timestamp(char *curentTimestamp);
+time_t timestampToTimeT(const char *timestamp);
 float rand_float(float min, float max);
 bool rand_bool();
 

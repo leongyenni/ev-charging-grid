@@ -16,8 +16,9 @@ struct BaseStation
   int *nearby_availabilities;
   struct AlertMessage *alert_messages;
   int num_alert_messages;
+  int num_iter;
   struct Log *logger;
-  FILE *log_file_handler; // TODO
+  FILE *log_file_handler;   // TODO
   pthread_t base_station_t; // TODO
 };
 
@@ -35,8 +36,10 @@ struct Log // TODO
   int neighbouring_nodes_coord[MAX_NUM_NEIGHBOURS][N_DIMS];
   int nearby_nodes[MAX_NUM_NEARBY];
   int nearby_nodes_coord[MAX_NUM_NEARBY][N_DIMS];
+  int available_nodes[MAX_NUM_NEARBY];
   int num_port;
   int num_neighbours;
+  int num_nearby_nodes;
   int num_available_nodes;
   int num_iter;
   int num_messages_sent;

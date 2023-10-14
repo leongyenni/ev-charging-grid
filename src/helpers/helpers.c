@@ -54,6 +54,13 @@ void get_timestamp(char *curentTimestamp)
 	strftime(curentTimestamp, TIMESTAMP_LEN, "%Y-%m-%d %H:%M:%S", currentTime);
 }
 
+time_t timestampToTimeT(const char *timestamp)
+{
+	struct tm tm_time;
+	strptime(timestamp, "%Y-%m-%d %H:%M:%S", &tm_time);
+	return mktime(&tm_time);
+}
+
 float rand_float(float min, float max)
 {
 	float scale = rand() / (float)RAND_MAX;
