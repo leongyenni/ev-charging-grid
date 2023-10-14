@@ -70,7 +70,8 @@ struct ChargingNode *new_charging_node(int num_ports, float cycle_interval, int 
     for (int i = 0; i < num_ports; i++)
     {
         int id = i;
-        ports[i] = new_charging_port(node, id);
+        int seed = (int)(intptr_t)&ports[i] + i + node->id;
+        ports[i] = new_charging_port(node, id, seed);
     }
     node->ports = ports;
 
@@ -163,6 +164,7 @@ void start_charging_node(struct ChargingNode *node)
         sprintf(neighbour_message_buf, "%s available neighbour nodes: [", currentTimestamp);
 
         int first_entry = 1;
+        int neighbours_availabilities = 0;
         for (int i = 0; i < MAX_NUM_NEIGHBOURS; i++)
         {
             if (node->available_neighbour_nodes[i].id < 0)
@@ -172,6 +174,7 @@ void start_charging_node(struct ChargingNode *node)
             else if (availabilities[i] > 0 && availabilities[i] <= NUM_PORTS)
             {
                 node->available_neighbour_nodes[i].num_ports = availabilities[i];
+                neighbours_availabilities++;
 
                 char neighbour_info[516];
                 if (!first_entry)
@@ -188,15 +191,14 @@ void start_charging_node(struct ChargingNode *node)
             }
         }
 
-        strcat(neighbour_message_buf, "]");
+        char info[100];
+        sprintf(info, "], neighbours_availability: %d", neighbours_availabilities);
+        strcat(neighbour_message_buf, info);
         log_charging_node_event(node, neighbour_message_buf);
 
         if (availability == 0)
         {
-            if ((node->top_rank < 0 || top_availability == 0) &&
-                (node->bottom_rank < 0 || bottom_availability == 0) &&
-                (node->left_rank < 0 || left_availability == 0) &&
-                (node->right_rank < 0 || right_availability == 0))
+            if (neighbours_availabilities == 0)
             {
                 // TODO (1f): Add timestamp, Add which nodes are not available (in list), Add total messages sent
 
@@ -259,7 +261,7 @@ void start_charging_node(struct ChargingNode *node)
                 log_charging_node_event(node, "receiving available nodes from base station");
 
                 MPI_Request report_request;
-                double timeout = 5;
+                double timeout = 8;
                 double start_time = MPI_Wtime();
 
                 struct AvailableNodes available_nodes;
@@ -292,50 +294,42 @@ void start_charging_node(struct ChargingNode *node)
 
                     printf("size %d ", size);
 
-                    if (available_nodes.size > 0)
+                    int nearby_nodes[size];
+                    for (int i = 0; i < size; i++)
                     {
-                        int nearby_nodes[size];
-                        for (int i = 0; i < size; i++)
-                        {
-                           printf("nearby node %d\n", i);
-                           printf("%d \n", available_nodes.nodes[i]);
-                           //if (available_nodes.nodes[i]) {
-                             //  printf("nearby node %d\n", available_nodes.nodes[i]);
-                               //nearby_nodes[i] = available_nodes.nodes[i];
-                           //}
-                           
-                        }
+                        nearby_nodes[i] = available_nodes.nodes[i];
                     }
-                                       // char report_message_buf[5000];
-                    // sprintf(report_message_buf, "REPORT MESSAGE: { timestamp: %s, no. of available nearby nodes: %d, nearby nodes: [",
-                    //         available_nodes.timestamp, available_nodes.size);
 
-                    // first_entry = 1;
-                    // for (int i = 0; i < available_nodes.size; i++)
-                    // {
-                    //     char nearby_node_info[1000];
-                    //     if (!first_entry)
-                    //         strcat(report_message_buf, ", ");
-                    //     else
-                    //         first_entry = 0;
+                    char report_message_buf[5000];
+                    sprintf(report_message_buf, "REPORT MESSAGE: { timestamp: %s, no. of available nearby nodes: %d, nearby nodes: [",
+                            available_nodes.timestamp, available_nodes.size);
 
-                    //     sprintf(nearby_node_info, "node %d", nearby_nodes[i]);
-                    //     strcat(report_message_buf, nearby_node_info);
-                    // }
+                    first_entry = 1;
+                    for (int i = 0; i < available_nodes.size; i++)
+                    {
+                        char nearby_node_info[1000];
+                        if (!first_entry)
+                            strcat(report_message_buf, ", ");
+                        else
+                            first_entry = 0;
 
-                    //strcat(report_message_buf, "] }");
-                    //log_charging_node_event(node, report_message_buf);
+                        sprintf(nearby_node_info, "node %d", nearby_nodes[i]);
+                        strcat(report_message_buf, nearby_node_info);
+                    }
+
+                    strcat(report_message_buf, "] }");
+                    log_charging_node_event(node, report_message_buf);
                 }
             }
-            else
-            {
-                // TODO: prettify message
-                char message[2000];
-                sprintf(message, "Node %d top_availability: %d, bottom_availability: %d, left_availability: %d, right_availability: %d",
-                        node->id, top_availability, bottom_availability, left_availability, right_availability);
-                log_charging_node_event(node, message);
-            }
         }
+        // else
+        // {
+        //     // TODO: prettify message
+        //     char message[2000];
+        //     sprintf(message, "Node %d top_availability: %d, bottom_availability: %d, left_availability: %d, right_availability: %d",
+        //             node->id, top_availability, bottom_availability, left_availability, right_availability);
+        //     log_charging_node_event(node, message);
+        // }
         sleep(node->cycle_interval);
     }
 
@@ -365,4 +359,21 @@ int get_availability(struct ChargingNode *node)
         }
     }
     return availability;
+}
+
+int get_neighbours_availability(struct ChargingNode *node)
+{
+    int neighbours_availability = 0;
+    for (int i = 0; i < MAX_NUM_NEIGHBOURS; i++)
+    {
+        int neighbour_availability = node->available_neighbour_nodes[i].num_ports;
+
+        if (neighbour_availability > 0 && neighbour_availability <= NUM_PORTS)
+        {
+            neighbours_availability = 1;
+            break;
+        }
+    }
+
+    return neighbours_availability;
 }

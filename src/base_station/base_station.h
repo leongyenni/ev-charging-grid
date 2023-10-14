@@ -18,13 +18,11 @@ struct BaseStation
   pthread_t base_station_t; // TODO
 };
 
-// function to create new base station
-// struct BaseStation *new_base_station(MPI_Comm world_comm, MPI_Comm grid_comm_cart, float listen_frequency_s, FILE *log_file_handler);
 struct BaseStation *new_base_station(MPI_Comm world_comm, int grid_size, float listen_frequency_s, FILE *log_file_handler);
 void start_base_station(struct BaseStation *base_station);
 void close_base_station(struct BaseStation *base_station);
 
-struct Log
+struct Log // TODO
 {
   char timestamp[TIMESTAMP_LEN];
   int grid_size, total_alerts, total_sent_messages;

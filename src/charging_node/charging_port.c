@@ -8,13 +8,14 @@
 #include "charging_node.h"
 #include "../helpers/helpers.h"
 
-struct ChargingPort *new_charging_port(struct ChargingNode *parent_node, int id)
+struct ChargingPort *new_charging_port(struct ChargingNode *parent_node, int id, int seed)
 {
   struct ChargingPort *port = malloc(sizeof(struct ChargingPort));
   port->parent_node = parent_node;
   port->id = id;
   port->is_available = true;
   port->sig_term = 1;
+  port->seed = seed;
   return port;
 }
 
@@ -25,13 +26,8 @@ void start_charging_port(struct ChargingPort *port)
 
   while (port->sig_term)
   {
-    // TODO: handle terminating signal (DONE)
-    // int sig_term = port->sig_term;
-    // if (!sig_term)
-    // {
-    //   break;
-    // }
-    port->is_available = rand_bool();
+    int r = rand_r(&port->seed);
+    port->is_available = (r % 2 == 0);
     sleep(port->parent_node->cycle_interval);
   }
 

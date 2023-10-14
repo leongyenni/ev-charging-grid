@@ -10,11 +10,12 @@ struct ChargingPort
 {
   struct ChargingNode *parent_node;
   int id;
+  int seed;
   bool is_available;
   bool sig_term;
 };
 
-struct ChargingPort *new_charging_port(struct ChargingNode *parent_node, int id);
+struct ChargingPort *new_charging_port(struct ChargingNode *parent_node, int id, int seed);
 void start_charging_port(struct ChargingPort *port);
 bool is_available(struct ChargingPort *port);
 

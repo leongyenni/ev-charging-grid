@@ -62,5 +62,5 @@ float rand_float(float min, float max)
 
 bool rand_bool()
 {
-	return rand() % 2 == 0;
+	return (int)rand_float(1, 10) % 2 == 0;
 }

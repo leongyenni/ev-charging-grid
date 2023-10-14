@@ -16,7 +16,7 @@
 #define DEFAULT_ROW 3
 #define DEFAULT_COL 3
 
-#define NUM_PORTS 2
+#define NUM_PORTS 1
 #define MAX_NUM_NEIGHBOURS 4
 #define N_DIMS 2
 #define REORDER 1

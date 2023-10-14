@@ -1130,3 +1130,1118 @@
 [Node 8] 2023-10-13 14:52:20 available neighbour nodes: [top node 5 (1 ports), left node 7 (2 ports)]
 [Node 8] 2023-10-13 14:52:42 2 ports available
 [Node 8] 2023-10-13 14:52:59 1 ports available
+[Node 8] 2023-10-14 07:59:07 4 ports available
+[Node 8] 2023-10-14 07:59:07 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32767, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 07:59:12 2 ports available
+[Node 8] 2023-10-14 07:59:12 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 07:59:17 2 ports available
+[Node 8] 2023-10-14 07:59:17 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 07:59:22 5 ports available
+[Node 8] 2023-10-14 07:59:22 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32767, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 07:59:27 2 ports available
+[Node 8] 2023-10-14 07:59:27 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 07:59:32 2 ports available
+[Node 8] 2023-10-14 07:59:32 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 07:59:38 3 ports available
+[Node 8] 2023-10-14 07:59:38 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32767, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 07:59:43 2 ports available
+[Node 8] 2023-10-14 07:59:43 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 07:59:48 1 ports available
+[Node 8] 2023-10-14 07:59:48 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32767, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 07:59:53 3 ports available
+[Node 8] 2023-10-14 07:59:53 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32767, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 07:59:58 3 ports available
+[Node 8] 2023-10-14 07:59:58 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32767, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:00:03 3 ports available
+[Node 8] 2023-10-14 08:00:03 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32767, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:00:08 2 ports available
+[Node 8] 2023-10-14 08:00:08 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:00:14 1 ports available
+[Node 8] 2023-10-14 08:00:14 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32767, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:00:19 3 ports available
+[Node 8] 2023-10-14 08:00:19 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32767, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:00:24 3 ports available
+[Node 8] 2023-10-14 08:00:24 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32767, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:00:29 4 ports available
+[Node 8] 2023-10-14 08:00:29 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32767, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:03:51 4 ports available
+[Node 8] 2023-10-14 08:03:51 available neighbour nodes: [top node 5 (2 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32766, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:03:56 2 ports available
+[Node 8] 2023-10-14 08:03:56 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32766, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:04:01 1 ports available
+[Node 8] 2023-10-14 08:04:01 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32766, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:04:06 2 ports available
+[Node 8] 2023-10-14 08:04:06 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32766, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:04:11 4 ports available
+[Node 8] 2023-10-14 08:04:11 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32766, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:04:17 1 ports available
+[Node 8] 2023-10-14 08:04:17 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32766, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:04:22 3 ports available
+[Node 8] 2023-10-14 08:04:22 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32766, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:04:27 1 ports available
+[Node 8] 2023-10-14 08:04:27 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32766, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:04:32 2 ports available
+[Node 8] 2023-10-14 08:04:32 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32766, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:04:37 2 ports available
+[Node 8] 2023-10-14 08:04:37 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32766, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:04:42 0 ports available
+[Node 8] 2023-10-14 08:04:42 available neighbour nodes: []
+[Node 8] ALERT MESSAGE = { timestamp: 2023-10-14 08:04:42, reporting node: 8 (2, 2), neighbouring nodes: [node 5 (1, 2), node 7 (2, 1)], num_neighbours: 2 }
+[Node 8] sending alert message to base station
+[Node 8] sent alert message to base station
+[Node 8] receiving available nodes from base station
+[Node 8] REPORT MESSAGE: { timestamp: 2023-10-14 08:04:44, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 8] 2023-10-14 08:04:49 3 ports available
+[Node 8] 2023-10-14 08:04:49 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32766, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:04:54 2 ports available
+[Node 8] 2023-10-14 08:04:54 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32766, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:04:59 2 ports available
+[Node 8] 2023-10-14 08:04:59 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32766, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:05:04 3 ports available
+[Node 8] 2023-10-14 08:05:04 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32766, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:05:13 2 ports available
+[Node 8] 2023-10-14 08:05:13 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32766, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:09:40 4 ports available
+[Node 8] 2023-10-14 08:09:40 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32766, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:09:45 1 ports available
+[Node 8] 2023-10-14 08:09:45 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32766, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:09:50 0 ports available
+[Node 8] 2023-10-14 08:09:50 available neighbour nodes: []
+[Node 8] ALERT MESSAGE = { timestamp: 2023-10-14 08:09:50, reporting node: 8 (2, 2), neighbouring nodes: [node 5 (1, 2), node 7 (2, 1)], num_neighbours: 2 }
+[Node 8] sending alert message to base station
+[Node 8] sent alert message to base station
+[Node 8] receiving available nodes from base station
+[Node 8] REPORT MESSAGE: { timestamp: 2023-10-14 08:09:53, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 8] 2023-10-14 08:09:58 1 ports available
+[Node 8] 2023-10-14 08:09:58 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32766, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:10:03 1 ports available
+[Node 8] 2023-10-14 08:10:03 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32766, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:10:08 0 ports available
+[Node 8] 2023-10-14 08:10:08 available neighbour nodes: []
+[Node 8] ALERT MESSAGE = { timestamp: 2023-10-14 08:10:08, reporting node: 8 (2, 2), neighbouring nodes: [node 5 (1, 2), node 7 (2, 1)], num_neighbours: 2 }
+[Node 8] sending alert message to base station
+[Node 8] sent alert message to base station
+[Node 8] receiving available nodes from base station
+[Node 8] REPORT MESSAGE: { timestamp: 2023-10-14 08:10:09, no. of available nearby nodes: 3, nearby nodes: [node 4, node 6, node 2] }
+[Node 8] 2023-10-14 08:10:14 1 ports available
+[Node 8] 2023-10-14 08:10:14 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32766, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:10:22 0 ports available
+[Node 8] 2023-10-14 08:10:22 available neighbour nodes: []
+[Node 8] ALERT MESSAGE = { timestamp: 2023-10-14 08:10:22, reporting node: 8 (2, 2), neighbouring nodes: [node 5 (1, 2), node 7 (2, 1)], num_neighbours: 2 }
+[Node 8] sending alert message to base station
+[Node 8] sent alert message to base station
+[Node 8] receiving available nodes from base station
+[Node 8] REPORT MESSAGE: { timestamp: 2023-10-14 08:10:26, no. of available nearby nodes: 3, nearby nodes: [node 4, node 6, node 2] }
+[Node 8] 2023-10-14 08:10:31 0 ports available
+[Node 8] 2023-10-14 08:10:31 available neighbour nodes: []
+[Node 8] ALERT MESSAGE = { timestamp: 2023-10-14 08:10:31, reporting node: 8 (2, 2), neighbouring nodes: [node 5 (1, 2), node 7 (2, 1)], num_neighbours: 2 }
+[Node 8] sending alert message to base station
+[Node 8] sent alert message to base station
+[Node 8] receiving available nodes from base station
+[Node 8] REPORT MESSAGE: { timestamp: 2023-10-14 08:10:39, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 8] 2023-10-14 08:10:44 2 ports available
+[Node 8] 2023-10-14 08:10:44 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32766, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:10:49 1 ports available
+[Node 8] 2023-10-14 08:10:49 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32766, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:10:59 2 ports available
+[Node 8] 2023-10-14 08:10:59 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32766, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:15:21 6 ports available
+[Node 8] 2023-10-14 08:15:21 available neighbour nodes: [top node 5 (2 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32765, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 08:15:26 3 ports available
+[Node 8] 2023-10-14 08:15:26 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32765, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:15:31 4 ports available
+[Node 8] 2023-10-14 08:15:31 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32765, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:15:36 3 ports available
+[Node 8] 2023-10-14 08:15:36 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32765, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:15:42 3 ports available
+[Node 8] 2023-10-14 08:15:42 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32765, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:15:47 3 ports available
+[Node 8] 2023-10-14 08:15:47 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32765, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:15:52 2 ports available
+[Node 8] 2023-10-14 08:15:52 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32765, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:15:57 3 ports available
+[Node 8] 2023-10-14 08:15:57 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32765, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:16:02 3 ports available
+[Node 8] 2023-10-14 08:16:02 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32765, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:16:07 4 ports available
+[Node 8] 2023-10-14 08:16:07 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32765, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:16:12 2 ports available
+[Node 8] 2023-10-14 08:16:12 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32765, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:16:17 2 ports available
+[Node 8] 2023-10-14 08:16:17 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32765, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:16:22 4 ports available
+[Node 8] 2023-10-14 08:16:22 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32765, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:17:01 3 ports available
+[Node 8] 2023-10-14 08:17:01 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32765, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:17:07 0 ports available
+[Node 8] 2023-10-14 08:17:07 available neighbour nodes: []
+[Node 8] ALERT MESSAGE = { timestamp: 2023-10-14 08:17:07, reporting node: 8 (2, 2), neighbouring nodes: [node 5 (1, 2), node 7 (2, 1)], num_neighbours: 2 }
+[Node 8] sending alert message to base station
+[Node 8] sent alert message to base station
+[Node 8] receiving available nodes from base station
+[Node 8] REPORT MESSAGE: { timestamp: 2023-10-14 08:17:08, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 8] 2023-10-14 08:17:13 2 ports available
+[Node 8] 2023-10-14 08:17:13 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32765, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:17:18 1 ports available
+[Node 8] 2023-10-14 08:17:18 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32765, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:17:23 1 ports available
+[Node 8] 2023-10-14 08:17:23 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32765, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:17:28 3 ports available
+[Node 8] 2023-10-14 08:17:28 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32765, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:17:37 1 ports available
+[Node 8] 2023-10-14 08:17:37 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32765, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:17:42 3 ports available
+[Node 8] 2023-10-14 08:17:42 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32765, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:17:47 0 ports available
+[Node 8] 2023-10-14 08:17:47 available neighbour nodes: []
+[Node 8] ALERT MESSAGE = { timestamp: 2023-10-14 08:17:47, reporting node: 8 (2, 2), neighbouring nodes: [node 5 (1, 2), node 7 (2, 1)], num_neighbours: 2 }
+[Node 8] sending alert message to base station
+[Node 8] sent alert message to base station
+[Node 8] receiving available nodes from base station
+[Node 8] REPORT MESSAGE: { timestamp: 2023-10-14 08:17:51, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 8] 2023-10-14 08:17:56 2 ports available
+[Node 8] 2023-10-14 08:17:56 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32765, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:18:01 1 ports available
+[Node 8] 2023-10-14 08:18:01 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32765, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:18:07 1 ports available
+[Node 8] 2023-10-14 08:18:07 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32765, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:20:00 1 ports available
+[Node 8] 2023-10-14 08:20:00 available neighbour nodes: [top node 5 (1 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32767, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:20:05 2 ports available
+[Node 8] 2023-10-14 08:20:05 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:20:10 3 ports available
+[Node 8] 2023-10-14 08:20:10 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32767, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:20:15 2 ports available
+[Node 8] 2023-10-14 08:20:15 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:20:20 2 ports available
+[Node 8] 2023-10-14 08:20:20 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:20:25 2 ports available
+[Node 8] 2023-10-14 08:20:25 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:20:31 2 ports available
+[Node 8] 2023-10-14 08:20:31 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:20:36 2 ports available
+[Node 8] 2023-10-14 08:20:36 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:20:41 3 ports available
+[Node 8] 2023-10-14 08:20:41 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32767, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:20:46 3 ports available
+[Node 8] 2023-10-14 08:20:46 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32767, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:20:52 2 ports available
+[Node 8] 2023-10-14 08:20:52 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:20:57 2 ports available
+[Node 8] 2023-10-14 08:20:57 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:21:02 2 ports available
+[Node 8] 2023-10-14 08:21:02 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32767, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:21:27 9 ports available
+[Node 8] 2023-10-14 08:21:27 available neighbour nodes: [top node 5 (10 ports), left node 7 (7 ports)]
+[Node 8] Node 8 top_availability: 10, bottom_availability: 32765, left_availability: 7, right_availability: 0
+[Node 8] 2023-10-14 08:21:32 7 ports available
+[Node 8] 2023-10-14 08:21:32 available neighbour nodes: [top node 5 (7 ports), left node 7 (7 ports)]
+[Node 8] Node 8 top_availability: 7, bottom_availability: 32765, left_availability: 7, right_availability: 0
+[Node 8] 2023-10-14 08:21:37 8 ports available
+[Node 8] 2023-10-14 08:21:37 available neighbour nodes: [top node 5 (8 ports), left node 7 (8 ports)]
+[Node 8] Node 8 top_availability: 8, bottom_availability: 32765, left_availability: 8, right_availability: 0
+[Node 8] 2023-10-14 08:21:43 8 ports available
+[Node 8] 2023-10-14 08:21:43 available neighbour nodes: [top node 5 (6 ports), left node 7 (8 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32765, left_availability: 8, right_availability: 0
+[Node 8] 2023-10-14 08:21:48 9 ports available
+[Node 8] 2023-10-14 08:21:48 available neighbour nodes: [top node 5 (9 ports), left node 7 (9 ports)]
+[Node 8] Node 8 top_availability: 9, bottom_availability: 32765, left_availability: 9, right_availability: 0
+[Node 8] 2023-10-14 08:21:53 8 ports available
+[Node 8] 2023-10-14 08:21:53 available neighbour nodes: [top node 5 (8 ports), left node 7 (7 ports)]
+[Node 8] Node 8 top_availability: 8, bottom_availability: 32765, left_availability: 7, right_availability: 0
+[Node 8] 2023-10-14 08:21:58 5 ports available
+[Node 8] 2023-10-14 08:21:58 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32765, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:22:03 8 ports available
+[Node 8] 2023-10-14 08:22:03 available neighbour nodes: [top node 5 (8 ports), left node 7 (8 ports)]
+[Node 8] Node 8 top_availability: 8, bottom_availability: 32765, left_availability: 8, right_availability: 0
+[Node 8] 2023-10-14 08:22:08 8 ports available
+[Node 8] 2023-10-14 08:22:08 available neighbour nodes: [top node 5 (8 ports), left node 7 (8 ports)]
+[Node 8] Node 8 top_availability: 8, bottom_availability: 32765, left_availability: 8, right_availability: 0
+[Node 8] 2023-10-14 08:22:13 6 ports available
+[Node 8] 2023-10-14 08:22:13 available neighbour nodes: [top node 5 (6 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32765, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 08:22:18 8 ports available
+[Node 8] 2023-10-14 08:22:18 available neighbour nodes: [top node 5 (8 ports), left node 7 (8 ports)]
+[Node 8] Node 8 top_availability: 8, bottom_availability: 32765, left_availability: 8, right_availability: 0
+[Node 8] 2023-10-14 08:22:24 8 ports available
+[Node 8] 2023-10-14 08:22:24 available neighbour nodes: [top node 5 (8 ports), left node 7 (8 ports)]
+[Node 8] Node 8 top_availability: 8, bottom_availability: 32765, left_availability: 8, right_availability: 0
+[Node 8] 2023-10-14 08:22:29 8 ports available
+[Node 8] 2023-10-14 08:22:29 available neighbour nodes: [top node 5 (8 ports), left node 7 (8 ports)]
+[Node 8] Node 8 top_availability: 8, bottom_availability: 32765, left_availability: 8, right_availability: 0
+[Node 8] 2023-10-14 08:23:46 10 ports available
+[Node 8] 2023-10-14 08:23:46 available neighbour nodes: [top node 5 (9 ports), left node 7 (10 ports)]
+[Node 8] Node 8 top_availability: 9, bottom_availability: 32764, left_availability: 10, right_availability: 0
+[Node 8] 2023-10-14 08:23:51 5 ports available
+[Node 8] 2023-10-14 08:23:51 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32764, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:23:56 6 ports available
+[Node 8] 2023-10-14 08:23:56 available neighbour nodes: [top node 5 (6 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32764, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 08:24:01 3 ports available
+[Node 8] 2023-10-14 08:24:01 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32764, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:24:06 3 ports available
+[Node 8] 2023-10-14 08:24:06 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32764, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:24:11 3 ports available
+[Node 8] 2023-10-14 08:24:11 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32764, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:24:16 2 ports available
+[Node 8] 2023-10-14 08:24:16 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32764, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:24:21 3 ports available
+[Node 8] 2023-10-14 08:24:21 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32764, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:24:27 5 ports available
+[Node 8] 2023-10-14 08:24:27 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32764, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:24:32 6 ports available
+[Node 8] 2023-10-14 08:24:32 available neighbour nodes: [top node 5 (6 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32764, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 08:24:37 6 ports available
+[Node 8] 2023-10-14 08:24:37 available neighbour nodes: [top node 5 (6 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32764, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 08:24:42 5 ports available
+[Node 8] 2023-10-14 08:24:42 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32764, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:24:47 3 ports available
+[Node 8] 2023-10-14 08:24:47 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32764, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:28:49 10 ports available
+[Node 8] 2023-10-14 08:28:49 available neighbour nodes: [top node 5 (10 ports), left node 7 (10 ports)]
+[Node 8] Node 8 top_availability: 10, bottom_availability: 32765, left_availability: 10, right_availability: 0
+[Node 8] 2023-10-14 08:28:54 7 ports available
+[Node 8] 2023-10-14 08:28:54 available neighbour nodes: [top node 5 (7 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 7, bottom_availability: 32765, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 08:28:59 5 ports available
+[Node 8] 2023-10-14 08:28:59 available neighbour nodes: [top node 5 (5 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32765, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 08:29:04 3 ports available
+[Node 8] 2023-10-14 08:29:04 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32765, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:29:09 3 ports available
+[Node 8] 2023-10-14 08:29:09 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32765, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:38:01 10 ports available
+[Node 8] 2023-10-14 08:38:01 available neighbour nodes: [top node 5 (10 ports), left node 7 (10 ports)]
+[Node 8] Node 8 top_availability: 10, bottom_availability: 32537, left_availability: 10, right_availability: 0
+[Node 8] 2023-10-14 08:38:06 5 ports available
+[Node 8] 2023-10-14 08:38:06 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32537, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:38:11 3 ports available
+[Node 8] 2023-10-14 08:38:11 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32537, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:38:17 6 ports available
+[Node 8] 2023-10-14 08:38:17 available neighbour nodes: [top node 5 (6 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32537, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 08:38:22 4 ports available
+[Node 8] 2023-10-14 08:38:22 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32537, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:38:27 4 ports available
+[Node 8] 2023-10-14 08:38:27 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32537, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:38:32 7 ports available
+[Node 8] 2023-10-14 08:38:32 available neighbour nodes: [top node 5 (7 ports), left node 7 (7 ports)]
+[Node 8] Node 8 top_availability: 7, bottom_availability: 32537, left_availability: 7, right_availability: 0
+[Node 8] 2023-10-14 08:38:37 5 ports available
+[Node 8] 2023-10-14 08:38:37 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32537, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:38:42 4 ports available
+[Node 8] 2023-10-14 08:38:42 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32537, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:38:47 4 ports available
+[Node 8] 2023-10-14 08:38:47 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32537, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:38:53 3 ports available
+[Node 8] 2023-10-14 08:38:53 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32537, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:38:58 3 ports available
+[Node 8] 2023-10-14 08:38:58 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32537, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:39:03 9 ports available
+[Node 8] 2023-10-14 08:39:03 available neighbour nodes: [top node 5 (9 ports), left node 7 (9 ports)]
+[Node 8] Node 8 top_availability: 9, bottom_availability: 32537, left_availability: 9, right_availability: 0
+[Node 8] 2023-10-14 08:40:28 9 ports available
+[Node 8] 2023-10-14 08:40:28 available neighbour nodes: [top node 5 (9 ports), left node 7 (10 ports)]
+[Node 8] Node 8 top_availability: 9, bottom_availability: 32764, left_availability: 10, right_availability: 0
+[Node 8] 2023-10-14 08:40:33 5 ports available
+[Node 8] 2023-10-14 08:40:33 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32764, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:40:38 3 ports available
+[Node 8] 2023-10-14 08:40:38 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32764, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:40:44 6 ports available
+[Node 8] 2023-10-14 08:40:44 available neighbour nodes: [top node 5 (6 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32764, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 08:41:00 8 ports available
+[Node 8] 2023-10-14 08:41:00 available neighbour nodes: [top node 5 (9 ports), left node 7 (10 ports)]
+[Node 8] Node 8 top_availability: 9, bottom_availability: 32764, left_availability: 10, right_availability: 0
+[Node 8] 2023-10-14 08:41:05 5 ports available
+[Node 8] 2023-10-14 08:41:05 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32764, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:41:10 3 ports available
+[Node 8] 2023-10-14 08:41:10 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32764, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:41:15 6 ports available
+[Node 8] 2023-10-14 08:41:15 available neighbour nodes: [top node 5 (6 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32764, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 08:41:20 4 ports available
+[Node 8] 2023-10-14 08:41:20 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32764, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:41:25 4 ports available
+[Node 8] 2023-10-14 08:41:25 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32764, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:41:30 7 ports available
+[Node 8] 2023-10-14 08:41:30 available neighbour nodes: [top node 5 (7 ports), left node 7 (7 ports)]
+[Node 8] Node 8 top_availability: 7, bottom_availability: 32764, left_availability: 7, right_availability: 0
+[Node 8] 2023-10-14 08:41:36 5 ports available
+[Node 8] 2023-10-14 08:41:36 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32764, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:41:41 4 ports available
+[Node 8] 2023-10-14 08:41:41 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32764, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:41:46 4 ports available
+[Node 8] 2023-10-14 08:41:46 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32764, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:41:51 3 ports available
+[Node 8] 2023-10-14 08:41:51 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32764, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:41:56 3 ports available
+[Node 8] 2023-10-14 08:41:56 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32764, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:42:01 9 ports available
+[Node 8] 2023-10-14 08:42:01 available neighbour nodes: [top node 5 (9 ports), left node 7 (9 ports)]
+[Node 8] Node 8 top_availability: 9, bottom_availability: 32764, left_availability: 9, right_availability: 0
+[Node 8] 2023-10-14 08:46:39 3 ports available
+[Node 8] 2023-10-14 08:46:39 available neighbour nodes: [top node 5 (4 ports), left node 7 (8 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32718, left_availability: 8, right_availability: 0
+[Node 8] 2023-10-14 08:46:44 5 ports available
+[Node 8] 2023-10-14 08:46:44 available neighbour nodes: [top node 5 (4 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32718, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:46:49 4 ports available
+[Node 8] 2023-10-14 08:46:49 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32718, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:46:54 5 ports available
+[Node 8] 2023-10-14 08:46:54 available neighbour nodes: [top node 5 (3 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32718, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:47:00 6 ports available
+[Node 8] 2023-10-14 08:47:00 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32718, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:47:05 6 ports available
+[Node 8] 2023-10-14 08:47:05 available neighbour nodes: [top node 5 (5 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32718, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 08:47:10 5 ports available
+[Node 8] 2023-10-14 08:47:10 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32718, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:47:15 5 ports available
+[Node 8] 2023-10-14 08:47:15 available neighbour nodes: [top node 5 (6 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32718, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 08:47:20 5 ports available
+[Node 8] 2023-10-14 08:47:20 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32718, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:47:25 6 ports available
+[Node 8] 2023-10-14 08:47:25 available neighbour nodes: [top node 5 (6 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32718, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:47:31 5 ports available
+[Node 8] 2023-10-14 08:47:31 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32718, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:47:36 5 ports available
+[Node 8] 2023-10-14 08:47:36 available neighbour nodes: [top node 5 (6 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32718, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:47:41 5 ports available
+[Node 8] 2023-10-14 08:47:41 available neighbour nodes: [top node 5 (6 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32718, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:49:40 10 ports available
+[Node 8] 2023-10-14 08:49:40 available neighbour nodes: [top node 5 (10 ports), left node 7 (10 ports)]
+[Node 8] Node 8 top_availability: 10, bottom_availability: 32677, left_availability: 10, right_availability: 0
+[Node 8] 2023-10-14 08:49:45 0 ports available
+[Node 8] 2023-10-14 08:49:45 available neighbour nodes: []
+[Node 8] ALERT MESSAGE = { timestamp: 2023-10-14 08:49:45, reporting node: 8 (2, 2), neighbouring nodes: [node 5 (1, 2), node 7 (2, 1)], num_neighbours: 2 }
+[Node 8] sending alert message to base station
+[Node 8] sent alert message to base station
+[Node 8] receiving available nodes from base station
+[Node 8] REPORT MESSAGE: { timestamp: 2023-10-14 08:49:47, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 8] 2023-10-14 08:49:52 0 ports available
+[Node 8] 2023-10-14 08:49:52 available neighbour nodes: []
+[Node 8] ALERT MESSAGE = { timestamp: 2023-10-14 08:49:52, reporting node: 8 (2, 2), neighbouring nodes: [node 5 (1, 2), node 7 (2, 1)], num_neighbours: 2 }
+[Node 8] sending alert message to base station
+[Node 8] sent alert message to base station
+[Node 8] receiving available nodes from base station
+[Node 8] REPORT MESSAGE: { timestamp: 2023-10-14 08:49:55, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 8] 2023-10-14 08:50:00 0 ports available
+[Node 8] 2023-10-14 08:50:00 available neighbour nodes: []
+[Node 8] ALERT MESSAGE = { timestamp: 2023-10-14 08:50:00, reporting node: 8 (2, 2), neighbouring nodes: [node 5 (1, 2), node 7 (2, 1)], num_neighbours: 2 }
+[Node 8] sending alert message to base station
+[Node 8] sent alert message to base station
+[Node 8] receiving available nodes from base station
+[Node 8] REPORT MESSAGE: { timestamp: 2023-10-14 08:50:02, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 8] 2023-10-14 08:50:07 0 ports available
+[Node 8] 2023-10-14 08:50:07 available neighbour nodes: []
+[Node 8] ALERT MESSAGE = { timestamp: 2023-10-14 08:50:07, reporting node: 8 (2, 2), neighbouring nodes: [node 5 (1, 2), node 7 (2, 1)], num_neighbours: 2 }
+[Node 8] sending alert message to base station
+[Node 8] sent alert message to base station
+[Node 8] receiving available nodes from base station
+[Node 8] REPORT MESSAGE: { timestamp: 2023-10-14 08:50:09, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 8] 2023-10-14 08:50:14 10 ports available
+[Node 8] 2023-10-14 08:50:14 available neighbour nodes: []
+[Node 8] Node 8 top_availability: 0, bottom_availability: 32677, left_availability: 0, right_availability: 0
+[Node 8] 2023-10-14 08:51:19 10 ports available
+[Node 8] 2023-10-14 08:51:19 available neighbour nodes: [top node 5 (8 ports), left node 7 (7 ports)]
+[Node 8] Node 8 top_availability: 8, bottom_availability: 21930, left_availability: 7, right_availability: 0
+[Node 8] 2023-10-14 08:51:24 5 ports available
+[Node 8] 2023-10-14 08:51:24 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 21930, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:51:29 5 ports available
+[Node 8] 2023-10-14 08:51:29 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 21930, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:51:34 6 ports available
+[Node 8] 2023-10-14 08:51:34 available neighbour nodes: [top node 5 (7 ports), left node 7 (7 ports)]
+[Node 8] Node 8 top_availability: 7, bottom_availability: 21930, left_availability: 7, right_availability: 0
+[Node 8] 2023-10-14 08:51:39 6 ports available
+[Node 8] 2023-10-14 08:51:39 available neighbour nodes: [top node 5 (5 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 21930, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 08:51:44 6 ports available
+[Node 8] 2023-10-14 08:51:44 available neighbour nodes: [top node 5 (7 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 7, bottom_availability: 21930, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:51:49 6 ports available
+[Node 8] 2023-10-14 08:51:49 available neighbour nodes: [top node 5 (5 ports), left node 7 (7 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 21930, left_availability: 7, right_availability: 0
+[Node 8] 2023-10-14 08:51:55 6 ports available
+[Node 8] 2023-10-14 08:51:55 available neighbour nodes: [top node 5 (6 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 21930, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 08:52:00 5 ports available
+[Node 8] 2023-10-14 08:52:00 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 21930, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:52:05 4 ports available
+[Node 8] 2023-10-14 08:52:05 available neighbour nodes: [top node 5 (4 ports), left node 7 (7 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 21930, left_availability: 7, right_availability: 0
+[Node 8] 2023-10-14 08:52:10 5 ports available
+[Node 8] 2023-10-14 08:52:10 available neighbour nodes: [top node 5 (5 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 21930, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 08:52:15 3 ports available
+[Node 8] 2023-10-14 08:52:15 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 21930, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 08:52:20 7 ports available
+[Node 8] 2023-10-14 08:52:20 available neighbour nodes: [top node 5 (5 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 21930, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:59:41 10 ports available
+[Node 8] 2023-10-14 08:59:41 available neighbour nodes: [top node 5 (10 ports), left node 7 (10 ports)]
+[Node 8] Node 8 top_availability: 10, bottom_availability: 32766, left_availability: 10, right_availability: 0
+[Node 8] 2023-10-14 08:59:46 5 ports available
+[Node 8] 2023-10-14 08:59:46 available neighbour nodes: [top node 5 (6 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32766, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 08:59:52 5 ports available
+[Node 8] 2023-10-14 08:59:52 available neighbour nodes: [top node 5 (5 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32766, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 08:59:57 5 ports available
+[Node 8] 2023-10-14 08:59:57 available neighbour nodes: [top node 5 (6 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32766, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:00:02 1 ports available
+[Node 8] 2023-10-14 09:00:02 available neighbour nodes: [top node 5 (8 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 8, bottom_availability: 32766, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:00:07 3 ports available
+[Node 8] 2023-10-14 09:00:07 available neighbour nodes: [top node 5 (4 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32766, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 09:00:13 4 ports available
+[Node 8] 2023-10-14 09:00:13 available neighbour nodes: [top node 5 (5 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32766, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:00:18 5 ports available
+[Node 8] 2023-10-14 09:00:18 available neighbour nodes: [top node 5 (6 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32766, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:00:23 6 ports available
+[Node 8] 2023-10-14 09:00:23 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32766, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:00:28 6 ports available
+[Node 8] 2023-10-14 09:00:28 available neighbour nodes: [top node 5 (7 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 7, bottom_availability: 32766, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:00:33 6 ports available
+[Node 8] 2023-10-14 09:00:33 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32766, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:00:39 5 ports available
+[Node 8] 2023-10-14 09:00:39 available neighbour nodes: [top node 5 (4 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32766, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 09:00:44 6 ports available
+[Node 8] 2023-10-14 09:00:44 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32766, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:02:10 10 ports available
+[Node 8] 2023-10-14 09:02:10 available neighbour nodes: [top node 5 (10 ports), left node 7 (10 ports)]
+[Node 8] Node 8 top_availability: 10, bottom_availability: 32765, left_availability: 10, right_availability: 0
+[Node 8] 2023-10-14 09:02:15 5 ports available
+[Node 8] 2023-10-14 09:02:15 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32765, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:02:21 5 ports available
+[Node 8] 2023-10-14 09:02:21 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32765, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:02:26 5 ports available
+[Node 8] 2023-10-14 09:02:26 available neighbour nodes: [top node 5 (3 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32765, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 09:02:31 5 ports available
+[Node 8] 2023-10-14 09:02:31 available neighbour nodes: [top node 5 (5 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32765, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:02:36 5 ports available
+[Node 8] 2023-10-14 09:02:36 available neighbour nodes: [top node 5 (4 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32765, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:02:41 5 ports available
+[Node 8] 2023-10-14 09:02:41 available neighbour nodes: [top node 5 (4 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32765, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:02:46 5 ports available
+[Node 8] 2023-10-14 09:02:46 available neighbour nodes: [top node 5 (5 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32765, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 09:02:52 7 ports available
+[Node 8] 2023-10-14 09:02:52 available neighbour nodes: [top node 5 (3 ports), left node 7 (7 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32765, left_availability: 7, right_availability: 0
+[Node 8] 2023-10-14 09:02:57 5 ports available
+[Node 8] 2023-10-14 09:02:57 available neighbour nodes: [top node 5 (6 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32765, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:03:02 6 ports available
+[Node 8] 2023-10-14 09:03:02 available neighbour nodes: [top node 5 (5 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32765, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 09:03:07 5 ports available
+[Node 8] 2023-10-14 09:03:07 available neighbour nodes: [top node 5 (5 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32765, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:03:13 5 ports available
+[Node 8] 2023-10-14 09:03:13 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32765, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:05:05 6 ports available
+[Node 8] 2023-10-14 09:05:05 available neighbour nodes: [top node 5 (8 ports), left node 7 (9 ports)]
+[Node 8] Node 8 top_availability: 8, bottom_availability: 32766, left_availability: 9, right_availability: 0
+[Node 8] 2023-10-14 09:05:10 5 ports available
+[Node 8] 2023-10-14 09:05:10 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32766, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:05:15 6 ports available
+[Node 8] 2023-10-14 09:05:15 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32766, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:05:21 3 ports available
+[Node 8] 2023-10-14 09:05:21 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32766, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:05:26 5 ports available
+[Node 8] 2023-10-14 09:05:26 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32766, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:05:31 4 ports available
+[Node 8] 2023-10-14 09:05:31 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32766, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:05:37 5 ports available
+[Node 8] 2023-10-14 09:05:37 available neighbour nodes: [top node 5 (4 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32766, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 09:05:41 10 ports available
+[Node 8] 2023-10-14 09:05:41 available neighbour nodes: [top node 5 (10 ports), left node 7 (8 ports)]
+[Node 8] Node 8 top_availability: 10, bottom_availability: 22037, left_availability: 8, right_availability: 0
+[Node 8] 2023-10-14 09:05:46 6 ports available
+[Node 8] 2023-10-14 09:05:46 available neighbour nodes: [top node 5 (4 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 22037, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:05:51 5 ports available
+[Node 8] 2023-10-14 09:05:51 available neighbour nodes: [top node 5 (5 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 22037, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:05:56 3 ports available
+[Node 8] 2023-10-14 09:05:56 available neighbour nodes: [top node 5 (7 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 7, bottom_availability: 22037, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:06:02 5 ports available
+[Node 8] 2023-10-14 09:06:02 available neighbour nodes: [top node 5 (6 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 22037, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:06:07 6 ports available
+[Node 8] 2023-10-14 09:06:07 available neighbour nodes: [top node 5 (5 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 22037, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 09:06:12 5 ports available
+[Node 8] 2023-10-14 09:06:12 available neighbour nodes: [top node 5 (6 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 22037, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 09:06:17 5 ports available
+[Node 8] 2023-10-14 09:06:17 available neighbour nodes: [top node 5 (6 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 22037, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 09:06:22 6 ports available
+[Node 8] 2023-10-14 09:06:22 available neighbour nodes: [top node 5 (3 ports), left node 7 (7 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 22037, left_availability: 7, right_availability: 0
+[Node 8] 2023-10-14 09:06:28 4 ports available
+[Node 8] 2023-10-14 09:06:28 available neighbour nodes: [top node 5 (4 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 22037, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 09:06:33 4 ports available
+[Node 8] 2023-10-14 09:06:33 available neighbour nodes: [top node 5 (4 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 22037, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 09:06:38 4 ports available
+[Node 8] 2023-10-14 09:06:38 available neighbour nodes: [top node 5 (5 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 22037, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 09:06:43 5 ports available
+[Node 8] 2023-10-14 09:06:43 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 22037, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:07:11 8 ports available
+[Node 8] 2023-10-14 09:07:11 available neighbour nodes: [top node 5 (8 ports), left node 7 (10 ports)]
+[Node 8] Node 8 top_availability: 8, bottom_availability: 32764, left_availability: 10, right_availability: 0
+[Node 8] 2023-10-14 09:07:16 2 ports available
+[Node 8] 2023-10-14 09:07:16 available neighbour nodes: [left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 0, bottom_availability: 32764, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 09:07:21 2 ports available
+[Node 8] 2023-10-14 09:07:21 available neighbour nodes: [left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 0, bottom_availability: 32764, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:07:26 1 ports available
+[Node 8] 2023-10-14 09:07:26 available neighbour nodes: [top node 5 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32764, left_availability: 0, right_availability: 0
+[Node 8] 2023-10-14 09:07:31 1 ports available
+[Node 8] 2023-10-14 09:07:31 available neighbour nodes: []
+[Node 8] Node 8 top_availability: 0, bottom_availability: 32764, left_availability: 0, right_availability: 0
+[Node 8] 2023-10-14 09:07:37 0 ports available
+[Node 8] 2023-10-14 09:07:37 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:07:42 1 ports available
+[Node 8] 2023-10-14 09:07:42 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32764, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:07:47 0 ports available
+[Node 8] 2023-10-14 09:07:47 available neighbour nodes: [top node 5 (1 ports), left node 7 (3 ports)]
+[Node 8] 2023-10-14 09:08:02 10 ports available
+[Node 8] 2023-10-14 09:08:02 available neighbour nodes: [top node 5 (10 ports), left node 7 (10 ports)]
+[Node 8] Node 8 top_availability: 10, bottom_availability: 32535, left_availability: 10, right_availability: 0
+[Node 8] 2023-10-14 09:08:08 5 ports available
+[Node 8] 2023-10-14 09:08:08 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32535, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:08:13 6 ports available
+[Node 8] 2023-10-14 09:08:13 available neighbour nodes: [top node 5 (2 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32535, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 09:08:18 5 ports available
+[Node 8] 2023-10-14 09:08:18 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32535, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:08:23 2 ports available
+[Node 8] 2023-10-14 09:08:23 available neighbour nodes: [top node 5 (3 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32535, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:08:28 2 ports available
+[Node 8] 2023-10-14 09:08:28 available neighbour nodes: [top node 5 (4 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32535, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:08:33 2 ports available
+[Node 8] 2023-10-14 09:08:33 available neighbour nodes: [top node 5 (5 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32535, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 09:08:38 3 ports available
+[Node 8] 2023-10-14 09:08:38 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32535, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:08:43 3 ports available
+[Node 8] 2023-10-14 09:08:43 available neighbour nodes: [top node 5 (4 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32535, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 09:08:49 2 ports available
+[Node 8] 2023-10-14 09:08:49 available neighbour nodes: [top node 5 (4 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32535, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:08:54 3 ports available
+[Node 8] 2023-10-14 09:08:54 available neighbour nodes: [top node 5 (4 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32535, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 09:08:59 2 ports available
+[Node 8] 2023-10-14 09:08:59 available neighbour nodes: [top node 5 (3 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32535, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:09:04 2 ports available
+[Node 8] 2023-10-14 09:09:04 available neighbour nodes: [top node 5 (2 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32535, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:09:09 8 ports available
+[Node 8] 2023-10-14 09:09:09 available neighbour nodes: [top node 5 (8 ports), left node 7 (10 ports)]
+[Node 8] Node 8 top_availability: 8, bottom_availability: 32535, left_availability: 10, right_availability: 0
+[Node 8] 2023-10-14 09:09:14 5 ports available
+[Node 8] 2023-10-14 09:09:14 available neighbour nodes: [top node 5 (6 ports), left node 7 (6 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32535, left_availability: 6, right_availability: 0
+[Node 8] 2023-10-14 09:09:19 5 ports available
+[Node 8] 2023-10-14 09:09:19 available neighbour nodes: [top node 5 (6 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32535, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:09:24 4 ports available
+[Node 8] 2023-10-14 09:09:24 available neighbour nodes: [top node 5 (3 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32535, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:09:29 5 ports available
+[Node 8] 2023-10-14 09:09:29 available neighbour nodes: [top node 5 (6 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32535, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:09:35 5 ports available
+[Node 8] 2023-10-14 09:09:35 available neighbour nodes: [top node 5 (5 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32535, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:09:40 5 ports available
+[Node 8] 2023-10-14 09:09:40 available neighbour nodes: [top node 5 (4 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32535, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:09:45 3 ports available
+[Node 8] 2023-10-14 09:09:45 available neighbour nodes: [top node 5 (6 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32535, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:09:50 7 ports available
+[Node 8] 2023-10-14 09:09:50 available neighbour nodes: [top node 5 (6 ports), left node 7 (7 ports)]
+[Node 8] Node 8 top_availability: 6, bottom_availability: 32535, left_availability: 7, right_availability: 0
+[Node 8] 2023-10-14 09:09:55 6 ports available
+[Node 8] 2023-10-14 09:09:55 available neighbour nodes: [top node 5 (4 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 4, bottom_availability: 32535, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:10:00 5 ports available
+[Node 8] 2023-10-14 09:10:00 available neighbour nodes: [top node 5 (5 ports), left node 7 (4 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32535, left_availability: 4, right_availability: 0
+[Node 8] 2023-10-14 09:10:05 5 ports available
+[Node 8] 2023-10-14 09:10:05 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32535, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:10:11 5 ports available
+[Node 8] 2023-10-14 09:10:11 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32535, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:11:02 4 ports available
+[Node 8] 2023-10-14 09:11:02 available neighbour nodes: [top node 5 (5 ports), left node 7 (5 ports)]
+[Node 8] Node 8 top_availability: 5, bottom_availability: 32695, left_availability: 5, right_availability: 0
+[Node 8] 2023-10-14 09:11:07 2 ports available
+[Node 8] 2023-10-14 09:11:07 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32695, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:11:13 3 ports available
+[Node 8] 2023-10-14 09:11:13 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32695, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 09:11:18 3 ports available
+[Node 8] 2023-10-14 09:11:18 available neighbour nodes: [top node 5 (1 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32695, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 09:11:23 3 ports available
+[Node 8] 2023-10-14 09:11:23 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32695, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:11:28 3 ports available
+[Node 8] 2023-10-14 09:11:28 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32695, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:11:34 3 ports available
+[Node 8] 2023-10-14 09:11:34 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32695, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:11:39 1 ports available
+[Node 8] 2023-10-14 09:11:39 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32695, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 09:11:44 2 ports available
+[Node 8] 2023-10-14 09:11:44 available neighbour nodes: [top node 5 (3 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32695, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:11:49 3 ports available
+[Node 8] 2023-10-14 09:11:49 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32695, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:11:54 3 ports available
+[Node 8] 2023-10-14 09:11:54 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32695, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 09:11:59 3 ports available
+[Node 8] 2023-10-14 09:11:59 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32695, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:12:05 3 ports available
+[Node 8] 2023-10-14 09:12:05 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32695, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:12:50 0 ports available
+[Node 8] 2023-10-14 09:12:50 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] 2023-10-14 09:12:55 2 ports available
+[Node 8] 2023-10-14 09:12:55 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32764, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:13:00 2 ports available
+[Node 8] 2023-10-14 09:13:00 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32764, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:13:05 1 ports available
+[Node 8] 2023-10-14 09:13:05 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32764, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:13:10 2 ports available
+[Node 8] 2023-10-14 09:13:10 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32764, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:13:16 1 ports available
+[Node 8] 2023-10-14 09:13:16 available neighbour nodes: [top node 5 (1 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32764, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:13:21 2 ports available
+[Node 8] 2023-10-14 09:13:21 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32764, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:13:26 2 ports available
+[Node 8] 2023-10-14 09:13:26 available neighbour nodes: [top node 5 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32764, left_availability: 0, right_availability: 0
+[Node 8] 2023-10-14 09:13:31 1 ports available
+[Node 8] 2023-10-14 09:13:31 available neighbour nodes: [top node 5 (1 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32764, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:13:37 1 ports available
+[Node 8] 2023-10-14 09:13:37 available neighbour nodes: []
+[Node 8] Node 8 top_availability: 0, bottom_availability: 32764, left_availability: 0, right_availability: 0
+[Node 8] 2023-10-14 09:13:42 1 ports available
+[Node 8] 2023-10-14 09:13:42 available neighbour nodes: [top node 5 (3 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 32764, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:13:47 1 ports available
+[Node 8] 2023-10-14 09:13:47 available neighbour nodes: [top node 5 (1 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32764, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 09:13:52 2 ports available
+[Node 8] 2023-10-14 09:13:52 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32764, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:22:09 3 ports available
+[Node 8] 2023-10-14 09:22:09 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 3, bottom_availability: 21868, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 09:22:14 1 ports available
+[Node 8] 2023-10-14 09:22:14 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 21868, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:22:19 1 ports available
+[Node 8] 2023-10-14 09:22:19 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 21868, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:22:24 2 ports available
+[Node 8] 2023-10-14 09:22:24 available neighbour nodes: [top node 5 (1 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 21868, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:22:30 2 ports available
+[Node 8] 2023-10-14 09:22:30 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 21868, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:22:35 1 ports available
+[Node 8] 2023-10-14 09:22:35 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 21868, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:22:40 1 ports available
+[Node 8] 2023-10-14 09:22:40 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 21868, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:22:45 0 ports available
+[Node 8] 2023-10-14 09:22:45 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] ALERT MESSAGE = { timestamp: 2023-10-14 09:22:45, reporting node: 8 (2, 2), neighbouring nodes: [], num_neighbours: 0 }
+[Node 8] sending alert message to base station
+[Node 8] sent alert message to base station
+[Node 8] receiving available nodes from base station
+[Node 8] REPORT MESSAGE: { timestamp: 2023-10-14 09:22:48, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 8] 2023-10-14 09:22:53 2 ports available
+[Node 8] 2023-10-14 09:22:53 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 21868, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:22:59 0 ports available
+[Node 8] 2023-10-14 09:22:59 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] 2023-10-14 09:23:04 1 ports available
+[Node 8] 2023-10-14 09:23:04 available neighbour nodes: [left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 0, bottom_availability: 21868, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:23:09 2 ports available
+[Node 8] 2023-10-14 09:23:09 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 21868, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:23:14 1 ports available
+[Node 8] 2023-10-14 09:25:18 2 ports available
+[Node 8] 2023-10-14 09:25:18 available neighbour nodes: [top node 5 (1 ports), left node 7 (3 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32767, left_availability: 3, right_availability: 0
+[Node 8] 2023-10-14 09:25:24 1 ports available
+[Node 8] 2023-10-14 09:25:24 available neighbour nodes: [top node 5 (1 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:25:29 1 ports available
+[Node 8] 2023-10-14 09:25:29 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32767, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:25:34 2 ports available
+[Node 8] 2023-10-14 09:25:34 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)]
+[Node 8] Node 8 top_availability: 2, bottom_availability: 32767, left_availability: 1, right_availability: 0
+[Node 8] 2023-10-14 09:25:39 1 ports available
+[Node 8] 2023-10-14 09:25:39 available neighbour nodes: [top node 5 (1 ports), left node 7 (2 ports)]
+[Node 8] Node 8 top_availability: 1, bottom_availability: 32767, left_availability: 2, right_availability: 0
+[Node 8] 2023-10-14 09:26:07 3 ports available
+[Node 8] 2023-10-14 09:26:07 available neighbour nodes: [top node 5 (3 ports), left node 7 (3 ports)]
+[Node 8] 2023-10-14 09:26:12 1 ports available
+[Node 8] 2023-10-14 09:26:12 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] 2023-10-14 09:26:17 2 ports available
+[Node 8] 2023-10-14 09:26:17 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:26:23 1 ports available
+[Node 8] 2023-10-14 09:26:23 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:26:28 1 ports available
+[Node 8] 2023-10-14 09:26:28 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] 2023-10-14 09:26:33 1 ports available
+[Node 8] 2023-10-14 09:26:33 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:26:38 2 ports available
+[Node 8] 2023-10-14 09:26:38 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:26:44 2 ports available
+[Node 8] 2023-10-14 09:26:44 available neighbour nodes: [top node 5 (2 ports)]
+[Node 8] 2023-10-14 09:26:49 2 ports available
+[Node 8] 2023-10-14 09:26:49 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:26:54 0 ports available
+[Node 8] 2023-10-14 09:26:54 available neighbour nodes: [top node 5 (1 ports), left node 7 (2 ports)]
+[Node 8] 2023-10-14 09:26:59 1 ports available
+[Node 8] 2023-10-14 09:26:59 available neighbour nodes: [top node 5 (1 ports)]
+[Node 8] 2023-10-14 09:27:04 2 ports available
+[Node 8] 2023-10-14 09:27:04 available neighbour nodes: [top node 5 (3 ports)]
+[Node 8] 2023-10-14 09:27:10 2 ports available
+[Node 8] 2023-10-14 09:27:10 available neighbour nodes: [top node 5 (1 ports), left node 7 (2 ports)]
+[Node 8] 2023-10-14 09:30:26 2 ports available
+[Node 8] 2023-10-14 09:30:26 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] 2023-10-14 09:30:31 1 ports available
+[Node 8] 2023-10-14 09:30:31 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:30:37 1 ports available
+[Node 8] 2023-10-14 09:30:37 available neighbour nodes: [top node 5 (1 ports)]
+[Node 8] 2023-10-14 09:30:42 0 ports available
+[Node 8] 2023-10-14 09:30:42 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:30:47 1 ports available
+[Node 8] 2023-10-14 09:30:47 available neighbour nodes: [left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:30:52 1 ports available
+[Node 8] 2023-10-14 09:30:52 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:30:57 1 ports available
+[Node 8] 2023-10-14 09:30:57 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:31:02 0 ports available
+[Node 8] 2023-10-14 09:31:02 available neighbour nodes: [top node 5 (1 ports), left node 7 (2 ports)]
+[Node 8] 2023-10-14 09:31:07 1 ports available
+[Node 8] 2023-10-14 09:31:07 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:31:13 0 ports available
+[Node 8] 2023-10-14 09:31:13 available neighbour nodes: [top node 5 (1 ports)]
+[Node 8] 2023-10-14 09:31:18 1 ports available
+[Node 8] 2023-10-14 09:31:18 available neighbour nodes: [left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:31:23 2 ports available
+[Node 8] 2023-10-14 09:31:23 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] 2023-10-14 09:31:28 1 ports available
+[Node 8] 2023-10-14 09:31:28 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:35:42 2 ports available
+[Node 8] 2023-10-14 09:35:42 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] 2023-10-14 09:35:47 2 ports available
+[Node 8] 2023-10-14 09:35:47 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:35:53 1 ports available
+[Node 8] 2023-10-14 09:35:53 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)]
+[Node 8] 2023-10-14 09:35:58 1 ports available
+[Node 8] 2023-10-14 09:35:58 available neighbour nodes: [left node 7 (2 ports)]
+[Node 8] 2023-10-14 09:36:03 0 ports available
+[Node 8] 2023-10-14 09:36:03 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:36:08 1 ports available
+[Node 8] 2023-10-14 09:36:08 available neighbour nodes: [left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:36:13 1 ports available
+[Node 8] 2023-10-14 09:36:13 available neighbour nodes: [top node 5 (2 ports)]
+[Node 8] 2023-10-14 09:36:18 0 ports available
+[Node 8] 2023-10-14 09:36:18 available neighbour nodes: [top node 5 (1 ports)]
+[Node 8] 2023-10-14 09:36:23 1 ports available
+[Node 8] 2023-10-14 09:36:23 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:36:28 1 ports available
+[Node 8] 2023-10-14 09:36:28 available neighbour nodes: []
+[Node 8] 2023-10-14 09:36:34 2 ports available
+[Node 8] 2023-10-14 09:36:34 available neighbour nodes: [left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:36:39 2 ports available
+[Node 8] 2023-10-14 09:36:39 available neighbour nodes: []
+[Node 8] 2023-10-14 09:36:46 1 ports available
+[Node 8] 2023-10-14 09:36:46 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)]
+[Node 8] 2023-10-14 09:37:31 1 ports available
+[Node 8] ], neighbours_availability: 2
+[Node 8] 2023-10-14 09:37:36 0 ports available
+[Node 8] ], neighbours_availability: 2
+[Node 8] 2023-10-14 09:37:41 1 ports available
+[Node 8] ], neighbours_availability: 1
+[Node 8] 2023-10-14 09:37:46 1 ports available
+[Node 8] ], neighbours_availability: 1
+[Node 8] 2023-10-14 09:37:51 2 ports available
+[Node 8] ], neighbours_availability: 2
+[Node 8] 2023-10-14 09:37:56 1 ports available
+[Node 8] ], neighbours_availability: 2
+[Node 8] 2023-10-14 09:38:04 1 ports available
+[Node 8] ], neighbours_availability: 2
+[Node 8] 2023-10-14 09:38:09 2 ports available
+[Node 8] ], neighbours_availability: 0
+[Node 8] 2023-10-14 09:38:14 1 ports available
+[Node 8] ], neighbours_availability: 2
+[Node 8] 2023-10-14 09:38:19 1 ports available
+[Node 8] ], neighbours_availability: 1
+[Node 8] 2023-10-14 09:38:24 0 ports available
+[Node 8] ], neighbours_availability: 2
+[Node 8] 2023-10-14 09:38:29 0 ports available
+[Node 8] ], neighbours_availability: 2
+[Node 8] 2023-10-14 09:38:35 1 ports available
+[Node 8] ], neighbours_availability: 2
+[Node 8] 2023-10-14 09:41:19 1 ports available
+[Node 8] 2023-10-14 09:41:19 available neighbour nodes: [top node 5 (2 ports), left node 7 (2 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:41:24 1 ports available
+[Node 8] 2023-10-14 09:41:24 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:41:29 1 ports available
+[Node 8] 2023-10-14 09:41:29 available neighbour nodes: [left node 7 (1 ports)], neighbours_availability: 1
+[Node 8] 2023-10-14 09:41:34 1 ports available
+[Node 8] 2023-10-14 09:41:34 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:41:39 0 ports available
+[Node 8] 2023-10-14 09:41:39 available neighbour nodes: [top node 5 (1 ports)], neighbours_availability: 1
+[Node 8] 2023-10-14 09:41:44 1 ports available
+[Node 8] 2023-10-14 09:41:44 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:41:49 1 ports available
+[Node 8] 2023-10-14 09:41:49 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:41:55 1 ports available
+[Node 8] 2023-10-14 09:41:55 available neighbour nodes: [left node 7 (1 ports)], neighbours_availability: 1
+[Node 8] 2023-10-14 09:42:00 1 ports available
+[Node 8] 2023-10-14 09:42:00 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:42:05 0 ports available
+[Node 8] 2023-10-14 09:42:05 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:42:10 1 ports available
+[Node 8] 2023-10-14 09:42:10 available neighbour nodes: [left node 7 (2 ports)], neighbours_availability: 1
+[Node 8] 2023-10-14 09:42:15 1 ports available
+[Node 8] 2023-10-14 09:42:15 available neighbour nodes: [top node 5 (1 ports), left node 7 (2 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:42:20 1 ports available
+[Node 8] 2023-10-14 09:42:20 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:42:26 1 ports available
+[Node 8] 2023-10-14 09:42:26 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:42:31 2 ports available
+[Node 8] 2023-10-14 09:42:31 available neighbour nodes: [top node 5 (2 ports), left node 7 (1 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:42:36 2 ports available
+[Node 8] 2023-10-14 09:42:36 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:42:41 2 ports available
+[Node 8] 2023-10-14 09:42:41 available neighbour nodes: [], neighbours_availability: 0
+[Node 8] 2023-10-14 09:45:15 1 ports available
+[Node 8] 2023-10-14 09:45:15 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:45:20 0 ports available
+[Node 8] 2023-10-14 09:45:20 available neighbour nodes: [], neighbours_availability: 0
+[Node 8] ALERT MESSAGE = { timestamp: 2023-10-14 09:45:20, reporting node: 8 (2, 2), neighbouring nodes: [node 5 (1, 2), node 7 (2, 1)], num_neighbours: 2 }
+[Node 8] sending alert message to base station
+[Node 8] sent alert message to base station
+[Node 8] receiving available nodes from base station
+[Node 8] REPORT MESSAGE: { timestamp: 2023-10-14 09:45:23, no. of available nearby nodes: 2, nearby nodes: [node 4, node 6] }
+[Node 8] 2023-10-14 09:45:28 1 ports available
+[Node 8] 2023-10-14 09:45:28 available neighbour nodes: [], neighbours_availability: 0
+[Node 8] 2023-10-14 09:45:33 1 ports available
+[Node 8] 2023-10-14 09:45:33 available neighbour nodes: [], neighbours_availability: 0
+[Node 8] 2023-10-14 09:45:38 0 ports available
+[Node 8] 2023-10-14 09:45:38 available neighbour nodes: [top node 5 (1 ports)], neighbours_availability: 1
+[Node 8] 2023-10-14 09:45:43 1 ports available
+[Node 8] 2023-10-14 09:45:43 available neighbour nodes: [], neighbours_availability: 0
+[Node 8] 2023-10-14 09:45:51 0 ports available
+[Node 8] 2023-10-14 09:45:51 available neighbour nodes: [left node 7 (1 ports)], neighbours_availability: 1
+[Node 8] 2023-10-14 09:45:56 1 ports available
+[Node 8] 2023-10-14 09:45:56 available neighbour nodes: [top node 5 (1 ports)], neighbours_availability: 1
+[Node 8] 2023-10-14 09:46:05 1 ports available
+[Node 8] 2023-10-14 09:46:05 available neighbour nodes: [left node 7 (1 ports)], neighbours_availability: 1
+[Node 8] 2023-10-14 09:46:11 0 ports available
+[Node 8] 2023-10-14 09:46:11 available neighbour nodes: [left node 7 (1 ports)], neighbours_availability: 1
+[Node 8] 2023-10-14 09:46:16 1 ports available
+[Node 8] 2023-10-14 09:46:16 available neighbour nodes: [], neighbours_availability: 0
+[Node 8] 2023-10-14 09:46:21 1 ports available
+[Node 8] 2023-10-14 09:46:21 available neighbour nodes: [], neighbours_availability: 0
+[Node 8] 2023-10-14 09:46:26 0 ports available
+[Node 8] 2023-10-14 09:46:26 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)], neighbours_availability: 2
+[Node 8] 2023-10-14 09:46:31 1 ports available
+[Node 8] 2023-10-14 09:46:31 available neighbour nodes: [left node 7 (1 ports)], neighbours_availability: 1
+[Node 8] 2023-10-14 09:46:41 0 ports available
+[Node 8] 2023-10-14 09:46:41 available neighbour nodes: [top node 5 (1 ports), left node 7 (1 ports)], neighbours_availability: 2
