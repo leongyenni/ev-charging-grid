@@ -13,6 +13,7 @@ struct BaseStation
   int grid_size;
   float listen_frequency_s;
   int *node_availabilities;
+  int *nearby_availabilities;
   struct AlertMessage *alert_messages;
   int num_alert_messages;
   FILE *log_file_handler; // TODO

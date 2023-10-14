@@ -14,8 +14,8 @@ time_t lastResetTime = 0;
 int get_world_rank(int i);
 int get_index(int world_rank);
 int write_to_logs(struct BaseStation *base_station, struct Log *log);
-void resetNodeAvailabilities(struct BaseStation *base_station);
-void checkResetTimer(struct BaseStation *base_station);
+void reset_availabilities(struct BaseStation *base_station);
+void reset_timer(struct BaseStation *base_station);
 void add_to_available_nodes(struct AvailableNodes *available_nodes, int node);
 void get_nearby_nodes(struct BaseStation *base_station, int x_row, int y_col, struct AvailableNodes *available_nodes);
 
@@ -24,7 +24,7 @@ void log_base_station_event(struct BaseStation *base_station, const char *messag
     printf("[Base Station] %s\n", message);
     FILE *f;
     f = fopen("logs_base_station.txt", "a");
-    fprintf(f, "[Base Station] %s\n", message); 
+    fprintf(f, "[Base Station] %s\n", message);
     fclose(f);
 }
 
@@ -37,9 +37,11 @@ struct BaseStation *new_base_station(MPI_Comm world_comm, int grid_size, float l
     base_station->grid_size = grid_size;
 
     base_station->node_availabilities = malloc(sizeof(int) * base_station->grid_size);
+    base_station->nearby_availabilities = malloc(sizeof(int) * base_station->grid_size);
     for (int i = 0; i < base_station->grid_size; i++)
     {
         base_station->node_availabilities[i] = 1;
+        base_station->nearby_availabilities[i] = 1;
     }
 
     base_station->alert_messages = malloc(sizeof(struct AlertMessage) * base_station->grid_size);
@@ -61,7 +63,7 @@ void start_base_station(struct BaseStation *base_station)
         num_iter++;
         receive_alert_message(base_station);
         send_report_messages(base_station);
-        checkResetTimer(base_station);
+        reset_timer(base_station);
         sleep(8);
     }
 
@@ -87,11 +89,12 @@ void close_base_station(struct BaseStation *base_station)
     }
 
     MPI_Waitall(base_station->grid_size, send_request, send_status);
-    
+
     get_timestamp(currentTimestamp);
     printf("[Base Station] %s sent termination messages to charging grid \n", currentTimestamp);
 
     free(base_station->node_availabilities);
+    free(base_station->nearby_availabilities);
     free(base_station->alert_messages);
     free(base_station);
 }
@@ -174,6 +177,12 @@ void process_alert_message(struct BaseStation *base_station, int source_rank, MP
 
     base_station->alert_messages[base_station->num_alert_messages] = alert_message;
     base_station->node_availabilities[alert_message.reporting_node] = 0;
+    base_station->nearby_availabilities[alert_message.reporting_node] = 0;
+
+    for (int i = 0; i < num_neighbours; i++) {
+        base_station->nearby_availabilities[alert_message.neighbouring_nodes[i]] = 0;
+    }
+
     base_station->num_alert_messages++;
 
     get_timestamp(currentTimestamp);
@@ -184,10 +193,10 @@ void send_report_messages(struct BaseStation *base_station)
 {
     MPI_Request report_request[base_station->num_alert_messages];
     MPI_Status report_status[base_station->num_alert_messages];
-       
+
     char reporting_node_buf[500];
     sprintf(reporting_node_buf, "Reporting node: [");
-    
+
     int first_entry = 1;
     for (int i = 0; i < base_station->num_alert_messages; i++)
     {
@@ -275,13 +284,14 @@ void get_nearby_nodes(struct BaseStation *base_station, int x_row, int y_col, st
     int right_rank = (x_row + 1) * n + (y_col);
     int left_rank = (x_row - 1) * n + (y_col);
 
-    int neighbour_nodes[MAX_NUM_NEIGHBOURS] = {top_rank, bottom_rank, left_rank, right_rank};
+    int nearby_nodes[MAX_NUM_NEIGHBOURS] = {top_rank, bottom_rank, left_rank, right_rank};
 
     for (int i = 0; i < MAX_NUM_NEIGHBOURS; i++)
     {
-        if (neighbour_nodes[i] >= 0 && neighbour_nodes[i] < base_station->grid_size && base_station->node_availabilities[neighbour_nodes[i]] == 1)
+        if (nearby_nodes[i] >= 0 && nearby_nodes[i] < base_station->grid_size && base_station->node_availabilities[nearby_nodes[i]] == 1 && base_station->nearby_availabilities[nearby_nodes[i]] == 1)
         {
-            add_to_available_nodes(available_nodes, neighbour_nodes[i]);
+            // nearby node not in reporting node neighbour
+            add_to_available_nodes(available_nodes, nearby_nodes[i]);
         }
     }
 }
@@ -307,21 +317,22 @@ void add_to_available_nodes(struct AvailableNodes *available_nodes, int node)
     }
 }
 
-void resetNodeAvailabilities(struct BaseStation *base_station)
+void reset_availabilities(struct BaseStation *base_station)
 {
     for (int i = 0; i < base_station->grid_size; i++)
     {
         base_station->node_availabilities[i] = 1;
+        base_station->nearby_availabilities[i] = 1;
     }
 }
 
-void checkResetTimer(struct BaseStation *base_station)
+void reset_timer(struct BaseStation *base_station)
 {
     time_t currentTime = time(NULL);
 
     if (currentTime - lastResetTime >= RESET_INTERVAL_S)
     {
-        resetNodeAvailabilities(base_station);
+        reset_availabilities(base_station);
         lastResetTime = currentTime;
 
         char reset_message_buf[1000];
