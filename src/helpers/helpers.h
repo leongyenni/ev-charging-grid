@@ -11,7 +11,7 @@
 #define CYCLE_INTERVAL_S 5
 #define RESET_INTERVAL_S 10
 
-#define ITERATION 5
+#define ITERATION 20
 
 #define DEFAULT_ROW 3
 #define DEFAULT_COL 3
@@ -46,7 +46,7 @@ struct AvailableNodes
 {
     char timestamp[TIMESTAMP_LEN];
     int size;
-    int *nodes;
+    int nodes[MAX_NUM_NEIGHBOURS*MAX_NUM_NEIGHBOURS];
 };
 
 void define_mpi_alert_message(MPI_Datatype *MPI_ALERT_MESSAGE);

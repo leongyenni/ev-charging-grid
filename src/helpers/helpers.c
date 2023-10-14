@@ -30,7 +30,7 @@ void define_mpi_alert_message(MPI_Datatype *CUSTOM_MPI_ALERT_MESSAGE)
 void define_mpi_available_nodes(MPI_Datatype *CUSTOM_MPI_AVAILABLE_NODES)
 {
 	const int fields = 3;
-	int blocklengths[3] = {TIMESTAMP_LEN, 1, 1};
+	int blocklengths[3] = {TIMESTAMP_LEN, 1, MAX_NUM_NEIGHBOURS*MAX_NUM_NEIGHBOURS};
 
 	MPI_Datatype types[3] = {MPI_CHAR, MPI_INT, MPI_INT};
 	MPI_Aint offsets[3];

@@ -170,17 +170,17 @@ void start_base_station(struct BaseStation *base_station)
             get_timestamp(currentTimestamp);
 
             printf("[Base Station] timestamp %s\n", currentTimestamp);
-            printf("node %d\n", base_station->alert_messages[i].reporting_node);
+            //printf("node %d\n", base_station->alert_messages[i].reporting_node);
 
             int num_neighbours = base_station->alert_messages[i].num_neighbours;
             int max_nearby_nodes = num_neighbours * 4;
 
-            printf("num neighbours %d\n", num_neighbours);
+            //printf("num neighbours %d\n", num_neighbours);
 
             struct AvailableNodes available_nodes;
             strcpy(available_nodes.timestamp, currentTimestamp);
             available_nodes.size = 0;
-            available_nodes.nodes = (int *)malloc(max_nearby_nodes * sizeof(int));
+            available_nodes.nodes[MAX_NUM_NEIGHBOURS*MAX_NUM_NEIGHBOURS];
 
             for (int j = 0; j < num_neighbours; j++)
             {
@@ -196,11 +196,13 @@ void start_base_station(struct BaseStation *base_station)
                     printf("%d, %d\n", row, col);
 
                     get_neighbours(base_station, row, col, &available_nodes);
+
+                    printf("memory of array %d\n",&available_nodes.nodes[i]);
                 }
             }
             char received_message_buf[5000];
-            sprintf(received_message_buf, "REPORT MESSAGE: { timestamp: %s, node size: %d, available nearby nodes: [ ",
-                    available_nodes.timestamp, available_nodes.size);
+            sprintf(received_message_buf, "REPORTING NODE %d: REPORT MESSAGE: { timestamp: %s, node size: %d, available nearby nodes: [ ",
+                    base_station->alert_messages[i].reporting_node + 1, available_nodes.timestamp, available_nodes.size);
 
             int first_entry = 1;
             for (int i = 0; i < available_nodes.size; i++)
@@ -224,9 +226,6 @@ void start_base_station(struct BaseStation *base_station)
             strcat(received_message_buf, "]} ");
             log_base_station_event(base_station, received_message_buf);
 
-            printf("reporting to node %d\n", base_station->alert_messages[i].reporting_node + 1);
-
-
             MPI_Isend(&available_nodes, 1, MPI_AVAILABLE_NODES, base_station->alert_messages[i].reporting_node + 1, REPORT_TAG, base_station->world_comm, &report_request[i]);
 
             // log_base_station_event(base_station, received_message_buf);
@@ -236,28 +235,14 @@ void start_base_station(struct BaseStation *base_station)
 
         MPI_Waitall(num_alert_messages, report_request, report_status);
 
-        for (int i = 0; i < num_alert_messages; i++)
-        {
-            int error_code = report_status[i].MPI_ERROR;
-
-            if (error_code == MPI_SUCCESS)
-            {
-                // The request was completed successfully
-                printf("Request %d completed successfully\n", i);
-            }
-            else
-            {
-                // Handle the case where the request had an error
-                printf("Request %d encountered an error with code %d\n", i, error_code);
-            }
-        }
-
         log_base_station_event(base_station, "sent report messages to all nodes \n");
 
         checkResetTimer(base_station);
         //resetNodeAvailabilities(base_station);
 
-         sleep(3);
+         sleep(5
+         
+         );
     }
 
     MPI_Type_free(&MPI_ALERT_MESSAGE);

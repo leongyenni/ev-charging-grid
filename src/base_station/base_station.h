@@ -10,13 +10,12 @@
 struct BaseStation
 {
   MPI_Comm world_comm;
-  // MPI_Comm grid_comm_cart; // read-only
   int grid_size;
   float listen_frequency_s;
-  pthread_t base_station_t;
   int *node_availabilities;
   struct AlertMessage *alert_messages;
-  FILE *log_file_handler;
+  FILE *log_file_handler; // TODO
+  pthread_t base_station_t; // TODO
 };
 
 // function to create new base station

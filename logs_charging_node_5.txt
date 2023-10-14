@@ -1485,3 +1485,718 @@
 [Node 5] receiving available nodes from base station
 [Node 5] REPORT MESSAGE: { timestamp: 2023-10-13 17:16:16, node 0, available nearby nodes: [ ]} 
 [Node 5] received available nodes from base station
+[Node 5] 2023-10-13 17:19:11 2 ports available
+[Node 5] 2023-10-13 17:19:11 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 17:19:16 0 ports available
+[Node 5] 2023-10-13 17:19:16 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 17:19:16, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 17:20:51 2 ports available
+[Node 5] 2023-10-13 17:20:51 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (1 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 17:20:56 0 ports available
+[Node 5] 2023-10-13 17:20:56 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 17:20:56, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 17:22:31 2 ports available
+[Node 5] 2023-10-13 17:22:31 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (1 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 17:22:36 0 ports available
+[Node 5] 2023-10-13 17:22:36 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 17:22:36, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 17:23:24 1 ports available
+[Node 5] 2023-10-13 17:23:24 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 17:23:29 0 ports available
+[Node 5] 2023-10-13 17:23:29 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 17:23:29, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] REPORT MESSAGE: { timestamp: 2023-10-13 17:23:30, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 5] 2023-10-13 17:24:34 2 ports available
+[Node 5] 2023-10-13 17:24:34 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 17:24:39 0 ports available
+[Node 5] 2023-10-13 17:24:39 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 17:24:39, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 17:25:49 2 ports available
+[Node 5] 2023-10-13 17:25:49 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 17:25:55 0 ports available
+[Node 5] 2023-10-13 17:25:55 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 17:25:55, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 17:26:11 1 ports available
+[Node 5] 2023-10-13 17:26:11 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 17:26:16 0 ports available
+[Node 5] 2023-10-13 17:26:16 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 17:26:16, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] REPORT MESSAGE: { timestamp: 2023-10-13 17:26:18, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 5] 2023-10-13 18:12:47 2 ports available
+[Node 5] 2023-10-13 18:12:47 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:12:52 0 ports available
+[Node 5] 2023-10-13 18:12:52 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:12:52, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:17:27 2 ports available
+[Node 5] 2023-10-13 18:17:27 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (1 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:17:32 0 ports available
+[Node 5] 2023-10-13 18:17:32 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:17:32, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:33:01 1 ports available
+[Node 5] 2023-10-13 18:33:01 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:33:06 0 ports available
+[Node 5] 2023-10-13 18:33:06 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:33:06, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:34:01 1 ports available
+[Node 5] 2023-10-13 18:34:01 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:34:07 0 ports available
+[Node 5] 2023-10-13 18:34:07 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:34:07, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:34:13 0 ports available
+[Node 5] 2023-10-13 18:34:13 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:34:13, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:34:19 2 ports available
+[Node 5] 2023-10-13 18:34:19 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:34:25 0 ports available
+[Node 5] 2023-10-13 18:34:25 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:34:25, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:34:51 1 ports available
+[Node 5] 2023-10-13 18:34:51 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:34:56 0 ports available
+[Node 5] 2023-10-13 18:34:56 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:34:56, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:35:02 0 ports available
+[Node 5] 2023-10-13 18:35:02 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:35:02, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:35:09 2 ports available
+[Node 5] 2023-10-13 18:35:09 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:35:14 0 ports available
+[Node 5] 2023-10-13 18:35:14 available neighbour nodes: [top node 3 (1 ports), left node 4 (1 ports)]
+[Node 5] Node 5 top_availability: 1, bottom_availability: 0, left_availability: 1, right_availability: 6797
+[Node 5] 2023-10-13 18:35:23 1 ports available
+[Node 5] 2023-10-13 18:35:23 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:35:31 1 ports available
+[Node 5] 2023-10-13 18:35:31 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:35:36 2 ports available
+[Node 5] 2023-10-13 18:35:36 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:35:41 1 ports available
+[Node 5] 2023-10-13 18:35:41 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:35:46 0 ports available
+[Node 5] 2023-10-13 18:35:46 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:35:46, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:35:53 2 ports available
+[Node 5] 2023-10-13 18:35:53 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:35:58 1 ports available
+[Node 5] 2023-10-13 18:35:58 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:37:03 1 ports available
+[Node 5] 2023-10-13 18:37:03 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (1 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:37:08 0 ports available
+[Node 5] 2023-10-13 18:37:08 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:37:08, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] REPORT MESSAGE: { timestamp: 2023-10-13 18:37:10, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 5] 2023-10-13 18:37:23 2 ports available
+[Node 5] 2023-10-13 18:37:23 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:37:29 0 ports available
+[Node 5] 2023-10-13 18:37:29 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:37:29, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:38:22 2 ports available
+[Node 5] 2023-10-13 18:38:22 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:38:27 0 ports available
+[Node 5] 2023-10-13 18:38:27 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:38:27, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:38:54 2 ports available
+[Node 5] 2023-10-13 18:38:54 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (2 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:38:59 0 ports available
+[Node 5] 2023-10-13 18:38:59 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:38:59, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:39:51 2 ports available
+[Node 5] 2023-10-13 18:39:51 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:39:56 0 ports available
+[Node 5] 2023-10-13 18:39:56 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:39:56, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:40:44 2 ports available
+[Node 5] 2023-10-13 18:40:44 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:40:49 0 ports available
+[Node 5] 2023-10-13 18:40:49 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:40:49, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:40:59 2 ports available
+[Node 5] 2023-10-13 18:40:59 available neighbour nodes: [top node 3 (2 ports)]
+[Node 5] 2023-10-13 18:41:04 0 ports available
+[Node 5] 2023-10-13 18:41:04 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:41:04, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] 2023-10-13 18:41:22 2 ports available
+[Node 5] 2023-10-13 18:41:22 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:41:28 0 ports available
+[Node 5] 2023-10-13 18:41:28 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:41:28, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:41:33 0 ports available
+[Node 5] 2023-10-13 18:41:33 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:41:33, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:41:38 2 ports available
+[Node 5] 2023-10-13 18:41:38 available neighbour nodes: []
+[Node 5] 2023-10-13 18:41:48 1 ports available
+[Node 5] 2023-10-13 18:41:48 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:41:53 1 ports available
+[Node 5] 2023-10-13 18:41:53 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:41:58 1 ports available
+[Node 5] 2023-10-13 18:41:58 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:42:03 2 ports available
+[Node 5] 2023-10-13 18:42:03 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:42:08 2 ports available
+[Node 5] 2023-10-13 18:42:08 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:42:13 1 ports available
+[Node 5] 2023-10-13 18:42:13 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:42:18 0 ports available
+[Node 5] 2023-10-13 18:42:18 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:42:18, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:42:24 2 ports available
+[Node 5] 2023-10-13 18:42:24 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (1 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:42:34 0 ports available
+[Node 5] 2023-10-13 18:42:34 available neighbour nodes: [top node 3 (1 ports), left node 4 (1 ports)]
+[Node 5] Node 5 top_availability: 1, bottom_availability: 0, left_availability: 1, right_availability: 4096
+[Node 5] 2023-10-13 18:42:39 1 ports available
+[Node 5] 2023-10-13 18:42:39 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:42:44 2 ports available
+[Node 5] 2023-10-13 18:42:44 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:42:49 0 ports available
+[Node 5] 2023-10-13 18:42:49 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:42:49, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:42:55 1 ports available
+[Node 5] 2023-10-13 18:42:55 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:43:00 1 ports available
+[Node 5] 2023-10-13 18:43:00 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:43:05 0 ports available
+[Node 5] 2023-10-13 18:43:05 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:43:05, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:46:42 2 ports available
+[Node 5] 2023-10-13 18:46:42 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:46:47 0 ports available
+[Node 5] 2023-10-13 18:46:47 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:46:47, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:46:55 0 ports available
+[Node 5] 2023-10-13 18:46:55 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:46:55, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:47:03 0 ports available
+[Node 5] 2023-10-13 18:47:03 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:47:03, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:47:12 1 ports available
+[Node 5] 2023-10-13 18:47:12 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:47:17 1 ports available
+[Node 5] 2023-10-13 18:47:17 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:47:24 2 ports available
+[Node 5] 2023-10-13 18:47:24 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:47:29 2 ports available
+[Node 5] 2023-10-13 18:47:29 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:47:34 1 ports available
+[Node 5] 2023-10-13 18:47:34 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:47:39 0 ports available
+[Node 5] 2023-10-13 18:47:39 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:47:39, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:47:49 1 ports available
+[Node 5] 2023-10-13 18:47:49 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:47:54 0 ports available
+[Node 5] 2023-10-13 18:47:54 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:47:54, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:48:01 1 ports available
+[Node 5] 2023-10-13 18:48:01 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:48:06 2 ports available
+[Node 5] 2023-10-13 18:48:06 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:50:32 2 ports available
+[Node 5] 2023-10-13 18:50:32 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:50:37 0 ports available
+[Node 5] 2023-10-13 18:50:37 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:50:37, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:51:05 2 ports available
+[Node 5] 2023-10-13 18:51:05 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (1 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:51:10 0 ports available
+[Node 5] 2023-10-13 18:51:10 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:51:10, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:51:51 2 ports available
+[Node 5] 2023-10-13 18:51:51 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:51:56 0 ports available
+[Node 5] 2023-10-13 18:51:56 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:51:56, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:52:30 2 ports available
+[Node 5] 2023-10-13 18:52:30 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:52:35 0 ports available
+[Node 5] 2023-10-13 18:52:35 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:52:35, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:52:41 0 ports available
+[Node 5] 2023-10-13 18:52:41 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:52:41, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:52:48 2 ports available
+[Node 5] 2023-10-13 18:52:48 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:52:53 0 ports available
+[Node 5] 2023-10-13 18:52:53 available neighbour nodes: [top node 3 (1 ports), left node 4 (1 ports)]
+[Node 5] Node 5 top_availability: 1, bottom_availability: 0, left_availability: 1, right_availability: 4096
+[Node 5] 2023-10-13 18:53:01 1 ports available
+[Node 5] 2023-10-13 18:53:01 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:53:09 1 ports available
+[Node 5] 2023-10-13 18:53:09 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (1 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:53:19 2 ports available
+[Node 5] 2023-10-13 18:53:19 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:53:24 1 ports available
+[Node 5] 2023-10-13 18:53:24 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:53:29 0 ports available
+[Node 5] 2023-10-13 18:53:29 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:53:29, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:53:35 2 ports available
+[Node 5] 2023-10-13 18:53:35 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:54:02 2 ports available
+[Node 5] 2023-10-13 18:54:02 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:54:07 0 ports available
+[Node 5] 2023-10-13 18:54:07 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:54:07, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:54:41 1 ports available
+[Node 5] 2023-10-13 18:54:41 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:54:46 0 ports available
+[Node 5] 2023-10-13 18:54:46 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:54:46, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:55:01 2 ports available
+[Node 5] 2023-10-13 18:55:01 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:55:06 0 ports available
+[Node 5] 2023-10-13 18:55:06 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:55:06, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:55:37 2 ports available
+[Node 5] 2023-10-13 18:55:37 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:55:42 0 ports available
+[Node 5] 2023-10-13 18:55:42 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:55:42, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:56:14 2 ports available
+[Node 5] 2023-10-13 18:56:14 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:56:19 0 ports available
+[Node 5] 2023-10-13 18:56:19 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:56:19, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:56:27 2 ports available
+[Node 5] 2023-10-13 18:56:27 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:56:32 0 ports available
+[Node 5] 2023-10-13 18:56:32 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:56:32, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:56:38 0 ports available
+[Node 5] 2023-10-13 18:56:38 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:56:38, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:56:45 2 ports available
+[Node 5] 2023-10-13 18:56:45 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 18:56:50 0 ports available
+[Node 5] 2023-10-13 18:56:50 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 18:56:50, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 18:56:57 1 ports available
+[Node 5] 2023-10-13 18:56:57 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:57:04 1 ports available
+[Node 5] 2023-10-13 18:57:04 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 18:57:09 2 ports available
+[Node 5] 2023-10-13 18:57:09 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 19:04:28 2 ports available
+[Node 5] 2023-10-13 19:04:28 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 19:04:33 0 ports available
+[Node 5] 2023-10-13 19:04:33 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 19:04:33, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 19:04:39 0 ports available
+[Node 5] 2023-10-13 19:04:39 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 19:04:39, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 19:04:46 2 ports available
+[Node 5] 2023-10-13 19:04:46 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 19:04:51 0 ports available
+[Node 5] 2023-10-13 19:04:51 available neighbour nodes: [top node 3 (1 ports)]
+[Node 5] Node 5 top_availability: 1, bottom_availability: 0, left_availability: 0, right_availability: 4096
+[Node 5] 2023-10-13 19:04:58 1 ports available
+[Node 5] 2023-10-13 19:04:58 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 19:05:05 1 ports available
+[Node 5] 2023-10-13 19:05:05 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 19:05:10 2 ports available
+[Node 5] 2023-10-13 19:05:10 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 19:05:50 2 ports available
+[Node 5] 2023-10-13 19:05:50 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 19:05:55 0 ports available
+[Node 5] 2023-10-13 19:05:55 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 19:05:55, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 19:07:15 1 ports available
+[Node 5] 2023-10-13 19:07:15 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 19:07:20 0 ports available
+[Node 5] 2023-10-13 19:07:20 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 19:07:20, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 19:08:18 2 ports available
+[Node 5] 2023-10-13 19:08:18 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 19:08:23 0 ports available
+[Node 5] 2023-10-13 19:08:23 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 19:08:23, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 19:09:26 2 ports available
+[Node 5] 2023-10-13 19:09:26 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (1 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 19:09:31 0 ports available
+[Node 5] 2023-10-13 19:09:31 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 19:09:31, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 19:10:57 2 ports available
+[Node 5] 2023-10-13 19:10:57 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 19:11:02 0 ports available
+[Node 5] 2023-10-13 19:11:02 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 19:11:02, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 19:11:51 2 ports available
+[Node 5] 2023-10-13 19:11:51 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 19:11:56 0 ports available
+[Node 5] 2023-10-13 19:11:56 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 19:11:56, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 19:12:03 0 ports available
+[Node 5] 2023-10-13 19:12:03 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 19:12:03, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 19:12:09 2 ports available
+[Node 5] 2023-10-13 19:12:09 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 19:12:14 0 ports available
+[Node 5] 2023-10-13 19:12:14 available neighbour nodes: [top node 3 (1 ports), left node 4 (1 ports)]
+[Node 5] Node 5 top_availability: 1, bottom_availability: 0, left_availability: 1, right_availability: 4096
+[Node 5] 2023-10-13 19:12:22 1 ports available
+[Node 5] 2023-10-13 19:12:22 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 19:12:31 1 ports available
+[Node 5] 2023-10-13 19:12:31 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 19:12:36 2 ports available
+[Node 5] 2023-10-13 19:12:36 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 19:17:17 2 ports available
+[Node 5] 2023-10-13 19:17:17 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 19:17:40 2 ports available
+[Node 5] 2023-10-13 19:17:40 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-13 19:17:45 0 ports available
+[Node 5] 2023-10-13 19:17:45 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 19:17:45, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-13 20:20:12 1 ports available
+[Node 5] 2023-10-13 20:20:12 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-13 20:20:17 0 ports available
+[Node 5] 2023-10-13 20:20:17 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-13 20:20:17, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 00:54:39 1 ports available
+[Node 5] 2023-10-14 00:54:39 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 00:54:45 0 ports available
+[Node 5] 2023-10-14 00:54:45 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 00:54:45, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 00:55:37 1 ports available
+[Node 5] 2023-10-14 00:55:37 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 00:55:42 0 ports available
+[Node 5] 2023-10-14 00:55:42 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 00:55:42, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 00:59:18 2 ports available
+[Node 5] 2023-10-14 00:59:18 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 00:59:23 0 ports available
+[Node 5] 2023-10-14 00:59:23 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 00:59:23, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:00:34 2 ports available
+[Node 5] 2023-10-14 01:00:34 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:00:40 0 ports available
+[Node 5] 2023-10-14 01:00:40 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:00:40, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:24:28 1 ports available
+[Node 5] 2023-10-14 01:24:28 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-14 01:24:33 0 ports available
+[Node 5] 2023-10-14 01:24:33 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:24:33, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:25:07 2 ports available
+[Node 5] 2023-10-14 01:25:07 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:25:12 0 ports available
+[Node 5] 2023-10-14 01:25:12 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:25:12, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:26:11 1 ports available
+[Node 5] 2023-10-14 01:26:11 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:26:16 0 ports available
+[Node 5] 2023-10-14 01:26:16 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:26:16, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:26:52 2 ports available
+[Node 5] 2023-10-14 01:26:52 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:26:57 0 ports available
+[Node 5] 2023-10-14 01:26:57 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:26:57, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:36:59 2 ports available
+[Node 5] 2023-10-14 01:36:59 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-14 01:37:04 0 ports available
+[Node 5] 2023-10-14 01:37:04 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:37:04, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:38:34 2 ports available
+[Node 5] 2023-10-14 01:38:34 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:38:39 0 ports available
+[Node 5] 2023-10-14 01:38:39 available neighbour nodes: [bottom node 7 (1 ports)]
+[Node 5] Node 5 top_availability: 0, bottom_availability: 1, left_availability: 0, right_availability: 4096
+[Node 5] 2023-10-14 01:41:06 2 ports available
+[Node 5] 2023-10-14 01:41:06 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:41:11 0 ports available
+[Node 5] 2023-10-14 01:41:11 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:41:11, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:53:10 2 ports available
+[Node 5] 2023-10-14 01:53:10 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:53:15 0 ports available
+[Node 5] 2023-10-14 01:53:15 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:53:15, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:55:22 2 ports available
+[Node 5] 2023-10-14 01:55:22 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:55:28 0 ports available
+[Node 5] 2023-10-14 01:55:28 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:55:28, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:55:34 0 ports available
+[Node 5] 2023-10-14 01:55:34 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:55:34, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:55:40 2 ports available
+[Node 5] 2023-10-14 01:55:40 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:55:45 0 ports available
+[Node 5] 2023-10-14 01:55:45 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:55:45, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:55:53 1 ports available
+[Node 5] 2023-10-14 01:55:53 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-14 01:55:59 1 ports available
+[Node 5] 2023-10-14 01:55:59 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-14 01:56:04 2 ports available
+[Node 5] 2023-10-14 01:56:04 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:57:32 2 ports available
+[Node 5] 2023-10-14 01:57:32 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:57:37 0 ports available
+[Node 5] 2023-10-14 01:57:37 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:57:37, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:57:43 0 ports available
+[Node 5] 2023-10-14 01:57:43 available neighbour nodes: [top node 3 (2 ports)]
+[Node 5] Node 5 top_availability: 2, bottom_availability: 0, left_availability: 0, right_availability: 35
+[Node 5] 2023-10-14 01:57:52 0 ports available
+[Node 5] 2023-10-14 01:57:52 available neighbour nodes: [bottom node 7 (2 ports)]
+[Node 5] Node 5 top_availability: 0, bottom_availability: 2, left_availability: 0, right_availability: 35
+[Node 5] 2023-10-14 01:57:58 1 ports available
+[Node 5] 2023-10-14 01:57:58 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-14 01:58:03 1 ports available
+[Node 5] 2023-10-14 01:58:03 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-14 01:58:08 1 ports available
+[Node 5] 2023-10-14 01:58:08 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-14 01:58:13 2 ports available
+[Node 5] 2023-10-14 01:58:13 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:58:18 2 ports available
+[Node 5] 2023-10-14 01:58:18 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:58:23 1 ports available
+[Node 5] 2023-10-14 01:58:23 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-14 01:58:28 0 ports available
+[Node 5] 2023-10-14 01:58:28 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:58:28, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:58:34 2 ports available
+[Node 5] 2023-10-14 01:58:34 available neighbour nodes: [top node 3 (2 ports), bottom node 7 (2 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:58:39 1 ports available
+[Node 5] 2023-10-14 01:58:39 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-14 01:58:44 0 ports available
+[Node 5] 2023-10-14 01:58:44 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:58:44, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] 2023-10-14 01:58:49 1 ports available
+[Node 5] 2023-10-14 01:58:49 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (2 ports)]
+[Node 5] 2023-10-14 01:58:59 0 ports available
+[Node 5] 2023-10-14 01:58:59 available neighbour nodes: [top node 3 (2 ports)]
+[Node 5] Node 5 top_availability: 2, bottom_availability: 0, left_availability: 0, right_availability: 35
+[Node 5] 2023-10-14 01:59:04 1 ports available
+[Node 5] 2023-10-14 01:59:04 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-14 01:59:10 1 ports available
+[Node 5] 2023-10-14 01:59:10 available neighbour nodes: [top node 3 (1 ports), bottom node 7 (1 ports), left node 4 (1 ports)]
+[Node 5] 2023-10-14 01:59:15 0 ports available
+[Node 5] 2023-10-14 01:59:15 available neighbour nodes: []
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-14 01:59:15, reporting node: 5 (2, 1), neighbouring nodes: [node 3 (1, 1), node 7 (3, 1), node 4 (2, 0)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
