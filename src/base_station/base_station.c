@@ -67,8 +67,6 @@ void start_base_station(struct BaseStation *base_station)
     {
 
         num_iter += 1;
-        checkResetTimer(base_station);
-
         char currentTimestamp[TIMESTAMP_LEN];
         int num_alert_messages = 0;
         base_station->alert_messages = malloc(sizeof(struct AlertMessage) * base_station->grid_size);
@@ -161,8 +159,20 @@ void start_base_station(struct BaseStation *base_station)
             printf("[Base Station] AFTER node %d \n", base_station->alert_messages[i].reporting_node);
         }
 
+        char reporting_node_buf[500];
+        sprintf(reporting_node_buf, "Reporting node: [ ");
+        int first_entry = 1;
         for (int i = 0; i < num_alert_messages; i++)
         {
+            char node_buf[100];
+            if (!first_entry) {
+                strcat(node_buf, ", ");
+            } else {
+                first_entry = 0;
+            }
+            sprintf(node_buf, "Node %d", base_station->alert_messages[i].reporting_node);
+            strcat(reporting_node_buf, node_buf);
+
             get_timestamp(currentTimestamp);
 
             printf("[Base Station] timestamp %s\n", currentTimestamp);
@@ -192,9 +202,11 @@ void start_base_station(struct BaseStation *base_station)
                     get_neighbours(base_station, row, col, &available_nodes);
                 }
             }
+
+
             char received_message_buf[5000];
             sprintf(received_message_buf, "REPORTING NODE %d: REPORT MESSAGE: { timestamp: %s, node size: %d, available nearby nodes: [ ",
-                    base_station->alert_messages[i].reporting_node + 1, available_nodes.timestamp, available_nodes.size);
+                    base_station->alert_messages[i].reporting_node, available_nodes.timestamp, available_nodes.size);
 
             int first_entry = 1;
             for (int i = 0; i < available_nodes.size; i++)
@@ -216,7 +228,6 @@ void start_base_station(struct BaseStation *base_station)
             }
 
             strcat(received_message_buf, "]} ");
-            log_base_station_event(base_station, received_message_buf);
 
             MPI_Isend(&available_nodes, 1, MPI_AVAILABLE_NODES, base_station->alert_messages[i].reporting_node + 1, REPORT_TAG, base_station->world_comm, &report_request[i]);
 
@@ -225,11 +236,15 @@ void start_base_station(struct BaseStation *base_station)
             //  free(available_nodes);
         }
 
+        strcat(reporting_node_buf, "]");
+        log_base_station_event(base_station, reporting_node_buf);
+
         MPI_Waitall(num_alert_messages, report_request, report_status);
 
         log_base_station_event(base_station, "sent report messages to all nodes \n");
 
-        sleep(3);
+        checkResetTimer(base_station);
+        sleep(8);
     }
 
     MPI_Type_free(&MPI_ALERT_MESSAGE);

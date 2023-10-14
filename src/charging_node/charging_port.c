@@ -27,7 +27,8 @@ void start_charging_port(struct ChargingPort *port)
   while (port->sig_term)
   {
     int r = rand_r(&port->seed);
-    port->is_available = (r % 2 == 0);
+    port->is_available = (r % 10 == 0);
+    // port->is_available = rand_bool();
     sleep(port->parent_node->cycle_interval);
   }
 

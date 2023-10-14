@@ -117,15 +117,6 @@ void start_charging_node(struct ChargingNode *node)
 
     while (sig_term)
     {
-        MPI_Iprobe(BASE_STATION_RANK, TERMINATION_TAG, node->world_comm, &has_alert, &probe_status);
-        if (has_alert == 1)
-        {
-            printf("receiving termination messages from base station\n");
-            MPI_Recv(&sig_term, 1, MPI_INT, probe_status.MPI_SOURCE, TERMINATION_TAG, node->world_comm, &status);
-            printf("received termination messages from base station\n");
-            break;
-        }
-
         // listen to port and write to log
         int availability = get_availability(node);
 
@@ -152,6 +143,15 @@ void start_charging_node(struct ChargingNode *node)
         MPI_Irecv(&bottom_availability, 1, MPI_INT, node->bottom_rank, 0, node->grid_comm_cart, &receive_request[1]);
         MPI_Irecv(&left_availability, 1, MPI_INT, node->left_rank, 0, node->grid_comm_cart, &receive_request[2]);
         MPI_Irecv(&right_availability, 1, MPI_INT, node->right_rank, 0, node->grid_comm_cart, &receive_request[3]);
+
+        MPI_Iprobe(BASE_STATION_RANK, TERMINATION_TAG, node->world_comm, &has_alert, &probe_status);
+        if (has_alert == 1)
+        {
+            printf("receiving termination messages from base station\n");
+            MPI_Recv(&sig_term, 1, MPI_INT, probe_status.MPI_SOURCE, TERMINATION_TAG, node->world_comm, &status);
+            printf("received termination messages from base station\n");
+            break;
+        }
 
         MPI_Waitall(4, send_request, send_status);
         MPI_Waitall(4, receive_request, receive_status);
@@ -192,12 +192,13 @@ void start_charging_node(struct ChargingNode *node)
         }
 
         char info[100];
-        sprintf(info, "], neighbours_availability: %d", neighbours_availabilities);
+        sprintf(info, "], no. available neighbours: %d", neighbours_availabilities);
         strcat(neighbour_message_buf, info);
         log_charging_node_event(node, neighbour_message_buf);
 
         if (availability == 0)
         {
+            // printf("[Node %d] OCCUPIED NODE\n", availability);
             if (neighbours_availabilities == 0)
             {
                 // TODO (1f): Add timestamp, Add which nodes are not available (in list), Add total messages sent
@@ -322,14 +323,7 @@ void start_charging_node(struct ChargingNode *node)
                 }
             }
         }
-        // else
-        // {
-        //     // TODO: prettify message
-        //     char message[2000];
-        //     sprintf(message, "Node %d top_availability: %d, bottom_availability: %d, left_availability: %d, right_availability: %d",
-        //             node->id, top_availability, bottom_availability, left_availability, right_availability);
-        //     log_charging_node_event(node, message);
-        // }
+
         sleep(node->cycle_interval);
     }
 
@@ -353,11 +347,13 @@ int get_availability(struct ChargingNode *node)
     int availability = 0;
     for (int i = 0; i < node->num_ports; i++)
     {
-        if (node->ports[i]->is_available)
+        if (is_available(node->ports[i]))
         {
             availability++;
         }
     }
+    char node_avail_buf[50];
+    sprintf(node_avail_buf, "Node %d num ports: %d", node->id, availability);
     return availability;
 }
 

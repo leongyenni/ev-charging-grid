@@ -8,15 +8,15 @@
 #define ALERT_TAG 20
 #define REPORT_TAG 30
 
-#define CYCLE_INTERVAL_S 5
-#define RESET_INTERVAL_S 10
+#define CYCLE_INTERVAL_S 10
+#define RESET_INTERVAL_S 40
 
 #define ITERATION 20
 
 #define DEFAULT_ROW 3
 #define DEFAULT_COL 3
 
-#define NUM_PORTS 1
+#define NUM_PORTS 5
 #define MAX_NUM_NEIGHBOURS 4
 #define N_DIMS 2
 #define REORDER 1
