@@ -47,6 +47,8 @@ struct BaseStation *new_base_station(MPI_Comm world_comm, int grid_size, float l
     base_station->alert_messages = malloc(sizeof(struct AlertMessage) * base_station->grid_size);
     base_station->num_alert_messages = 0;
 
+    base_station->logger = malloc(sizeof(struct Log) * base_station->grid_size);
+
     return base_station;
 }
 
@@ -62,7 +64,7 @@ void start_base_station(struct BaseStation *base_station)
 
         num_iter++;
         receive_alert_message(base_station);
-        send_report_messages(base_station);
+        send_available_nodes_message(base_station);
         reset_timer(base_station);
         sleep(8);
     }
@@ -96,6 +98,7 @@ void close_base_station(struct BaseStation *base_station)
     free(base_station->node_availabilities);
     free(base_station->nearby_availabilities);
     free(base_station->alert_messages);
+    free(base_station->logger);
     free(base_station);
 }
 
@@ -119,45 +122,63 @@ void receive_alert_message(struct BaseStation *base_station)
 
         if (has_alert == 1)
         {
-            process_alert_message(base_station, i, probe_status, status);
+            char rev_message_buf[1024];
+            sprintf(rev_message_buf, "receiving alert message from charging node %d", (i - 1));
+            log_base_station_event(base_station, rev_message_buf);
+
+            struct AlertMessage alert_message;
+            MPI_Recv(&alert_message, 1, MPI_ALERT_MESSAGE, i, ALERT_TAG, base_station->world_comm, &status);
+            base_station->alert_messages[base_station->num_alert_messages] = alert_message;
+
+            sprintf(rev_message_buf, "received alert message from charging node %d", (i - 1));
+            log_base_station_event(base_station, rev_message_buf);
+
+            process_alert_message(base_station, &alert_message);
         }
     }
-}
 
-void process_alert_message(struct BaseStation *base_station, int source_rank, MPI_Status *probe_status, MPI_Status *status)
-{
-    char currentTimestamp[TIMESTAMP_LEN];
+    // char currentTimestamp[TIMESTAMP_LEN];
     get_timestamp(currentTimestamp);
     printf("[Base Station] timestamp %s %d ALERT MESSAGES READ\n", currentTimestamp, base_station->num_alert_messages);
+}
 
-    char rev_message_buf[1024];
-    sprintf(rev_message_buf, "receiving alert message from charging node %d", (source_rank - 1));
-    log_base_station_event(base_station, rev_message_buf);
+void process_alert_message(struct BaseStation *base_station, struct AlertMessage *alert_message)
+{
+    int num_neighbours = alert_message->num_neighbours;
+    int reporting_node = alert_message->reporting_node;
 
-    struct AlertMessage alert_message;
-    MPI_Recv(&alert_message, 1, MPI_ALERT_MESSAGE, source_rank, ALERT_TAG, base_station->world_comm, &status);
+    struct Log node_logger = base_station->logger[reporting_node];
 
-    sprintf(rev_message_buf, "received alert message from charging node %d", (source_rank - 1));
-    log_base_station_event(base_station, rev_message_buf);
+    strcpy(node_logger.alert_timestamp, alert_message->timestamp);
+    node_logger.reporting_node = reporting_node;
+    node_logger.reporting_node_coord[0] = alert_message->reporting_node_coord[0];
+    node_logger.reporting_node_coord[1] = alert_message->reporting_node_coord[1];
+    node_logger.num_neighbours = num_neighbours;
+    node_logger.num_port = 0;
 
-    int reporting_node = alert_message.reporting_node;
+    for (int i = 0; i < num_neighbours; i++)
+    {
+        node_logger.neighbouring_nodes[i] = alert_message->neighbouring_nodes[i];
+        node_logger.neighbouring_nodes_coord[i][0] = alert_message->neighbouring_nodes_coord[i][0];
+        node_logger.neighbouring_nodes_coord[i][1] = alert_message->neighbouring_nodes_coord[i][1];
+    }
+
     int reporting_node_coord[N_DIMS];
-    reporting_node_coord[0] = alert_message.reporting_node_coord[0];
-    reporting_node_coord[1] = alert_message.reporting_node_coord[1];
-    int num_neighbours = alert_message.num_neighbours;
+    reporting_node_coord[0] = alert_message->reporting_node_coord[0];
+    reporting_node_coord[1] = alert_message->reporting_node_coord[1];
     int neighbouring_nodes[num_neighbours];
     int neighbouring_nodes_coord[num_neighbours][N_DIMS];
 
     for (int i = 0; i < num_neighbours; i++)
     {
-        neighbouring_nodes[i] = alert_message.neighbouring_nodes[i];
-        neighbouring_nodes_coord[i][0] = alert_message.neighbouring_nodes_coord[i][0];
-        neighbouring_nodes_coord[i][1] = alert_message.neighbouring_nodes_coord[i][1];
+        neighbouring_nodes[i] = alert_message->neighbouring_nodes[i];
+        neighbouring_nodes_coord[i][0] = alert_message->neighbouring_nodes_coord[i][0];
+        neighbouring_nodes_coord[i][1] = alert_message->neighbouring_nodes_coord[i][1];
     };
 
     char alert_message_buf[2024];
     sprintf(alert_message_buf, "ALERT MESSAGE = { timestamp: %s, reporting node: %d (%d, %d), neighbouring nodes: [",
-            alert_message.timestamp, reporting_node, reporting_node_coord[0], reporting_node_coord[1]);
+            alert_message->timestamp, reporting_node, reporting_node_coord[0], reporting_node_coord[1]);
 
     int first_entry = 1;
     for (int i = 0; i < num_neighbours; i++)
@@ -175,21 +196,23 @@ void process_alert_message(struct BaseStation *base_station, int source_rank, MP
     strcat(alert_message_buf, "] }");
     log_base_station_event(base_station, alert_message_buf);
 
-    base_station->alert_messages[base_station->num_alert_messages] = alert_message;
-    base_station->node_availabilities[alert_message.reporting_node] = 0;
-    base_station->nearby_availabilities[alert_message.reporting_node] = 0;
+    base_station->node_availabilities[reporting_node] = 0;
+    base_station->nearby_availabilities[reporting_node] = 0;
 
-    for (int i = 0; i < num_neighbours; i++) {
-        base_station->nearby_availabilities[alert_message.neighbouring_nodes[i]] = 0;
+    for (int i = 0; i < num_neighbours; i++)
+    {
+        int neighbouring_node = alert_message->neighbouring_nodes[i];
+        base_station->nearby_availabilities[neighbouring_node] = 0;
     }
 
     base_station->num_alert_messages++;
 
+    char currentTimestamp[TIMESTAMP_LEN];
     get_timestamp(currentTimestamp);
     printf("[Base Station] timestamp %s %d ALERT MESSAGES READ. DONE READING.\n", currentTimestamp, base_station->num_alert_messages);
 }
 
-void send_report_messages(struct BaseStation *base_station)
+void send_available_nodes_message(struct BaseStation *base_station)
 {
     MPI_Request report_request[base_station->num_alert_messages];
     MPI_Status report_status[base_station->num_alert_messages];
@@ -232,7 +255,7 @@ void send_to_reporting_node(struct BaseStation *base_station, int i, MPI_Request
     struct AvailableNodes available_nodes;
     strcpy(available_nodes.timestamp, currentTimestamp);
     available_nodes.size = 0;
-    available_nodes.nodes[MAX_NUM_NEIGHBOURS * MAX_NUM_NEIGHBOURS];
+    available_nodes.nodes[MAX_NUM_NEARBY];
 
     for (int j = 0; j < num_neighbours; j++)
     {
@@ -390,18 +413,18 @@ int get_index(int world_rank)
 int write_to_logs(struct BaseStation *base_station, struct Log *log)
 {
     printf("writing to logs \n");
-    if (base_station->log_file_handler == NULL)
-    {
-        return 1;
-    }
+    // if (base_station->log_file_handler == NULL)
+    // {
+    //     return 1;
+    // }
 
-    printf("[%s] grid size=%d, total alerts=%d, total sent messages=%d\n",
-           log->timestamp, log->grid_size, log->total_alerts, log->total_sent_messages);
+    // printf("[%s] grid size=%d, total alerts=%d, total sent messages=%d\n",
+    //        log->timestamp, log->grid_size, log->total_alerts, log->total_sent_messages);
 
-    fprintf(base_station->log_file_handler, "[%s] grid size=%d, total alerts=%d, total sent messages=%d\n",
-            log->timestamp, log->grid_size, log->total_alerts, log->total_sent_messages);
+    // fprintf(base_station->log_file_handler, "[%s] grid size=%d, total alerts=%d, total sent messages=%d\n",
+    //         log->timestamp, log->grid_size, log->total_alerts, log->total_sent_messages);
 
-    printf("wrote to logs \n");
+    // printf("wrote to logs \n");
 
     return 0;
 }

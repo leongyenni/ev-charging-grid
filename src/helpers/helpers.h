@@ -18,6 +18,7 @@
 
 #define NUM_PORTS 5
 #define MAX_NUM_NEIGHBOURS 4
+#define MAX_NUM_NEARBY 8
 #define N_DIMS 2
 #define REORDER 1
 
@@ -49,7 +50,7 @@ struct AvailableNodes
 {
     char timestamp[TIMESTAMP_LEN];
     int size;
-    int nodes[MAX_NUM_NEIGHBOURS*MAX_NUM_NEIGHBOURS];
+    int nodes[MAX_NUM_NEARBY];
 };
 
 void define_mpi_alert_message(MPI_Datatype *MPI_ALERT_MESSAGE);

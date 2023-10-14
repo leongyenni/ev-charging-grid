@@ -16,6 +16,7 @@ struct BaseStation
   int *nearby_availabilities;
   struct AlertMessage *alert_messages;
   int num_alert_messages;
+  struct Log *logger;
   FILE *log_file_handler; // TODO
   pthread_t base_station_t; // TODO
 };
@@ -26,8 +27,20 @@ void close_base_station(struct BaseStation *base_station);
 
 struct Log // TODO
 {
-  char timestamp[TIMESTAMP_LEN];
-  int grid_size, total_alerts, total_sent_messages;
+  char logged_timestamp[TIMESTAMP_LEN];
+  char alert_timestamp[TIMESTAMP_LEN];
+  int reporting_node;
+  int reporting_node_coord[N_DIMS];
+  int neighbouring_nodes[MAX_NUM_NEIGHBOURS];
+  int neighbouring_nodes_coord[MAX_NUM_NEIGHBOURS][N_DIMS];
+  int nearby_nodes[MAX_NUM_NEARBY];
+  int nearby_nodes_coord[MAX_NUM_NEARBY][N_DIMS];
+  int num_port;
+  int num_neighbours;
+  int num_available_nodes;
+  int num_iter;
+  int num_messages_sent;
+  int communication_time;
 };
 
 #endif

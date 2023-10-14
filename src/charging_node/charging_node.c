@@ -105,6 +105,8 @@ void start_charging_node(struct ChargingNode *node)
         pthread_create(&charging_port_t[i], 0, start_charging_port_thread, (void *)node->ports[i]);
     }
 
+    MPI_Status probe_status, status;
+    int has_alert = 0;
     int sig_term = 1;
 
     while (1)
@@ -136,8 +138,6 @@ void start_charging_node(struct ChargingNode *node)
         MPI_Irecv(&left_availability, 1, MPI_INT, node->left_rank, 0, node->grid_comm_cart, &receive_request[2]);
         MPI_Irecv(&right_availability, 1, MPI_INT, node->right_rank, 0, node->grid_comm_cart, &receive_request[3]);
 
-        MPI_Status probe_status, status;
-        int has_alert = 0;
 
         MPI_Iprobe(BASE_STATION_RANK, TERMINATION_TAG, node->world_comm, &has_alert, &probe_status);
         if (has_alert == 1)
@@ -194,7 +194,7 @@ void start_charging_node(struct ChargingNode *node)
         if (availability == 0 && neighbours_availabilities == 0)
         {
             send_alert_message(node);
-            receive_report_message(node);
+            receive_available_nodes_message(node);
         }
 
         sleep(node->cycle_interval);
@@ -259,19 +259,14 @@ void send_alert_message(struct ChargingNode *node)
     sprintf(alert_message_buf + strlen(alert_message_buf), "], num_neighbours: %d }", alert_message.num_neighbours);
     log_charging_node_event(node, alert_message_buf);
 
-    // TODO: (1e, f) if no available adjacent ports, MPI_Send alert base station (DONE)
-
     log_charging_node_event(node, "sending alert message to base station");
-
-    // char message[] = "Hello, Process 1!";
-    // MPI_Send(&message, 1, MPI_CHAR, BASE_STATION_RANK, ALERT_TAG, node->world_comm);
 
     MPI_Send(&alert_message, 1, MPI_ALERT_MESSAGE, BASE_STATION_RANK, ALERT_TAG, node->world_comm);
 
     log_charging_node_event(node, "sent alert message to base station");
 }
 
-void receive_report_message(struct ChargingNode *node)
+void receive_available_nodes_message(struct ChargingNode *node)
 {
     log_charging_node_event(node, "receiving available nodes from base station");
 
