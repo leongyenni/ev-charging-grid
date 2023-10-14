@@ -14,6 +14,7 @@ struct BaseStation
   float listen_frequency_s;
   int *node_availabilities;
   struct AlertMessage *alert_messages;
+  int num_alert_messages;
   FILE *log_file_handler; // TODO
   pthread_t base_station_t; // TODO
 };

@@ -11,6 +11,9 @@
 
 time_t lastResetTime = 0;
 
+MPI_Datatype MPI_ALERT_MESSAGE;
+MPI_Datatype MPI_AVAILABLE_NODES;
+
 int get_world_rank(int i);
 int get_index(int world_rank);
 int write_to_logs(struct BaseStation *base_station, struct Log *log);
@@ -44,6 +47,7 @@ struct BaseStation *new_base_station(MPI_Comm world_comm, int grid_size, float l
     }
 
     base_station->alert_messages = malloc(sizeof(struct AlertMessage) * base_station->grid_size);
+    base_station->num_alert_messages = 0;
 
     // MPI_Comm_size(grid_comm, &base_station->grid_size);
     return base_station;
@@ -53,121 +57,117 @@ void start_base_station(struct BaseStation *base_station)
 {
     printf("starting base station \n");
 
-    MPI_Status probe_status, status;
     int num_iter = 0;
-
-    MPI_Datatype MPI_ALERT_MESSAGE;
     define_mpi_alert_message(&MPI_ALERT_MESSAGE);
-
-    MPI_Datatype MPI_AVAILABLE_NODES;
     define_mpi_available_nodes(&MPI_AVAILABLE_NODES);
 
     // TODO: (2f)  send or receive MPI messages using POSIX thread
     while (num_iter < ITERATION)
     {
 
-        num_iter += 1;
-        char currentTimestamp[TIMESTAMP_LEN];
-        int num_alert_messages = 0;
-        base_station->alert_messages = malloc(sizeof(struct AlertMessage) * base_station->grid_size);
+        num_iter++;
+        receive_alert_message(base_station);
+        send_report_messages(base_station);
+        // for (int i = 1; i <= base_station->grid_size; i++)
+        // {
 
-        int total_alerts, total_sent_messages = 0;
+        /*int has_alert = 0;
+        get_timestamp(currentTimestamp);
 
-        for (int i = 1; i <= base_station->grid_size; i++)
+        char listening_message_buf[100];
+        sprintf(listening_message_buf, "%s listening to node %d", currentTimestamp, i - 1);
+        log_base_station_event(base_station, listening_message_buf);
+
+        MPI_Iprobe(i, ALERT_TAG, base_station->world_comm, &has_alert, &probe_status);
+
+        if (has_alert == 1)
         {
-            int has_alert = 0;
             get_timestamp(currentTimestamp);
+            printf("[Base Station] timestamp %s %d ALERT MESSAGES READ\n", currentTimestamp, num_alert_messages);
 
-            char listening_message_buf[100];
-            sprintf(listening_message_buf, "%s listening to node %d", currentTimestamp, i - 1);
-            log_base_station_event(base_station, listening_message_buf);
+            int alert_source_rank = i;
 
-            MPI_Iprobe(i, ALERT_TAG, base_station->world_comm, &has_alert, &probe_status);
-            if (has_alert == 1)
+            char rev_message_buf[1024];
+            sprintf(rev_message_buf, "receiving alert message from charging node %d", alert_source_rank - 1);
+            log_base_station_event(base_station, rev_message_buf);
+
+            struct AlertMessage alert_message;
+            MPI_Recv(&alert_message, 1, MPI_ALERT_MESSAGE, alert_source_rank, ALERT_TAG, base_station->world_comm, &status);
+
+            sprintf(rev_message_buf, "received alert message from charging node %d", alert_source_rank - 1);
+            log_base_station_event(base_station, rev_message_buf);
+
+            // TODO: format the receive message
+
+            int reporting_node = alert_message.reporting_node;
+            int reporting_node_coord[N_DIMS];
+            reporting_node_coord[0] = alert_message.reporting_node_coord[0];
+            reporting_node_coord[1] = alert_message.reporting_node_coord[1];
+            int num_neighbours = alert_message.num_neighbours;
+            int neighbouring_nodes[num_neighbours];
+            int neighbouring_nodes_coord[num_neighbours][N_DIMS];
+
+            for (int i = 0; i < num_neighbours; i++)
             {
-                get_timestamp(currentTimestamp);
-                printf("[Base Station] timestamp %s %d ALERT MESSAGES READ\n", currentTimestamp, num_alert_messages);
+                neighbouring_nodes[i] = alert_message.neighbouring_nodes[i];
+                neighbouring_nodes_coord[i][0] = alert_message.neighbouring_nodes_coord[i][0];
+                neighbouring_nodes_coord[i][1] = alert_message.neighbouring_nodes_coord[i][1];
+            };
 
-                int alert_source_rank = i;
+            char alert_message_buf[2024];
+            sprintf(alert_message_buf, "ALERT MESSAGE = { timestamp: %s, reporting node: %d (%d, %d), neighbouring nodes: [",
+                    alert_message.timestamp, reporting_node, reporting_node_coord[0], reporting_node_coord[1]);
 
-                char rev_message_buf[1024];
-                sprintf(rev_message_buf, "receiving alert message from charging node %d", alert_source_rank - 1);
-                log_base_station_event(base_station, rev_message_buf);
-
-                struct AlertMessage alert_message;
-                MPI_Recv(&alert_message, 1, MPI_ALERT_MESSAGE, alert_source_rank, ALERT_TAG, base_station->world_comm, &status);
-
-                sprintf(rev_message_buf, "received alert message from charging node %d", alert_source_rank - 1);
-                log_base_station_event(base_station, rev_message_buf);
-
-                // TODO: format the receive message
-
-                int reporting_node = alert_message.reporting_node;
-                int reporting_node_coord[N_DIMS];
-                reporting_node_coord[0] = alert_message.reporting_node_coord[0];
-                reporting_node_coord[1] = alert_message.reporting_node_coord[1];
-                int num_neighbours = alert_message.num_neighbours;
-                int neighbouring_nodes[num_neighbours];
-                int neighbouring_nodes_coord[num_neighbours][N_DIMS];
-
-                for (int i = 0; i < num_neighbours; i++)
-                {
-                    neighbouring_nodes[i] = alert_message.neighbouring_nodes[i];
-                    neighbouring_nodes_coord[i][0] = alert_message.neighbouring_nodes_coord[i][0];
-                    neighbouring_nodes_coord[i][1] = alert_message.neighbouring_nodes_coord[i][1];
-                };
-
-                char alert_message_buf[2024];
-                sprintf(alert_message_buf, "ALERT MESSAGE = { timestamp: %s, reporting node: %d (%d, %d), neighbouring nodes: [",
-                        alert_message.timestamp, reporting_node, reporting_node_coord[0], reporting_node_coord[1]);
-
-                int first_entry = 1;
-                for (int i = 0; i < num_neighbours; i++)
-                {
-                    char neighbour_info[516];
-                    if (!first_entry)
-                        strcat(alert_message_buf, ", ");
-                    else
-                        first_entry = 0;
-                    sprintf(neighbour_info, "node %d (%d, %d)", neighbouring_nodes[i], neighbouring_nodes_coord[i][0],
-                            neighbouring_nodes_coord[i][1]);
-                    strcat(alert_message_buf, neighbour_info);
-                }
-
-                strcat(alert_message_buf, "] }");
-                log_base_station_event(base_station, alert_message_buf);
-
-                total_alerts++;
-
-                base_station->alert_messages[num_alert_messages] = alert_message;
-                base_station->node_availabilities[alert_message.reporting_node] = 0;
-
-                printf("node %d\n", base_station->alert_messages[num_alert_messages].reporting_node);
-
-                num_alert_messages += 1;
+            int first_entry = 1;
+            for (int i = 0; i < num_neighbours; i++)
+            {
+                char neighbour_info[516];
+                if (!first_entry)
+                    strcat(alert_message_buf, ", ");
+                else
+                    first_entry = 0;
+                sprintf(neighbour_info, "node %d (%d, %d)", neighbouring_nodes[i], neighbouring_nodes_coord[i][0],
+                        neighbouring_nodes_coord[i][1]);
+                strcat(alert_message_buf, neighbour_info);
             }
-        }
 
-        MPI_Request report_request[num_alert_messages];
-        MPI_Status report_status[num_alert_messages];
+            strcat(alert_message_buf, "] }");
+            log_base_station_event(base_station, alert_message_buf);
+
+            total_alerts++;
+
+            base_station->alert_messages[num_alert_messages] = alert_message;
+            base_station->node_availabilities[alert_message.reporting_node] = 0;
+
+            printf("node %d\n", base_station->alert_messages[num_alert_messages].reporting_node);
+
+            num_alert_messages += 1;
+        } */
+        // }
+
+        /*MPI_Request report_request[base_station->num_alert_messages];
+        MPI_Status report_status[base_station->num_alert_messages];
 
         get_timestamp(currentTimestamp);
         printf("[Base Station] timestamp %s %d ALERT MESSAGES READ. DONE READING.\n", currentTimestamp, num_alert_messages);
 
-        for (int i = 0; i < num_alert_messages; i++)
+        for (int i = 0; i < base_station->num_alert_messages; i++)
         {
             printf("[Base Station] AFTER node %d \n", base_station->alert_messages[i].reporting_node);
         }
 
         char reporting_node_buf[500];
-        sprintf(reporting_node_buf, "Reporting node: [ ");
+        sprintf(reporting_node_buf, "Reporting node: [");
         int first_entry = 1;
-        for (int i = 0; i < num_alert_messages; i++)
+        for (int i = 0; i < base_station->num_alert_messages; i++)
         {
             char node_buf[100];
-            if (!first_entry) {
-                strcat(node_buf, ", ");
-            } else {
+            if (!first_entry)
+            {
+                strcat(reporting_node_buf, ", ");
+            }
+            else
+            {
                 first_entry = 0;
             }
             sprintf(node_buf, "Node %d", base_station->alert_messages[i].reporting_node);
@@ -203,7 +203,6 @@ void start_base_station(struct BaseStation *base_station)
                 }
             }
 
-
             char received_message_buf[5000];
             sprintf(received_message_buf, "REPORTING NODE %d: REPORT MESSAGE: { timestamp: %s, node size: %d, available nearby nodes: [ ",
                     base_station->alert_messages[i].reporting_node, available_nodes.timestamp, available_nodes.size);
@@ -237,11 +236,11 @@ void start_base_station(struct BaseStation *base_station)
         }
 
         strcat(reporting_node_buf, "]");
-        log_base_station_event(base_station, reporting_node_buf);
+        log_base_station_event(base_station, reporting_node_buf); */
 
-        MPI_Waitall(num_alert_messages, report_request, report_status);
+        // MPI_Waitall(num_alert_messages, report_request, report_status);
 
-        log_base_station_event(base_station, "sent report messages to all nodes \n");
+        // log_base_station_event(base_station, "sent report messages to all nodes \n");
 
         checkResetTimer(base_station);
         sleep(8);
@@ -278,6 +277,172 @@ void close_base_station(struct BaseStation *base_station)
     free(base_station->node_availabilities);
     free(base_station->alert_messages);
     free(base_station);
+}
+
+void receive_alert_message(struct BaseStation *base_station)
+{
+    MPI_Status probe_status, status;
+    char currentTimestamp[TIMESTAMP_LEN];
+    base_station->num_alert_messages = 0;
+    base_station->alert_messages = malloc(sizeof(struct AlertMessage) * base_station->grid_size);
+
+    for (int i = 1; i <= base_station->grid_size; i++)
+    {
+        int has_alert = 0;
+        get_timestamp(currentTimestamp);
+
+        char listening_message_buf[100];
+        sprintf(listening_message_buf, "%s listening to node %d", currentTimestamp, i - 1);
+        log_base_station_event(base_station, listening_message_buf);
+
+        MPI_Iprobe(i, ALERT_TAG, base_station->world_comm, &has_alert, &probe_status);
+
+        if (has_alert == 1)
+        {
+            process_alert_message(base_station, i, probe_status, status);
+        }
+    }
+}
+
+void process_alert_message(struct BaseStation *base_station, int source_rank, MPI_Status *probe_status, MPI_Status *status)
+{
+    char currentTimestamp[TIMESTAMP_LEN];
+    get_timestamp(currentTimestamp);
+    printf("[Base Station] timestamp %s %d ALERT MESSAGES READ\n", currentTimestamp, base_station->num_alert_messages);
+
+    char rev_message_buf[1024];
+    sprintf(rev_message_buf, "receiving alert message from charging node %d", (source_rank - 1));
+    log_base_station_event(base_station, rev_message_buf);
+
+    struct AlertMessage alert_message;
+    MPI_Recv(&alert_message, 1, MPI_ALERT_MESSAGE, source_rank, ALERT_TAG, base_station->world_comm, &status);
+
+    sprintf(rev_message_buf, "received alert message from charging node %d", (source_rank - 1));
+    log_base_station_event(base_station, rev_message_buf);
+
+    int reporting_node = alert_message.reporting_node;
+    int reporting_node_coord[N_DIMS];
+    reporting_node_coord[0] = alert_message.reporting_node_coord[0];
+    reporting_node_coord[1] = alert_message.reporting_node_coord[1];
+    int num_neighbours = alert_message.num_neighbours;
+    int neighbouring_nodes[num_neighbours];
+    int neighbouring_nodes_coord[num_neighbours][N_DIMS];
+
+    for (int i = 0; i < num_neighbours; i++)
+    {
+        neighbouring_nodes[i] = alert_message.neighbouring_nodes[i];
+        neighbouring_nodes_coord[i][0] = alert_message.neighbouring_nodes_coord[i][0];
+        neighbouring_nodes_coord[i][1] = alert_message.neighbouring_nodes_coord[i][1];
+    };
+
+    char alert_message_buf[2024];
+    sprintf(alert_message_buf, "ALERT MESSAGE = { timestamp: %s, reporting node: %d (%d, %d), neighbouring nodes: [",
+            alert_message.timestamp, reporting_node, reporting_node_coord[0], reporting_node_coord[1]);
+
+    int first_entry = 1;
+    for (int i = 0; i < num_neighbours; i++)
+    {
+        char neighbour_info[516];
+        if (!first_entry)
+            strcat(alert_message_buf, ", ");
+        else
+            first_entry = 0;
+        sprintf(neighbour_info, "node %d (%d, %d)", neighbouring_nodes[i], neighbouring_nodes_coord[i][0],
+                neighbouring_nodes_coord[i][1]);
+        strcat(alert_message_buf, neighbour_info);
+    }
+
+    strcat(alert_message_buf, "] }");
+    log_base_station_event(base_station, alert_message_buf);
+
+    base_station->alert_messages[base_station->num_alert_messages] = alert_message;
+    base_station->node_availabilities[alert_message.reporting_node] = 0;
+    base_station->num_alert_messages++;
+}
+
+void send_report_messages(struct BaseStation *base_station)
+{
+    MPI_Request report_request[base_station->num_alert_messages];
+    MPI_Status report_status[base_station->num_alert_messages];
+
+    char currentTimestamp[TIMESTAMP_LEN];
+    get_timestamp(currentTimestamp);
+    printf("[Base Station] timestamp %s %d ALERT MESSAGES READ. DONE READING.\n", currentTimestamp, base_station->num_alert_messages);
+
+    char reporting_node_buf[500];
+    sprintf(reporting_node_buf, "Reporting node: [");
+    
+    int first_entry = 1;
+    for (int i = 0; i < base_station->num_alert_messages; i++)
+    {
+        char node_buf[100];
+        if (!first_entry)
+        {
+            strcat(reporting_node_buf, ", ");
+        }
+        else
+        {
+            first_entry = 0;
+        }
+        sprintf(node_buf, "Node %d", base_station->alert_messages[i].reporting_node);
+        strcat(reporting_node_buf, node_buf);
+
+        int num_neighbours = base_station->alert_messages[i].num_neighbours;
+
+        struct AvailableNodes available_nodes;
+        strcpy(available_nodes.timestamp, currentTimestamp);
+        available_nodes.size = 0;
+        available_nodes.nodes[MAX_NUM_NEIGHBOURS * MAX_NUM_NEIGHBOURS];
+
+        for (int j = 0; j < num_neighbours; j++)
+        {
+
+            int neighbouring_node_rank = base_station->alert_messages[i].neighbouring_nodes[j];
+            // printf("neighbouring node %d \n", neighbouring_node_rank);
+
+            if (base_station->node_availabilities[neighbouring_node_rank] == 1)
+            {
+                int row = base_station->alert_messages[i].neighbouring_nodes_coord[j][0];
+                int col = base_station->alert_messages[i].neighbouring_nodes_coord[j][1];
+
+                get_neighbours(base_station, row, col, &available_nodes);
+            }
+        }
+
+        char received_message_buf[2000];
+        sprintf(received_message_buf, "REPORTING NODE %d: REPORT MESSAGE: { timestamp: %s, node size: %d, available nearby nodes: [ ",
+                base_station->alert_messages[i].reporting_node, available_nodes.timestamp, available_nodes.size);
+
+        int first_entry = 1;
+        for (int i = 0; i < available_nodes.size; i++)
+        {
+
+            char node_info[2000];
+
+            if (!first_entry)
+            {
+                strcat(received_message_buf, ", ");
+            }
+            else
+            {
+                first_entry = 0;
+            }
+
+            sprintf(node_info, "node %d", available_nodes.nodes[i]);
+            strcat(received_message_buf, node_info);
+        }
+        
+        MPI_Isend(&available_nodes, 1, MPI_AVAILABLE_NODES, base_station->alert_messages[i].reporting_node + 1, REPORT_TAG, base_station->world_comm, &report_request[i]);
+        
+        strcat(received_message_buf, "]} ");
+        log_base_station_event(base_station, received_message_buf);
+    }
+
+    MPI_Waitall(base_station->num_alert_messages, report_request, report_status);
+
+    strcat(reporting_node_buf, "]");
+    log_base_station_event(base_station, reporting_node_buf);
+    log_base_station_event(base_station, "sent report messages to all nodes \n");
 }
 
 int get_world_rank(int i)
