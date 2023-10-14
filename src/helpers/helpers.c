@@ -26,7 +26,6 @@ void define_mpi_alert_message(MPI_Datatype *CUSTOM_MPI_ALERT_MESSAGE)
 	MPI_Type_commit(CUSTOM_MPI_ALERT_MESSAGE);
 }
 
-// TODO: serialize array to MPI_Datatype
 void define_mpi_available_nodes(MPI_Datatype *CUSTOM_MPI_AVAILABLE_NODES)
 {
 	const int fields = 3;

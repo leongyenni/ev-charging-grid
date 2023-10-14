@@ -10,8 +10,8 @@
 #define REPORT_TAG 30
 
 #define CYCLE_INTERVAL_S 10
-#define RESET_INTERVAL_S 45
-
+#define STATION_INTERVAL_S 15
+#define RESET_INTERVAL_S 40
 #define ITERATION 20
 
 #define DEFAULT_ROW 3

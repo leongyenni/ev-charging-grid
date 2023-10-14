@@ -18,15 +18,14 @@ struct BaseStation
   int num_alert_messages;
   int num_iter;
   struct Log *logger;
-  FILE *log_file_handler;   // TODO
-  pthread_t base_station_t; // TODO
+  FILE *log_file_handler;  
 };
 
 struct BaseStation *new_base_station(MPI_Comm world_comm, int grid_size, float listen_frequency_s, FILE *log_file_handler);
 void start_base_station(struct BaseStation *base_station);
 void close_base_station(struct BaseStation *base_station);
 
-struct Log // TODO
+struct Log 
 {
   char logged_timestamp[TIMESTAMP_LEN];
   char alert_timestamp[TIMESTAMP_LEN];

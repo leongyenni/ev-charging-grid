@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 		// initialize variables
 		int dims[N_DIMS], coord[N_DIMS], wrap_around[N_DIMS];
 
-		/* Create cartesian mapping */
+		// Create cartesian mapping 
 		wrap_around[0] = wrap_around[1] = 0; // periodic shift is false
 		dims[0] = m, dims[1] = n;
 
@@ -69,12 +69,7 @@ int main(int argc, char *argv[])
 		MPI_Comm_size(node_comm, &total_nodes); // size of the slave communicator
 
 		MPI_Dims_create(total_nodes, N_DIMS, dims);
-
-		if (node_rank == 0)
-			printf("Node Rank: %d, Comm Size: %d: N_DIMS= %d, Grid Dimension = [%d x %d] \n", node_rank, total_nodes, N_DIMS, dims[0], dims[1]);
-
 		MPI_Cart_create(node_comm, N_DIMS, dims, wrap_around, REORDER, &node_comm_cart);
-
 		MPI_Comm_size(node_comm_cart, &grid_size);
 
 		struct ChargingNode *node = new_charging_node(NUM_PORTS, CYCLE_INTERVAL_S, node_rank, world_comm, node_comm_cart);

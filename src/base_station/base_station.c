@@ -14,16 +14,16 @@ time_t lastResetTime = 0;
 void receive_alert_message(struct BaseStation *base_station);
 void process_alert_message(struct BaseStation *base_station, struct AlertMessage *alert_message);
 void send_available_nodes_message(struct BaseStation *base_station);
-void write_to_logs(struct BaseStation *base_station, struct Log *logger);
+void send_to_reporting_node(struct BaseStation *base_station, int i, MPI_Request *report_request);
 void reset_availabilities(struct BaseStation *base_station);
 void reset_timer(struct BaseStation *base_station);
-void add_to_available_nodes(struct AvailableNodes *available_nodes, struct Log *logger, int node);
 void get_nearby_nodes(struct BaseStation *base_station, struct Log *logger, int x_row, int y_col, struct AvailableNodes *available_nodes);
-
-void log_base_station_event(struct BaseStation *base_station, const char *message)
-{
-    printf("[Base Station] %s\n", message);
-}
+void get_coordinates(int rank, int *row, int *col);
+int is_valid_rank(int rank, int grid_size);
+void add_to_nearby_nodes(struct Log *logger, int node);
+void add_to_available_nodes(struct AvailableNodes *available_nodes, struct Log *logger, int node);
+void log_base_station_event(struct BaseStation *base_station, const char *message);
+void write_to_logs(struct BaseStation *base_station, struct Log *logger);
 
 struct BaseStation *new_base_station(MPI_Comm world_comm, int grid_size, float listening_frenquency_s, FILE *log_file_handler)
 {
@@ -63,7 +63,7 @@ void start_base_station(struct BaseStation *base_station)
         receive_alert_message(base_station);
         send_available_nodes_message(base_station);
         reset_timer(base_station);
-        sleep(15);
+        sleep(base_station->listen_frequency_s);
     }
 
     printf("closing base station \n");
@@ -81,7 +81,7 @@ void close_base_station(struct BaseStation *base_station)
     get_timestamp(currentTimestamp);
     printf("[Base Station] %s sending termination messages to charging nodes \n", currentTimestamp);
 
-    // Send termination message to all charging nodes 
+    // Send termination message to all charging nodes
     int sig_term = 1;
     for (int world_rank = 0; world_rank < base_station->grid_size + 1; world_rank++)
     {
@@ -93,7 +93,7 @@ void close_base_station(struct BaseStation *base_station)
     get_timestamp(currentTimestamp);
     printf("[Base Station] %s sent termination messages to charging grid \n", currentTimestamp);
 
-    // Deallocate memory 
+    // Deallocate memory
     free(base_station->node_availabilities);
     free(base_station->nearby_availabilities);
     free(base_station->alert_messages);
@@ -118,7 +118,7 @@ void receive_alert_message(struct BaseStation *base_station)
         sprintf(listening_message_buf, "%s listening to node %d", currentTimestamp, i - 1);
         log_base_station_event(base_station, listening_message_buf);
 
-        // Test if a charging node send an alert message 
+        // Test if a charging node send an alert message
         MPI_Iprobe(i, ALERT_TAG, base_station->world_comm, &has_alert, &probe_status);
 
         if (has_alert == 1)
@@ -155,8 +155,6 @@ void process_alert_message(struct BaseStation *base_station, struct AlertMessage
     base_station->logger[reporting_node].reporting_node_coord[1] = alert_message->reporting_node_coord[1];
     base_station->logger[reporting_node].num_neighbours = num_neighbours;
     base_station->logger[reporting_node].num_port = 0;
-    base_station->logger[reporting_node].num_messages_sent = 1;
-    base_station->logger[reporting_node].num_iter = base_station->num_iter;
 
     for (int i = 0; i < num_neighbours; i++)
     {
@@ -165,7 +163,7 @@ void process_alert_message(struct BaseStation *base_station, struct AlertMessage
         base_station->logger[reporting_node].neighbouring_nodes_coord[i][1] = alert_message->neighbouring_nodes_coord[i][1];
     }
 
-    int reporting_node_coord[N_DIMS];
+    /*int reporting_node_coord[N_DIMS];
     reporting_node_coord[0] = alert_message->reporting_node_coord[0];
     reporting_node_coord[1] = alert_message->reporting_node_coord[1];
     int neighbouring_nodes[num_neighbours];
@@ -196,7 +194,7 @@ void process_alert_message(struct BaseStation *base_station, struct AlertMessage
     }
 
     strcat(alert_message_buf, "] }");
-    log_base_station_event(base_station, alert_message_buf);
+    log_base_station_event(base_station, alert_message_buf); */
 
     // Update node availabilities
     base_station->node_availabilities[reporting_node] = 0;
@@ -208,7 +206,7 @@ void process_alert_message(struct BaseStation *base_station, struct AlertMessage
         base_station->nearby_availabilities[neighbouring_node] = 0;
     }
 
-    // Update no. alert messages received 
+    // Update #alert messages received
     base_station->num_alert_messages++;
 
     char currentTimestamp[TIMESTAMP_LEN];
@@ -283,14 +281,13 @@ void send_to_reporting_node(struct BaseStation *base_station, int i, MPI_Request
 
     MPI_Isend(&available_nodes, 1, MPI_AVAILABLE_NODES, base_station->alert_messages[i].reporting_node + 1, REPORT_TAG, base_station->world_comm, &report_request[i]);
 
-    base_station->logger[reporting_node].num_messages_sent++;
     get_timestamp(base_station->logger[reporting_node].logged_timestamp);
-
-
+    base_station->logger[reporting_node].num_iter = base_station->num_iter;
+    base_station->logger[reporting_node].num_messages_sent = base_station->num_alert_messages;
     // Base station log
     write_to_logs(base_station, &base_station->logger[reporting_node]);
 
-    char received_message_buf[2000];
+    /*char received_message_buf[2000];
     sprintf(received_message_buf, "REPORTING NODE %d: REPORT MESSAGE: { timestamp: %s, node size: %d, available nearby nodes: [ ",
             base_station->alert_messages[i].reporting_node, available_nodes.timestamp, available_nodes.size);
 
@@ -314,7 +311,7 @@ void send_to_reporting_node(struct BaseStation *base_station, int i, MPI_Request
     }
 
     strcat(received_message_buf, "]} ");
-    log_base_station_event(base_station, received_message_buf);
+    log_base_station_event(base_station, received_message_buf); */
 }
 
 /* Get the nearby nodes */
@@ -329,7 +326,7 @@ void get_nearby_nodes(struct BaseStation *base_station, struct Log *logger, int 
 
     for (int i = 0; i < MAX_NUM_NEIGHBOURS; i++)
     {
-        if (is_valid_rank(nearby_nodes[i], base_station->grid_size))
+        if (is_valid_rank(nearby_nodes[i], base_station->grid_size) && nearby_nodes[i] != logger->reporting_node)
         {
             add_to_nearby_nodes(logger, nearby_nodes[i]);
 
@@ -339,6 +336,13 @@ void get_nearby_nodes(struct BaseStation *base_station, struct Log *logger, int 
             }
         }
     }
+}
+
+/* Get the coordinates of a rank*/
+void get_coordinates(int rank, int *row, int *col)
+{
+    *row = rank / n;
+    *col = rank % n;
 }
 
 /* Check if a rank is a valid */
@@ -395,13 +399,6 @@ void add_to_available_nodes(struct AvailableNodes *available_nodes, struct Log *
     }
 }
 
-/* Get the coordinates of a rank*/
-void get_coordinates(int rank, int *row, int *col)
-{
-    *row = rank / n;
-    *col = rank % n;
-}
-
 /* Reset node availability */
 void reset_availabilities(struct BaseStation *base_station)
 {
@@ -446,41 +443,18 @@ void reset_timer(struct BaseStation *base_station)
     }
 }
 
-int get_world_rank(int i)
+/* Write log message into terminal */
+void log_base_station_event(struct BaseStation *base_station, const char *message)
 {
-    int world_rank = i;
-    if (i >= BASE_STATION_RANK)
-    {
-        world_rank++;
-    }
-    return world_rank;
+    printf("[Base Station] %s\n", message);
 }
 
-int get_index(int world_rank)
-{
-    int i = world_rank;
-    if (world_rank == BASE_STATION_RANK)
-    {
-        return -1;
-    }
-    if (world_rank > BASE_STATION_RANK)
-    {
-        i = world_rank - 1;
-    }
-    return i;
-}
-
-/**
- * return value: 0 is success, 1 is failure
- */
-// TODO: add more stats to logs
+/* Write base station log to logs.txt */
 void write_to_logs(struct BaseStation *base_station, struct Log *logger)
 {
-    printf("WRITE TO LOGS TIMESTAMP %s", logger->alert_timestamp);
     log_base_station_event(base_station, "writing to logs");
-
     FILE *f;
-    f = fopen("logs.txt", "a");
+    f = base_station->log_file_handler;
     if (f == NULL)
     {
         perror("Error opening file");
@@ -523,7 +497,7 @@ void write_to_logs(struct BaseStation *base_station, struct Log *logger)
     {
         fprintf(f, "|        %d          |   ( %d, %d )  |\n",
                 logger->nearby_nodes[i], logger->nearby_nodes_coord[i][0], logger->nearby_nodes_coord[i][1]);
-        fprintf(f, "+----------------------------------+\n");
+        fprintf(f, "+---------------------------------+\n");
     }
 
     fprintf(f, "\n");
@@ -556,7 +530,6 @@ void write_to_logs(struct BaseStation *base_station, struct Log *logger)
     fprintf(f, "Total messages send between reporting node and base station: %d\n", logger->num_messages_sent);
 
     fprintf(f, "------------------------------------------------------------------------------------------------------------------------");
-    fprintf(f, "\n\n\n");
+    fprintf(f, "\n\n");
 
-    fclose(f);
 }
