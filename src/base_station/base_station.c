@@ -56,8 +56,10 @@ void start_base_station(struct BaseStation *base_station)
 {
     printf("starting base station \n");
 
+    printf("BASE STATION NUM ITER %d\n", base_station->num_iter);
     while (base_station->num_iter < ITERATION)
     {
+
         base_station->num_iter++;
         receive_alert_message(base_station);
         send_available_nodes_message(base_station);
@@ -82,7 +84,7 @@ void close_base_station(struct BaseStation *base_station)
 
     // Send termination message to all charging nodes
     int sig_term = 1;
-    #pragma omp parallel for
+
     for (int world_rank = 0; world_rank < base_station->grid_size + 1; world_rank++)
     {
         MPI_Isend(&sig_term, 1, MPI_INT, world_rank, TERMINATION_TAG, base_station->world_comm, &send_request[world_rank - 1]);
@@ -270,8 +272,7 @@ void send_to_reporting_node(struct BaseStation *base_station, int i, MPI_Request
 
         int neighbouring_node_rank = base_station->alert_messages[i].neighbouring_nodes[j];
 
-       // check if the base station has received an AlertMessage from the neighbour
-        if (base_station->node_availabilities[neighbouring_node_rank] == 1)  
+        if (base_station->node_availabilities[neighbouring_node_rank] == 1)
         {
             int row = base_station->alert_messages[i].neighbouring_nodes_coord[j][0];
             int col = base_station->alert_messages[i].neighbouring_nodes_coord[j][1];
@@ -280,8 +281,7 @@ void send_to_reporting_node(struct BaseStation *base_station, int i, MPI_Request
         }
     }
 
-    MPI_Isend(&available_nodes, 1, MPI_AVAILABLE_NODES, base_station->alert_messages[i].reporting_node + 1, 
-    REPORT_TAG, base_station->world_comm, &report_request[i]);
+    MPI_Isend(&available_nodes, 1, MPI_AVAILABLE_NODES, base_station->alert_messages[i].reporting_node + 1, REPORT_TAG, base_station->world_comm, &report_request[i]);
 
     get_timestamp(base_station->logger[reporting_node].logged_timestamp);
     base_station->logger[reporting_node].num_iter = base_station->num_iter;

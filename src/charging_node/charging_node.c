@@ -6,6 +6,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <pthread.h>
+#include <math.h>
 
 #include "../helpers/helpers.h"
 
@@ -13,7 +14,7 @@ void send_alert_message(struct ChargingNode *node);
 void receive_available_nodes_message(struct ChargingNode *node);
 int get_availability(struct ChargingNode *node);
 void log_charging_node_event(struct ChargingNode *node, const char *message);
-void log_event_time(struct ChargingNode *node, const char *communication_time);
+void log_metrics(struct ChargingNode *node, const char *communication_time);
 
 struct ChargingNode *new_charging_node(int num_ports, float cycle_interval, int id, MPI_Comm world_comm, MPI_Comm grid_comm_cart)
 {
@@ -47,7 +48,7 @@ struct ChargingNode *new_charging_node(int num_ports, float cycle_interval, int 
     {
         if (pos_rank[i] < 0)
         {
-            node->available_neighbour_nodes[i].id = -1;          // Indicate invalid rank
+            node->available_neighbour_nodes[i].id = -1; // Indicate invalid rank
             node->available_neighbour_nodes[i].coord[0] = -1;
             node->available_neighbour_nodes[i].coord[1] = -1;
         }
@@ -109,6 +110,7 @@ void start_charging_node(struct ChargingNode *node)
 
     while (1)
     {
+        
         int availability = get_availability(node);
 
         char currentTimestamp[TIMESTAMP_LEN];
@@ -126,22 +128,21 @@ void start_charging_node(struct ChargingNode *node)
         int ranks[MAX_NUM_NEIGHBOURS] = {node->top_rank, node->bottom_rank, node->left_rank, node->right_rank};
 
         // Send readings to adjacent nodes and receive readings from adjacent nodes
-        for (int i = 0; i < MAX_NUM_NEIGHBOURS; i++) {
+        for (int i = 0; i < MAX_NUM_NEIGHBOURS; i++)
+        {
             MPI_Isend(&availability, 1, MPI_INT, ranks[i], 0, node->grid_comm_cart, &send_request[i]);
             MPI_Irecv(&availabilities[i], 1, MPI_INT, ranks[i], 0, node->grid_comm_cart, &receive_request[i]);
         }
-       
+
         // Receive termination message from base station
         MPI_Iprobe(BASE_STATION_RANK, TERMINATION_TAG, node->world_comm, &has_alert, &probe_status);
-        
         if (has_alert == 1)
         {
-            printf("receiving termination messages from base station\n");
+            log_charging_node_event(node, "receiving termination messages from base station");
             MPI_Recv(&sig_term, 1, MPI_INT, probe_status.MPI_SOURCE, TERMINATION_TAG, node->world_comm, &status);
-            printf("received termination messages from base station\n");
+            log_charging_node_event(node, "received termination messages from base station");
             break;
         }
-
 
         MPI_Waitall(4, send_request, send_status);
         MPI_Waitall(4, receive_request, receive_status);
@@ -182,7 +183,7 @@ void start_charging_node(struct ChargingNode *node)
         strcat(neighbour_message_buf, info);
         log_charging_node_event(node, neighbour_message_buf);
 
-        if (availability == 0 && neighbours_availabilities == 0) 
+        if (availability == 0 && neighbours_availabilities == 0)
         {
             send_alert_message(node); // Alert the base station that the node and its quadrant are all being used up.
             receive_available_nodes_message(node);
@@ -263,17 +264,17 @@ void receive_available_nodes_message(struct ChargingNode *node)
 {
     log_charging_node_event(node, "receiving available nodes from base station");
 
-    double timeout = 25;
+    MPI_Request report_request;
+    double timeout = 10;
     double start_time = MPI_Wtime();
 
-    MPI_Request report_request
     struct AvailableNodes available_nodes;
-    MPI_Recv(&available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, REPORT_TAG, node->world_comm, &report_request);
+    MPI_Irecv(&available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, REPORT_TAG, node->world_comm, &report_request);
 
     int flag;
     while (1)
     {
-        MPI_Test(&flag, MPI_STATUS_IGNORE);
+        MPI_Test(&report_request, &flag, MPI_STATUS_IGNORE);
 
         if (flag)
         {
@@ -361,6 +362,17 @@ void log_charging_node_event(struct ChargingNode *node, const char *message)
     FILE *f;
     char file_buf[64];
     sprintf(file_buf, "logs_charging_node_%d.txt", node->id);
+    f = fopen(file_buf, "a");
+    fprintf(f, "[Node %d] %s\n", node->id, message);
+    fclose(f);
+}
+
+void log_metrics(struct ChargingNode *node, const char *message)
+{
+    printf("[Node %d] %s\n", node->id, message);
+    FILE *f;
+    char file_buf[64];
+    sprintf(file_buf, "logs_metrics_node_%d.txt", node->id);
     f = fopen(file_buf, "a");
     fprintf(f, "[Node %d] %s\n", node->id, message);
     fclose(f);
