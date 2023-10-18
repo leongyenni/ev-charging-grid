@@ -44,18 +44,17 @@ int main(int argc, char *argv[])
 		n = atoi(argv[2]);
 	}
 	
-
 	// Split into base station and node
 	MPI_Comm_split(world_comm, world_rank == 0, 0, &node_comm);
 
-	if (world_rank == 0)
+	if (world_rank == 0) // Master
 	{
 		int grid_size = m * n;
 		struct BaseStation *base_station = new_base_station(world_comm, grid_size, CYCLE_INTERVAL_S, log_file_handler);
 		start_base_station(base_station);
 	}
 
-	else
+	else // Slave
 	{
 		// initialize variables
 		int dims[N_DIMS], coord[N_DIMS], wrap_around[N_DIMS];

@@ -5,6 +5,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
+#include <omp.h>
 
 #include "mpi.h"
 #include "../helpers/helpers.h"
@@ -83,6 +84,7 @@ void close_base_station(struct BaseStation *base_station)
 
     // Send termination message to all charging nodes
     int sig_term = 1;
+    #pragma omp parallel for
     for (int world_rank = 0; world_rank < base_station->grid_size + 1; world_rank++)
     {
         MPI_Isend(&sig_term, 1, MPI_INT, world_rank, TERMINATION_TAG, base_station->world_comm, &send_request[world_rank - 1]);
@@ -284,6 +286,8 @@ void send_to_reporting_node(struct BaseStation *base_station, int i, MPI_Request
     get_timestamp(base_station->logger[reporting_node].logged_timestamp);
     base_station->logger[reporting_node].num_iter = base_station->num_iter;
     base_station->logger[reporting_node].num_messages_sent = base_station->num_alert_messages;
+    base_station->logger[reporting_node].num_available_nodes = available_nodes.size;
+
     // Base station log
     write_to_logs(base_station, &base_station->logger[reporting_node]);
 
@@ -395,7 +399,7 @@ void add_to_available_nodes(struct AvailableNodes *available_nodes, struct Log *
         available_nodes->size += 1;
 
         logger->available_nodes[index] = node;
-        logger->num_available_nodes += 1;
+        // logger->num_available_nodes += 1;
     }
 }
 
@@ -531,5 +535,4 @@ void write_to_logs(struct BaseStation *base_station, struct Log *logger)
 
     fprintf(f, "------------------------------------------------------------------------------------------------------------------------");
     fprintf(f, "\n\n");
-
 }

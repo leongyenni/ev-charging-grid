@@ -13,6 +13,7 @@ void send_alert_message(struct ChargingNode *node);
 void receive_available_nodes_message(struct ChargingNode *node);
 int get_availability(struct ChargingNode *node);
 void log_charging_node_event(struct ChargingNode *node, const char *message);
+void log_event_time(struct ChargingNode *node, const char *communication_time);
 
 struct ChargingNode *new_charging_node(int num_ports, float cycle_interval, int id, MPI_Comm world_comm, MPI_Comm grid_comm_cart)
 {
@@ -132,6 +133,8 @@ void start_charging_node(struct ChargingNode *node)
        
         // Receive termination message from base station
         MPI_Iprobe(BASE_STATION_RANK, TERMINATION_TAG, node->world_comm, &has_alert, &probe_status);
+        
+        
         if (has_alert == 1)
         {
             printf("receiving termination messages from base station\n");
@@ -139,6 +142,7 @@ void start_charging_node(struct ChargingNode *node)
             printf("received termination messages from base station\n");
             break;
         }
+
 
         MPI_Waitall(4, send_request, send_status);
         MPI_Waitall(4, receive_request, receive_status);
@@ -265,7 +269,7 @@ void receive_available_nodes_message(struct ChargingNode *node)
     double start_time = MPI_Wtime();
 
     struct AvailableNodes available_nodes;
-    MPI_Irecv(&available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, REPORT_TAG, node->world_comm, &report_request);
+    MPI_Recv(&available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, REPORT_TAG, node->world_comm, &report_request);
 
     int flag;
     while (1)
