@@ -27,6 +27,15 @@ struct ChargingNode
   pthread_t charging_port_t[NUM_PORTS];
 };
 
+struct Performance
+{
+  int comm_time_base;
+  int comm_time_node;
+  int comm_time_total;
+  int num_reported_msg;
+  int num_runs;
+};
+
 struct ChargingNode *new_charging_node(int num_ports, float cycle_interval, int id, MPI_Comm world_comm, MPI_Comm grid_comm_cart);
 void start_charging_node(struct ChargingNode *node);
 int get_availability(struct ChargingNode *node);

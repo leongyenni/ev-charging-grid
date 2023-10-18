@@ -60,6 +60,13 @@ time_t timestampToTimeT(const char *timestamp)
 	return mktime(&tm_time);
 }
 
+double get_time_taken(struct timespec start, struct timespec end)
+{
+	double seconds = end.tv_sec - start.tv_sec;
+	double nanoseconds = end.tv_nsec - start.tv_nsec;
+	return seconds + nanoseconds / 1e9; // Convert nanoseconds to seconds
+}
+
 float rand_float(float min, float max)
 {
 	float scale = rand() / (float)RAND_MAX;

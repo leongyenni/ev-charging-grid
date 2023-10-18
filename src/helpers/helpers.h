@@ -11,8 +11,8 @@
 
 #define CYCLE_INTERVAL_S 10
 #define STATION_INTERVAL_S 10
-#define RESET_INTERVAL_S 40
-#define ITERATION 3
+#define RESET_INTERVAL_S 30
+#define ITERATION 10
 
 #define DEFAULT_ROW 3
 #define DEFAULT_COL 3
@@ -57,6 +57,7 @@ struct AvailableNodes
 void define_mpi_alert_message(MPI_Datatype *MPI_ALERT_MESSAGE);
 void define_mpi_available_nodes(MPI_Datatype *MPI_AVAILABLE_NODES);
 void get_timestamp(char *curentTimestamp);
+double get_time_taken(struct timespec start, struct timespec end);
 time_t timestampToTimeT(const char *timestamp);
 float rand_float(float min, float max);
 bool rand_bool();

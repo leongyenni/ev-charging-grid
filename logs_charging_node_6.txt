@@ -670,3 +670,78 @@
 
 [Node 6] received termination messages from base station
 
+[Node 6] 2023-10-18 07:30:03 5 ports available
+[Node 6] 2023-10-18 07:30:03 available neighbour nodes: [top node 3 (4 ports), right node 7 (3 ports)], no. available neighbours: 2
+[Node 6] 2023-10-18 07:31:14 5 ports available
+[Node 6] 2023-10-18 07:31:14 available neighbour nodes: [top node 3 (5 ports), right node 7 (5 ports)], no. available neighbours: 2
+[Node 6] 2023-10-18 07:32:18 5 ports available
+[Node 6] 2023-10-18 07:32:18 available neighbour nodes: [top node 3 (5 ports), right node 7 (5 ports)], no. available neighbours: 2
+[Node 6] 2023-10-18 07:32:48 5 ports available
+[Node 6] 2023-10-18 07:32:48 available neighbour nodes: [top node 3 (5 ports), right node 7 (3 ports)], no. available neighbours: 2
+[Node 6] 2023-10-18 07:32:58 2 ports available
+[Node 6] 2023-10-18 07:32:58 available neighbour nodes: [], no. available neighbours: 0
+[Node 6] 2023-10-18 07:33:08 0 ports available
+[Node 6] 2023-10-18 07:33:08 available neighbour nodes: [], no. available neighbours: 0
+[Node 6] ALERT MESSAGE = { timestamp: 2023-10-18 07:33:08, reporting node: 6 (2, 0), neighbouring nodes: [node 3 (1, 0), node 7 (2, 1)], num_neighbours: 2 }
+[Node 6] sending alert message to base station
+[Node 6] sent alert message to base station
+[Node 6] receiving available nodes from base station
+[Node 6] REPORT MESSAGE: { timestamp: 2023-10-18 07:33:18, no. of available nearby nodes: 1, nearby nodes: [node 2] }
+[Node 6] 2023-10-18 07:33:28 2 ports available
+[Node 6] 2023-10-18 07:33:28 available neighbour nodes: [right node 7 (1 ports)], no. available neighbours: 1
+[Node 6] 2023-10-18 07:33:48 0 ports available
+[Node 6] 2023-10-18 07:33:48 available neighbour nodes: [top node 3 (2 ports)], no. available neighbours: 1
+[Node 6] 2023-10-18 07:33:58 0 ports available
+[Node 6] 2023-10-18 07:33:58 available neighbour nodes: [], no. available neighbours: 0
+[Node 6] ALERT MESSAGE = { timestamp: 2023-10-18 07:34:18, reporting node: 6 (2, 0), neighbouring nodes: [node 3 (1, 0), node 7 (2, 1)], num_neighbours: 2 }
+[Node 6] sending alert message to base station
+[Node 6] sent alert message to base station
+[Node 6] receiving available nodes from base station
+[Node 6] 2023-10-18 07:34:28 5 ports available
+[Node 6] 2023-10-18 07:34:28 available neighbour nodes: [top node 3 (5 ports), right node 7 (4 ports)], no. available neighbours: 2
+[Node 6] 2023-10-18 07:34:38 1 ports available
+[Node 6] 2023-10-18 07:34:38 available neighbour nodes: [], no. available neighbours: 0
+[Node 6] 2023-10-18 07:34:48 1 ports available
+[Node 6] 2023-10-18 07:34:48 available neighbour nodes: [top node 3 (1 ports), right node 7 (1 ports)], no. available neighbours: 2
+[Node 6] 2023-10-18 07:34:58 0 ports available
+[Node 6] 2023-10-18 07:34:58 available neighbour nodes: [], no. available neighbours: 0
+[Node 6] ALERT MESSAGE = { timestamp: 2023-10-18 07:35:18, reporting node: 6 (2, 0), neighbouring nodes: [node 3 (1, 0), node 7 (2, 1)], num_neighbours: 2 }
+[Node 6] sending alert message to base station
+[Node 6] sent alert message to base station
+[Node 6] receiving available nodes from base station
+[Node 6] REPORT MESSAGE: { timestamp: 2023-10-18 07:35:28, no. of available nearby nodes: 1, nearby nodes: [node 0] }
+[Node 6] 2023-10-18 07:35:38 0 ports available
+[Node 6] 2023-10-18 07:35:38 available neighbour nodes: [], no. available neighbours: 0
+[Node 6] ALERT MESSAGE = { timestamp: 2023-10-18 07:35:38, reporting node: 6 (2, 0), neighbouring nodes: [node 3 (1, 0), node 7 (2, 1)], num_neighbours: 2 }
+[Node 6] sending alert message to base station
+[Node 6] sent alert message to base station
+[Node 6] receiving available nodes from base station
+[Node 6] REPORT MESSAGE: { timestamp: 2023-10-18 07:35:48, no. of available nearby nodes: 4, nearby nodes: [node 2, node 4, node 0, node 8] }
+[Node 6] 2023-10-18 07:35:58 0 ports available
+[Node 6] 2023-10-18 07:35:58 available neighbour nodes: [top node 3 (1 ports), right node 7 (1 ports)], no. available neighbours: 2
+[Node 6] 2023-10-18 07:36:08 0 ports available
+[Node 6] 2023-10-18 07:36:08 available neighbour nodes: [top node 3 (1 ports), right node 7 (1 ports)], no. available neighbours: 2
+[Node 6] 2023-10-18 07:36:18 1 ports available
+[Node 6] receiving termination messages from base station
+[Node 6] received termination messages from base station
+[Node 6] 2023-10-18 07:42:34 5 ports available
+[Node 6] 2023-10-18 07:42:34 available neighbour nodes: [top node 3 (5 ports), right node 7 (5 ports)], no. available neighbours: 2
+[Node 6] 2023-10-18 07:42:44 0 ports available
+[Node 6] 2023-10-18 07:42:44 available neighbour nodes: [top node 3 (1 ports), right node 7 (1 ports)], no. available neighbours: 2
+[Node 6] 2023-10-18 07:42:54 0 ports available
+[Node 6] 2023-10-18 07:42:54 available neighbour nodes: [top node 3 (1 ports)], no. available neighbours: 1
+[Node 6] 2023-10-18 07:43:04 1 ports available
+[Node 6] 2023-10-18 07:43:04 available neighbour nodes: [], no. available neighbours: 0
+[Node 6] 2023-10-18 07:43:14 0 ports available
+[Node 6] 2023-10-18 07:43:14 available neighbour nodes: [top node 3 (1 ports)], no. available neighbours: 1
+[Node 6] 2023-10-18 07:43:34 0 ports available
+[Node 6] 2023-10-18 07:43:34 available neighbour nodes: [top node 3 (1 ports)], no. available neighbours: 1
+[Node 6] 2023-10-18 07:43:54 1 ports available
+[Node 6] 2023-10-18 07:43:54 available neighbour nodes: [top node 3 (1 ports)], no. available neighbours: 1
+[Node 6] 2023-10-18 07:44:04 1 ports available
+[Node 6] 2023-10-18 07:44:04 available neighbour nodes: [right node 7 (1 ports)], no. available neighbours: 1
+[Node 6] 2023-10-18 07:44:24 0 ports available
+[Node 6] receiving termination messages from base station
+[Node 6] received termination messages from base station
+[Node 6] 2023-10-18 07:48:31 5 ports available
+[Node 6] 2023-10-18 07:48:31 available neighbour nodes: [top node 3 (5 ports), right node 7 (5 ports)], no. available neighbours: 2
