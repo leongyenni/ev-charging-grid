@@ -124,3 +124,21 @@
 [Node 3] Communication time between adjacent nodes: 0, Communication time between the reporting node and the base station :  1, No.of runs :  10, No.of reported message :  0 
 [Node 7] Communication time between adjacent nodes: 0, Communication time between the reporting node and the base station :  9, No.of runs :  9, No.of reported message :  1 
 [Node 5] Communication time between adjacent nodes: 0, Communication time between the reporting node and the base station :  9, No.of runs :  9, No.of reported message :  1 
+[Node 64] Total Communication Time: -1404135152, Total Reported Message: 0, Total Runs: 9
+[Node 64] Total Communication Time: -765650672, Total Reported Message: 0, Total Runs: 9
+[Node 64] Total Communication Time: -273614576, Total Reported Message: 1, Total Runs: 9
+[Node 64] Total Communication Time: -1459451632, Total Reported Message: 0, Total Runs: 9
+[Node 64] Total Communication Time: -1297336048, Total Reported Message: 1, Total Runs: 9
+[Node 64] Total Communication Time: 1470904592, Total Reported Message: 0, Total Runs: 9
+[Node 64] Total Communication Time: 1254357264, Total Reported Message: 0, Total Runs: 9
+[Node 64] Total Communication Time: 626120976, Total Reported Message: 1, Total Runs: 9
+[Node 64] Total Communication Time: -251414256, Total Reported Message: 1, Total Runs: 9
+[Node 434378032] Total Communication Time: 415205664, Total Reported Message: 1, Total Runs: 6
+[Node 840894688] Total Communication Time: 826095904, Total Reported Message: 3, Total Runs: 6
+[Node 305058768] Total Communication Time: 298580256, Total Reported Message: 1, Total Runs: 6
+[Node -954096368] Total Communication Time: -957683424, Total Reported Message: 2, Total Runs: 7
+[Node 452272448] Total Communication Time: 436332832, Total Reported Message: 2, Total Runs: 7
+[Node 44647232] Total Communication Time: 42633504, Total Reported Message: 2, Total Runs: 7
+[Node 357946656] Total Communication Time: 353626400, Total Reported Message: 1, Total Runs: 7
+[Node -1701973024] Total Communication Time: -1732318944, Total Reported Message: 1, Total Runs: 8
+[Node 1942447072] Total Communication Time: 1909426464, Total Reported Message: 1, Total Runs: 8

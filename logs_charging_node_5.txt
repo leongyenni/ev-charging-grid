@@ -663,3 +663,35 @@
 [Node 5] 2023-10-18 07:49:31 available neighbour nodes: [top node 2 (1 ports), bottom node 8 (1 ports), left node 4 (1 ports)], no. available neighbours: 3
 [Node 5] 2023-10-18 07:49:41 2 ports available
 [Node 5] 2023-10-18 07:49:41 available neighbour nodes: [bottom node 8 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-18 07:52:37 5 ports available
+[Node 5] 2023-10-18 07:52:47 1 ports available
+[Node 5] 2023-10-18 07:52:57 1 ports available
+[Node 5] 2023-10-18 07:53:07 1 ports available
+[Node 5] 2023-10-18 07:53:18 0 ports available
+[Node 5] 2023-10-18 07:53:28 0 ports available
+[Node 5] 2023-10-18 07:53:38 0 ports available
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-18 07:53:57, reporting node: 5 (1, 2), neighbouring nodes: [node 2 (0, 2), node 8 (2, 2), node 4 (1, 1)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] REPORT MESSAGE: { timestamp: 2023-10-18 07:54:07, no. of available nearby nodes: 2, nearby nodes: [node 1, node 7] }
+[Node 5] 2023-10-18 07:54:17 2 ports available
+[Node 5] 2023-10-18 07:54:27 1 ports available
+[Node 5] 2023-10-18 07:59:29 5 ports available
+[Node 5] 2023-10-18 07:59:39 0 ports available
+[Node 5] 2023-10-18 07:59:49 1 ports available
+[Node 5] 2023-10-18 07:59:59 0 ports available
+[Node 5] 2023-10-18 08:00:09 0 ports available
+[Node 5] 2023-10-18 08:00:24 5 ports available
+[Node 5] 2023-10-18 08:00:34 0 ports available
+[Node 5] 2023-10-18 08:00:44 0 ports available
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-18 08:00:54, reporting node: 5 (1, 2), neighbouring nodes: [node 2 (0, 2), node 8 (2, 2), node 4 (1, 1)], num_neighbours: 3 }
+[Node 5] sending alert message to base station
+[Node 5] sent alert message to base station
+[Node 5] receiving available nodes from base station
+[Node 5] REPORT MESSAGE: { timestamp: 2023-10-18 08:01:04, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 5] 2023-10-18 08:01:14 1 ports available
+[Node 5] 2023-10-18 08:01:24 0 ports available
+[Node 5] 2023-10-18 08:01:44 0 ports available
+[Node 5] 2023-10-18 08:02:04 0 ports available
+[Node 5] 2023-10-18 08:02:54 0 ports available

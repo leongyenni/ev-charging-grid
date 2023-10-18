@@ -103,6 +103,10 @@ void start_charging_node(struct ChargingNode *node)
     performance.num_reported_msg = 0;
     performance.num_runs = 0;
 
+    char startTime[TIMESTAMP_LEN];
+    get_timestamp(startTime);
+    printf("[Node %d] Start time: %s\n", node->id, startTime);
+
     struct timespec start_comm_total, end_comm_total;
     double time_taken_total;
     clock_gettime(CLOCK_MONOTONIC, &start_comm_total);
@@ -144,19 +148,13 @@ void start_charging_node(struct ChargingNode *node)
         MPI_Iprobe(BASE_STATION_RANK, TERMINATION_TAG, node->world_comm, &has_alert, &probe_status);
         if (has_alert == 1)
         {
-            log_charging_node_event(node, "receiving termination messages from base station");
             MPI_Recv(&sig_term, 1, MPI_INT, probe_status.MPI_SOURCE, TERMINATION_TAG, node->world_comm, &status);
-            log_charging_node_event(node, "received termination messages from base station");
             break;
         }
 
         MPI_Waitall(4, send_request, send_status);
         MPI_Waitall(4, receive_request, receive_status);
 
-        char neighbour_message_buf[2024];
-        sprintf(neighbour_message_buf, "%s available neighbour nodes: [", currentTimestamp);
-
-        int first_entry = 1;
         int neighbours_availabilities = 0;
         for (int i = 0; i < MAX_NUM_NEIGHBOURS; i++)
         {
@@ -168,15 +166,6 @@ void start_charging_node(struct ChargingNode *node)
             {
                 node->available_neighbour_nodes[i].num_ports = availabilities[i];
                 neighbours_availabilities++;
-
-                char neighbour_info[516];
-                if (!first_entry)
-                    strcat(neighbour_message_buf, ", ");
-                else
-                    first_entry = 0;
-
-                sprintf(neighbour_info, "%s node %d (%d ports)", direction[i], node->available_neighbour_nodes[i].id, availabilities[i]);
-                strcat(neighbour_message_buf, neighbour_info);
             }
             else if (availabilities[i] == 0 && node->available_neighbour_nodes[i].id >= 0)
             {
@@ -184,10 +173,6 @@ void start_charging_node(struct ChargingNode *node)
             }
         }
 
-        char info[100];
-        sprintf(info, "], no. available neighbours: %d", neighbours_availabilities);
-        strcat(neighbour_message_buf, info);
-        log_charging_node_event(node, neighbour_message_buf);
 
         struct timespec start_comm_base, end_comm_base;
         double time_taken_comm_base;
@@ -206,6 +191,11 @@ void start_charging_node(struct ChargingNode *node)
     }
 
     clock_gettime(CLOCK_MONOTONIC, &end_comm_total);
+
+    char endTime[TIMESTAMP_LEN];
+    get_timestamp(endTime);
+    printf("[Node %d] End time: %s", node->id, endTime);
+
     time_taken_total = get_time_taken(start_comm_total, end_comm_total);
     log_performance(node, &performance);
 
@@ -295,7 +285,6 @@ void receive_available_nodes_message(struct ChargingNode *node, struct Performan
 
         if (flag)
         {
-            printf("[Node %d] Received data: %d\n", node->id, available_nodes.size);
             break;
         }
 
