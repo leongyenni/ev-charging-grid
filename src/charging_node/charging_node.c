@@ -64,15 +64,6 @@ struct ChargingNode *new_charging_node(int num_ports, float cycle_interval, int 
         node->available_neighbour_nodes[i].num_ports = -1;
     }
 
-    /*char buf[256];
-    FILE *f;
-    f = fopen("logs_cart.txt", "a");
-
-    sprintf(buf, "Cart rank: %d. Coord: (%d, %d). Top: %d. Bottom: %d. Left: %d. Right: %d\n", id, coord[0], coord[1], top_rank, bottom_rank, left_rank, right_rank);
-    fprintf(f, "%s", buf);
-    printf("%s", buf);
-    fclose(f); */
-
     // Initializes charging ports
     struct ChargingPort **ports = malloc(sizeof(struct ChargingPort *) * num_ports);
     for (int i = 0; i < num_ports; i++)
@@ -111,14 +102,13 @@ void start_charging_node(struct ChargingNode *node)
     struct Performance performance;
     performance.num_reported_msg = 0;
     performance.num_runs = 0;
+
     struct timespec start_comm_total, end_comm_total;
     double time_taken_total;
+    clock_gettime(CLOCK_MONOTONIC, &start_comm_total);
 
     while (1)
     {
-
-        clock_gettime(CLOCK_MONOTONIC, &start_comm_total);
-
         performance.num_runs += 1;
         int availability = get_availability(node);
 

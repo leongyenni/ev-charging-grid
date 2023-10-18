@@ -621,3 +621,14 @@
 [Node 1] received termination messages from base station
 [Node 1] 2023-10-18 07:48:31 5 ports available
 [Node 1] 2023-10-18 07:48:31 available neighbour nodes: [bottom node 4 (5 ports), left node 0 (5 ports), right node 2 (5 ports)], no. available neighbours: 3
+[Node 1] 2023-10-18 07:48:41 2 ports available
+[Node 1] 2023-10-18 07:48:41 available neighbour nodes: [bottom node 4 (1 ports), left node 0 (1 ports)], no. available neighbours: 2
+[Node 1] 2023-10-18 07:48:51 1 ports available
+[Node 1] 2023-10-18 07:48:51 available neighbour nodes: [bottom node 4 (1 ports)], no. available neighbours: 1
+[Node 1] 2023-10-18 07:49:01 0 ports available
+[Node 1] 2023-10-18 07:49:01 available neighbour nodes: [bottom node 4 (1 ports), right node 2 (2 ports)], no. available neighbours: 2
+[Node 1] 2023-10-18 07:49:11 1 ports available
+[Node 1] 2023-10-18 07:49:11 available neighbour nodes: [], no. available neighbours: 0
+[Node 1] 2023-10-18 07:49:21 0 ports available
+[Node 1] 2023-10-18 07:49:21 available neighbour nodes: [bottom node 4 (1 ports), right node 2 (1 ports)], no. available neighbours: 2
+[Node 1] 2023-10-18 07:49:32 0 ports available

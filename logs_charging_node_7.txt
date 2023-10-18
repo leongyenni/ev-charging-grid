@@ -634,3 +634,15 @@
 [Node 7] received termination messages from base station
 [Node 7] 2023-10-18 07:48:31 5 ports available
 [Node 7] 2023-10-18 07:48:31 available neighbour nodes: [top node 4 (5 ports), left node 6 (5 ports), right node 8 (5 ports)], no. available neighbours: 3
+[Node 7] 2023-10-18 07:48:41 0 ports available
+[Node 7] 2023-10-18 07:48:41 available neighbour nodes: [top node 4 (1 ports)], no. available neighbours: 1
+[Node 7] 2023-10-18 07:48:51 1 ports available
+[Node 7] 2023-10-18 07:48:51 available neighbour nodes: [top node 4 (1 ports), right node 8 (1 ports)], no. available neighbours: 2
+[Node 7] 2023-10-18 07:49:01 0 ports available
+[Node 7] 2023-10-18 07:49:01 available neighbour nodes: [top node 4 (1 ports), right node 8 (1 ports)], no. available neighbours: 2
+[Node 7] 2023-10-18 07:49:11 1 ports available
+[Node 7] 2023-10-18 07:49:11 available neighbour nodes: [], no. available neighbours: 0
+[Node 7] 2023-10-18 07:49:21 1 ports available
+[Node 7] 2023-10-18 07:49:21 available neighbour nodes: [top node 4 (1 ports), right node 8 (1 ports)], no. available neighbours: 2
+[Node 7] 2023-10-18 07:49:31 1 ports available
+[Node 7] 2023-10-18 07:49:31 available neighbour nodes: [left node 6 (1 ports), right node 8 (1 ports)], no. available neighbours: 2
