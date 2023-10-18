@@ -11,10 +11,9 @@
 #include "../helpers/helpers.h"
 
 void send_alert_message(struct ChargingNode *node);
-void receive_available_nodes_message(struct ChargingNode *node, struct Performance *performance);
+void receive_available_nodes_message(struct ChargingNode *node);
 int get_availability(struct ChargingNode *node);
 void log_charging_node_event(struct ChargingNode *node, const char *message);
-void log_performance(struct ChargingNode *node, struct Performance *performance);
 
 struct ChargingNode *new_charging_node(int num_ports, float cycle_interval, int id, MPI_Comm world_comm, MPI_Comm grid_comm_cart)
 {
@@ -64,6 +63,15 @@ struct ChargingNode *new_charging_node(int num_ports, float cycle_interval, int 
         node->available_neighbour_nodes[i].num_ports = -1;
     }
 
+    /*char buf[256];
+    FILE *f;
+    f = fopen("logs_cart.txt", "a");
+
+    sprintf(buf, "Cart rank: %d. Coord: (%d, %d). Top: %d. Bottom: %d. Left: %d. Right: %d\n", id, coord[0], coord[1], top_rank, bottom_rank, left_rank, right_rank);
+    fprintf(f, "%s", buf);
+    printf("%s", buf);
+    fclose(f); */
+
     // Initializes charging ports
     struct ChargingPort **ports = malloc(sizeof(struct ChargingPort *) * num_ports);
     for (int i = 0; i < num_ports; i++)
@@ -99,21 +107,10 @@ void start_charging_node(struct ChargingNode *node)
     int has_alert = 0;
     int sig_term = 1;
 
-    struct Performance performance;
-    performance.num_reported_msg = 0;
-    performance.num_runs = 0;
-
-    char startTime[TIMESTAMP_LEN];
-    get_timestamp(startTime);
-    printf("[Node %d] Start time: %s\n", node->id, startTime);
-
-    struct timespec start_comm_total, end_comm_total;
-    double time_taken_total;
-    clock_gettime(CLOCK_MONOTONIC, &start_comm_total);
 
     while (1)
     {
-        performance.num_runs += 1;
+
         int availability = get_availability(node);
 
         char currentTimestamp[TIMESTAMP_LEN];
@@ -136,12 +133,8 @@ void start_charging_node(struct ChargingNode *node)
         // Send readings to adjacent nodes and receive readings from adjacent nodes
         for (int i = 0; i < MAX_NUM_NEIGHBOURS; i++)
         {
-            clock_gettime(CLOCK_MONOTONIC, &start_comm_node);
             MPI_Isend(&availability, 1, MPI_INT, ranks[i], 0, node->grid_comm_cart, &send_request[i]);
             MPI_Irecv(&availabilities[i], 1, MPI_INT, ranks[i], 0, node->grid_comm_cart, &receive_request[i]);
-            clock_gettime(CLOCK_MONOTONIC, &end_comm_node);
-            time_taken_comm_node = get_time_taken(start_comm_node, end_comm_node);
-            performance.comm_time_node = time_taken_comm_node;
         }
 
         // Receive termination message from base station
@@ -155,6 +148,10 @@ void start_charging_node(struct ChargingNode *node)
         MPI_Waitall(4, send_request, send_status);
         MPI_Waitall(4, receive_request, receive_status);
 
+        char neighbour_message_buf[2024];
+        sprintf(neighbour_message_buf, "%s available neighbour nodes: [", currentTimestamp);
+
+        int first_entry = 1;
         int neighbours_availabilities = 0;
         for (int i = 0; i < MAX_NUM_NEIGHBOURS; i++)
         {
@@ -166,6 +163,15 @@ void start_charging_node(struct ChargingNode *node)
             {
                 node->available_neighbour_nodes[i].num_ports = availabilities[i];
                 neighbours_availabilities++;
+
+                char neighbour_info[516];
+                if (!first_entry)
+                    strcat(neighbour_message_buf, ", ");
+                else
+                    first_entry = 0;
+
+                sprintf(neighbour_info, "%s node %d (%d ports)", direction[i], node->available_neighbour_nodes[i].id, availabilities[i]);
+                strcat(neighbour_message_buf, neighbour_info);
             }
             else if (availabilities[i] == 0 && node->available_neighbour_nodes[i].id >= 0)
             {
@@ -173,31 +179,22 @@ void start_charging_node(struct ChargingNode *node)
             }
         }
 
+        char info[100];
+        sprintf(info, "], no. available neighbours: %d", neighbours_availabilities);
+        strcat(neighbour_message_buf, info);
+        log_charging_node_event(node, neighbour_message_buf);
 
         struct timespec start_comm_base, end_comm_base;
         double time_taken_comm_base;
 
         if (availability == 0 && neighbours_availabilities == 0)
         {
-            clock_gettime(CLOCK_MONOTONIC, &start_comm_base);
             send_alert_message(node); // Alert the base station that the node and its quadrant are all being used up.
-            receive_available_nodes_message(node, &performance);
-            clock_gettime(CLOCK_MONOTONIC, &end_comm_base);
-            time_taken_comm_base = get_time_taken(start_comm_base, end_comm_base);
-            performance.comm_time_base = time_taken_comm_base;
+            receive_available_nodes_message(node);
         }
 
         sleep(node->cycle_interval);
     }
-
-    clock_gettime(CLOCK_MONOTONIC, &end_comm_total);
-
-    char endTime[TIMESTAMP_LEN];
-    get_timestamp(endTime);
-    printf("[Node %d] End time: %s", node->id, endTime);
-
-    time_taken_total = get_time_taken(start_comm_total, end_comm_total);
-    log_performance(node, &performance);
 
     for (int i = 0; i < node->num_ports; i++)
     {
@@ -259,15 +256,11 @@ void send_alert_message(struct ChargingNode *node)
     sprintf(alert_message_buf + strlen(alert_message_buf), "], num_neighbours: %d }", alert_message.num_neighbours);
     log_charging_node_event(node, alert_message_buf);
 
-    log_charging_node_event(node, "sending alert message to base station");
-
     MPI_Send(&alert_message, 1, MPI_ALERT_MESSAGE, BASE_STATION_RANK, ALERT_TAG, node->world_comm);
-
-    log_charging_node_event(node, "sent alert message to base station");
 }
 
 /* Receive a list of available nodes from base station */
-void receive_available_nodes_message(struct ChargingNode *node, struct Performance *performance)
+void receive_available_nodes_message(struct ChargingNode *node)
 {
     log_charging_node_event(node, "receiving available nodes from base station");
 
@@ -298,7 +291,6 @@ void receive_available_nodes_message(struct ChargingNode *node, struct Performan
 
     if (flag)
     {
-        performance->num_reported_msg += 1;
         int size = available_nodes.size;
         int nearby_nodes[size];
         for (int i = 0; i < size; i++)
@@ -370,23 +362,5 @@ void log_charging_node_event(struct ChargingNode *node, const char *message)
     sprintf(file_buf, "logs_charging_node_%d.txt", node->id);
     f = fopen(file_buf, "a");
     fprintf(f, "[Node %d] %s\n", node->id, message);
-    fclose(f);
-}
-
-void log_performance(struct ChargingNode *node, struct Performance *performance)
-{
-
-    printf("[Node %d] Logging performance\n", node->id);
-    FILE *f;
-    if (f == NULL)
-    {
-        perror("Error opening file");
-        return; // Exit the function if the file cannot be opened
-    }
-    char file_buf[64];
-    f = fopen("logs_performance_node.txt", "a");
-    fprintf(f, "[Node %d] Total Communication Time: %d, ", performance->comm_time_total);
-    fprintf(f, "Total Reported Message: %d, ", performance->num_reported_msg);
-    fprintf(f, "Total Runs: %d\n", performance->num_runs);
     fclose(f);
 }

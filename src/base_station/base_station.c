@@ -45,6 +45,7 @@ struct BaseStation *new_base_station(MPI_Comm world_comm, int grid_size, float l
     base_station->alert_messages = malloc(sizeof(struct AlertMessage) * base_station->grid_size);
     base_station->num_alert_messages = 0;
     base_station->num_iter = 0;
+    base_station->num_total_msg_sent = 0;
 
     base_station->logger = malloc(sizeof(struct Log) * base_station->grid_size);
 
@@ -56,7 +57,6 @@ void start_base_station(struct BaseStation *base_station)
 {
     printf("starting base station \n");
 
-    printf("BASE STATION NUM ITER %d\n", base_station->num_iter);
     while (base_station->num_iter < ITERATION)
     {
 
@@ -141,7 +141,7 @@ void receive_alert_message(struct BaseStation *base_station)
     }
 
     get_timestamp(currentTimestamp);
-    printf("[Base Station] timestamp %s %d ALERT MESSAGES READ\n", currentTimestamp, base_station->num_alert_messages);
+    printf("[Base Station] timestamp %s read %d alert messages\n", currentTimestamp, base_station->num_alert_messages);
 }
 
 /* Process received message */
@@ -242,6 +242,7 @@ void send_available_nodes_message(struct BaseStation *base_station)
         strcat(reporting_node_buf, node_buf);
 
         send_to_reporting_node(base_station, i, report_request);
+        base_station->num_total_msg_sent++;
     }
 
     MPI_Waitall(base_station->num_alert_messages, report_request, report_status);
@@ -506,7 +507,7 @@ void write_to_logs(struct BaseStation *base_station, struct Log *logger)
 
     fprintf(f, "\n");
 
-    fprintf(f, "Available nearby nodes (no report in last 3 iterations): ");
+    fprintf(f, "Available nearby nodes (no report in last 25 seconds): ");
 
     int first_entry = 1;
     for (int i = 0; i < logger->num_available_nodes; i++)
@@ -533,6 +534,6 @@ void write_to_logs(struct BaseStation *base_station, struct Log *logger)
     fprintf(f, "Communication time (s): %.2lf\n", timeInSeconds);
     fprintf(f, "Total messages send between reporting node and base station: %d\n", logger->num_messages_sent);
 
-    fprintf(f, "------------------------------------------------------------------------------------------------------------------------");
+    fprintf(f, "\n------------------------------------------------------------------------------------------------------------------------");
     fprintf(f, "\n\n");
 }

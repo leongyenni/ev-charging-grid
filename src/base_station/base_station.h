@@ -17,6 +17,7 @@ struct BaseStation
   struct AlertMessage *alert_messages;
   int num_alert_messages;
   int num_iter;
+  int num_total_msg_sent;
   struct Log *logger;
   FILE *log_file_handler;  
 };

@@ -67,17 +67,6 @@ double get_time_taken(struct timespec start, struct timespec end)
 	return seconds + nanoseconds / 1e9; // Convert nanoseconds to seconds
 }
 
-char *format_time_taken(double time_in_seconds)
-{
-	int minutes = (int)(time_in_seconds / 60);
-	int seconds = (int)(time_in_seconds) % 60;
-
-	static char formatted_time[16]; /
-
-	snprintf(formatted_time, sizeof(formatted_time), "%d:%02d", minutes, seconds);
-	return formatted_time;
-}
-
 float rand_float(float min, float max)
 {
 	float scale = rand() / (float)RAND_MAX;
