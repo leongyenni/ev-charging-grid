@@ -56,10 +56,8 @@ void start_base_station(struct BaseStation *base_station)
 {
     printf("starting base station \n");
 
-    // TODO: (2f)  send or receive MPI messages using POSIX thread
     while (base_station->num_iter < ITERATION)
     {
-
         base_station->num_iter++;
         receive_alert_message(base_station);
         send_available_nodes_message(base_station);
@@ -272,7 +270,8 @@ void send_to_reporting_node(struct BaseStation *base_station, int i, MPI_Request
 
         int neighbouring_node_rank = base_station->alert_messages[i].neighbouring_nodes[j];
 
-        if (base_station->node_availabilities[neighbouring_node_rank] == 1)
+       // check if the base station has received an AlertMessage from the neighbour
+        if (base_station->node_availabilities[neighbouring_node_rank] == 1)  
         {
             int row = base_station->alert_messages[i].neighbouring_nodes_coord[j][0];
             int col = base_station->alert_messages[i].neighbouring_nodes_coord[j][1];
@@ -281,7 +280,8 @@ void send_to_reporting_node(struct BaseStation *base_station, int i, MPI_Request
         }
     }
 
-    MPI_Isend(&available_nodes, 1, MPI_AVAILABLE_NODES, base_station->alert_messages[i].reporting_node + 1, REPORT_TAG, base_station->world_comm, &report_request[i]);
+    MPI_Isend(&available_nodes, 1, MPI_AVAILABLE_NODES, base_station->alert_messages[i].reporting_node + 1, 
+    REPORT_TAG, base_station->world_comm, &report_request[i]);
 
     get_timestamp(base_station->logger[reporting_node].logged_timestamp);
     base_station->logger[reporting_node].num_iter = base_station->num_iter;

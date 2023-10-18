@@ -134,7 +134,6 @@ void start_charging_node(struct ChargingNode *node)
         // Receive termination message from base station
         MPI_Iprobe(BASE_STATION_RANK, TERMINATION_TAG, node->world_comm, &has_alert, &probe_status);
         
-        
         if (has_alert == 1)
         {
             printf("receiving termination messages from base station\n");
@@ -264,17 +263,17 @@ void receive_available_nodes_message(struct ChargingNode *node)
 {
     log_charging_node_event(node, "receiving available nodes from base station");
 
-    MPI_Request report_request;
-    double timeout = 10;
+    double timeout = 25;
     double start_time = MPI_Wtime();
 
+    MPI_Request report_request
     struct AvailableNodes available_nodes;
     MPI_Recv(&available_nodes, 1, MPI_AVAILABLE_NODES, BASE_STATION_RANK, REPORT_TAG, node->world_comm, &report_request);
 
     int flag;
     while (1)
     {
-        MPI_Test(&report_request, &flag, MPI_STATUS_IGNORE);
+        MPI_Test(&flag, MPI_STATUS_IGNORE);
 
         if (flag)
         {
