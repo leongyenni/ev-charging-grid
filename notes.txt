@@ -1,6 +1,0 @@
-to terminate program:
-1. use sig_term.txt -> substitute 0 to 1
-
-
-NIT:
-1. make sure no resource leaks for MPI objects, file handlers, malloc() etc.

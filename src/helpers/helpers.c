@@ -7,6 +7,7 @@
 
 const char *direction[] = {"top", "bottom", "left", "right"};
 
+/* Define custom data type (MPI_ALERT_MESSAGE) */
 void define_mpi_alert_message(MPI_Datatype *CUSTOM_MPI_ALERT_MESSAGE)
 {
 	const int fields = 6;
@@ -26,6 +27,7 @@ void define_mpi_alert_message(MPI_Datatype *CUSTOM_MPI_ALERT_MESSAGE)
 	MPI_Type_commit(CUSTOM_MPI_ALERT_MESSAGE);
 }
 
+/* Define custom data type (MPI_AVAILABLE_NODES) */
 void define_mpi_available_nodes(MPI_Datatype *CUSTOM_MPI_AVAILABLE_NODES)
 {
 	const int fields = 3;
@@ -42,6 +44,7 @@ void define_mpi_available_nodes(MPI_Datatype *CUSTOM_MPI_AVAILABLE_NODES)
 	MPI_Type_commit(CUSTOM_MPI_AVAILABLE_NODES);
 }
 
+/* Get current timestamp */
 void get_timestamp(char *curentTimestamp)
 {
 	time_t now;
@@ -53,6 +56,7 @@ void get_timestamp(char *curentTimestamp)
 	strftime(curentTimestamp, TIMESTAMP_LEN, "%Y-%m-%d %H:%M:%S", currentTime);
 }
 
+/* Convert to time_t */
 time_t timestampToTimeT(const char *timestamp)
 {
 	struct tm tm_time;
@@ -60,6 +64,7 @@ time_t timestampToTimeT(const char *timestamp)
 	return mktime(&tm_time);
 }
 
+/* Calculate time taken */
 double get_time_taken(struct timespec start, struct timespec end)
 {
 	double seconds = end.tv_sec - start.tv_sec;
@@ -67,12 +72,14 @@ double get_time_taken(struct timespec start, struct timespec end)
 	return seconds + nanoseconds / 1e9; // Convert nanoseconds to seconds
 }
 
+/* Random float maths function */
 float rand_float(float min, float max)
 {
 	float scale = rand() / (float)RAND_MAX;
 	return min + scale * (max - min);
 }
 
+/* Random boolean maths function */
 bool rand_bool()
 {
 	return (int)rand_float(1, 10) % 2 == 0;

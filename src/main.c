@@ -54,7 +54,6 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "ERROR: Invalid no. of processors. No. of processors must greater than the (grid size + 1).\n");
 		goto cleanup_and_exit;
 	}
-
 	else
 	{
 		m = atoi(argv[1]);
@@ -107,6 +106,7 @@ cleanup_and_exit:
 	return 0;
 }
 
+/* Log the performance */
 void log_performance(int num_itr, int num_msg, double time_taken)
 {
 	FILE *performance_file_handler = fopen("logs_performance.txt", "a");

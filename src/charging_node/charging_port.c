@@ -21,19 +21,14 @@ struct ChargingPort *new_charging_port(struct ChargingNode *parent_node, int id,
 
 void start_charging_port(struct ChargingPort *port)
 {
-  printf("starting charging port %d on node %d \n", port->id, port->parent_node->id);
-  // printf("Node, ")
-
+  
   while (port->sig_term)
   {
     int r = rand_r(&port->seed);
     port->is_available = (r % 10 == 0);
-    // port->is_available = rand_bool();
     sleep(port->parent_node->cycle_interval);
   }
-
-  printf("terminating charging port %d on node %d \n", port->id, port->parent_node->id);
-
+  
   free(port);
 }
 

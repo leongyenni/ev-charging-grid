@@ -45,7 +45,7 @@ struct ChargingNode *new_charging_node(int num_ports, float cycle_interval, int 
 
     for (int i = 0; i < MAX_NUM_NEIGHBOURS; i++)
     {
-        if (pos_rank[i] < 0)
+        if (pos_rank[i] < 0 || pos_rank[i] >= (m * n))
         {
             node->available_neighbour_nodes[i].id = -1; // Indicate invalid rank
             node->available_neighbour_nodes[i].coord[0] = -1;
@@ -62,15 +62,6 @@ struct ChargingNode *new_charging_node(int num_ports, float cycle_interval, int 
         }
         node->available_neighbour_nodes[i].num_ports = -1;
     }
-
-    /*char buf[256];
-    FILE *f;
-    f = fopen("logs_cart.txt", "a");
-
-    sprintf(buf, "Cart rank: %d. Coord: (%d, %d). Top: %d. Bottom: %d. Left: %d. Right: %d\n", id, coord[0], coord[1], top_rank, bottom_rank, left_rank, right_rank);
-    fprintf(f, "%s", buf);
-    printf("%s", buf);
-    fclose(f); */
 
     // Initializes charging ports
     struct ChargingPort **ports = malloc(sizeof(struct ChargingPort *) * num_ports);
@@ -107,7 +98,6 @@ void start_charging_node(struct ChargingNode *node)
     int has_alert = 0;
     int sig_term = 1;
 
-
     while (1)
     {
 
@@ -127,9 +117,6 @@ void start_charging_node(struct ChargingNode *node)
         int availabilities[MAX_NUM_NEIGHBOURS] = {top_availability, bottom_availability, left_availability, right_availability};
         int ranks[MAX_NUM_NEIGHBOURS] = {node->top_rank, node->bottom_rank, node->left_rank, node->right_rank};
 
-        struct timespec start_comm_node, end_comm_node;
-        double time_taken_comm_node;
-
         // Send readings to adjacent nodes and receive readings from adjacent nodes
         for (int i = 0; i < MAX_NUM_NEIGHBOURS; i++)
         {
@@ -148,7 +135,7 @@ void start_charging_node(struct ChargingNode *node)
         MPI_Waitall(4, send_request, send_status);
         MPI_Waitall(4, receive_request, receive_status);
 
-        char neighbour_message_buf[2024];
+        char neighbour_message_buf[5024];
         sprintf(neighbour_message_buf, "%s available neighbour nodes: [", currentTimestamp);
 
         int first_entry = 1;
@@ -164,7 +151,7 @@ void start_charging_node(struct ChargingNode *node)
                 node->available_neighbour_nodes[i].num_ports = availabilities[i];
                 neighbours_availabilities++;
 
-                char neighbour_info[516];
+                char neighbour_info[1000];
                 if (!first_entry)
                     strcat(neighbour_message_buf, ", ");
                 else
@@ -179,13 +166,10 @@ void start_charging_node(struct ChargingNode *node)
             }
         }
 
-        char info[100];
+        char info[1000];
         sprintf(info, "], no. available neighbours: %d", neighbours_availabilities);
         strcat(neighbour_message_buf, info);
         log_charging_node_event(node, neighbour_message_buf);
-
-        struct timespec start_comm_base, end_comm_base;
-        double time_taken_comm_base;
 
         if (availability == 0 && neighbours_availabilities == 0)
         {
@@ -195,6 +179,7 @@ void start_charging_node(struct ChargingNode *node)
 
         sleep(node->cycle_interval);
     }
+
 
     for (int i = 0; i < node->num_ports; i++)
     {
@@ -233,7 +218,7 @@ void send_alert_message(struct ChargingNode *node)
             num_neighbours += 1;
         }
     }
-
+    // Logging
     alert_message.num_neighbours = num_neighbours;
 
     char alert_message_buf[2024];
@@ -262,8 +247,6 @@ void send_alert_message(struct ChargingNode *node)
 /* Receive a list of available nodes from base station */
 void receive_available_nodes_message(struct ChargingNode *node)
 {
-    log_charging_node_event(node, "receiving available nodes from base station");
-
     MPI_Request report_request;
     double timeout = 20;
     double start_time = MPI_Wtime();
@@ -331,8 +314,6 @@ int get_availability(struct ChargingNode *node)
             availability++;
         }
     }
-    char node_avail_buf[50];
-    sprintf(node_avail_buf, "Node %d num ports: %d", node->id, availability);
     return availability;
 }
 

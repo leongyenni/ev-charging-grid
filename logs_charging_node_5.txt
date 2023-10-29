@@ -1,94 +1,125 @@
-[Node 5] 2023-10-18 09:16:01 5 ports available
-[Node 5] 2023-10-18 09:16:01 available neighbour nodes: [top node 2 (5 ports), bottom node 8 (5 ports), left node 4 (3 ports)], no. available neighbours: 3
-[Node 5] 2023-10-18 09:16:06 0 ports available
-[Node 5] 2023-10-18 09:16:06 available neighbour nodes: [], no. available neighbours: 0
-[Node 5] ALERT MESSAGE = { timestamp: 2023-10-18 09:16:06, reporting node: 5 (1, 2), neighbouring nodes: [node 2 (0, 2), node 8 (2, 2), node 4 (1, 1)], num_neighbours: 3 }
-[Node 5] receiving available nodes from base station
-[Node 5] REPORT MESSAGE: { timestamp: 2023-10-18 09:16:11, no. of available nearby nodes: 3, nearby nodes: [node 1, node 3, node 7] }
-[Node 5] 2023-10-18 09:16:16 1 ports available
-[Node 5] 2023-10-18 09:16:16 available neighbour nodes: [top node 2 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:16:21 0 ports available
-[Node 5] 2023-10-18 09:16:21 available neighbour nodes: [], no. available neighbours: 0
-[Node 5] ALERT MESSAGE = { timestamp: 2023-10-18 09:16:21, reporting node: 5 (1, 2), neighbouring nodes: [node 2 (0, 2), node 8 (2, 2), node 4 (1, 1)], num_neighbours: 3 }
-[Node 5] receiving available nodes from base station
-[Node 5] REPORT MESSAGE: { timestamp: 2023-10-18 09:16:26, no. of available nearby nodes: 0, nearby nodes: [] }
-[Node 5] 2023-10-18 09:16:31 1 ports available
-[Node 5] 2023-10-18 09:16:31 available neighbour nodes: [top node 2 (1 ports), bottom node 8 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:16:36 0 ports available
-[Node 5] 2023-10-18 09:16:36 available neighbour nodes: [bottom node 8 (1 ports), left node 4 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:16:42 0 ports available
-[Node 5] 2023-10-18 09:16:42 available neighbour nodes: [top node 2 (2 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:16:51 0 ports available
-[Node 5] 2023-10-18 09:16:51 available neighbour nodes: [left node 4 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:16:57 0 ports available
-[Node 5] 2023-10-18 09:16:57 available neighbour nodes: [bottom node 8 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:17:16 0 ports available
-[Node 5] 2023-10-18 09:17:16 available neighbour nodes: [], no. available neighbours: 0
-[Node 5] ALERT MESSAGE = { timestamp: 2023-10-18 09:17:26, reporting node: 5 (1, 2), neighbouring nodes: [node 2 (0, 2), node 8 (2, 2), node 4 (1, 1)], num_neighbours: 3 }
-[Node 5] receiving available nodes from base station
-[Node 5] REPORT MESSAGE: { timestamp: 2023-10-18 09:17:31, no. of available nearby nodes: 1, nearby nodes: [node 7] }
-[Node 5] 2023-10-18 09:17:36 0 ports available
-[Node 5] 2023-10-18 09:17:36 available neighbour nodes: [top node 2 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:17:47 2 ports available
-[Node 5] 2023-10-18 09:24:53 1 ports available
-[Node 5] 2023-10-18 09:24:53 available neighbour nodes: [top node 2 (5 ports), bottom node 8 (4 ports), left node 4 (2 ports)], no. available neighbours: 3
-[Node 5] 2023-10-18 09:24:58 0 ports available
-[Node 5] 2023-10-18 09:24:58 available neighbour nodes: [bottom node 8 (1 ports), left node 4 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:25:03 1 ports available
-[Node 5] 2023-10-18 09:25:03 available neighbour nodes: [], no. available neighbours: 0
-[Node 5] 2023-10-18 09:25:08 1 ports available
-[Node 5] 2023-10-18 09:25:08 available neighbour nodes: [left node 4 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:25:13 1 ports available
-[Node 5] 2023-10-18 09:25:13 available neighbour nodes: [top node 2 (2 ports), left node 4 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:25:23 1 ports available
-[Node 5] 2023-10-18 09:25:23 available neighbour nodes: [top node 2 (1 ports), left node 4 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:25:28 0 ports available
-[Node 5] 2023-10-18 09:25:28 available neighbour nodes: [top node 2 (1 ports), left node 4 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:25:33 0 ports available
-[Node 5] 2023-10-18 09:25:33 available neighbour nodes: [left node 4 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:25:43 0 ports available
-[Node 5] 2023-10-18 09:25:43 available neighbour nodes: [bottom node 8 (1 ports), left node 4 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:25:53 2 ports available
-[Node 5] 2023-10-18 09:25:53 available neighbour nodes: [top node 2 (1 ports), bottom node 8 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:25:58 1 ports available
-[Node 5] 2023-10-18 09:25:58 available neighbour nodes: [top node 2 (1 ports), bottom node 8 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:26:03 1 ports available
-[Node 5] 2023-10-18 09:26:03 available neighbour nodes: [left node 4 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:26:13 0 ports available
-[Node 5] 2023-10-18 09:26:13 available neighbour nodes: [top node 2 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:26:18 0 ports available
-[Node 5] 2023-10-18 09:26:18 available neighbour nodes: [top node 2 (1 ports), bottom node 8 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:26:28 0 ports available
-[Node 5] 2023-10-18 09:26:28 available neighbour nodes: [top node 2 (1 ports), left node 4 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:26:33 1 ports available
-[Node 5] 2023-10-18 09:26:33 available neighbour nodes: [top node 2 (1 ports), bottom node 8 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:26:58 0 ports available
-[Node 5] 2023-10-18 09:34:02 5 ports available
-[Node 5] 2023-10-18 09:34:02 available neighbour nodes: [top node 2 (5 ports), bottom node 8 (5 ports), left node 4 (5 ports)], no. available neighbours: 3
-[Node 5] 2023-10-18 09:34:08 1 ports available
-[Node 5] 2023-10-18 09:34:08 available neighbour nodes: [], no. available neighbours: 0
-[Node 5] 2023-10-18 09:34:13 0 ports available
-[Node 5] 2023-10-18 09:34:13 available neighbour nodes: [top node 2 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:34:18 1 ports available
-[Node 5] 2023-10-18 09:34:18 available neighbour nodes: [top node 2 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:34:27 1 ports available
-[Node 5] 2023-10-18 09:34:27 available neighbour nodes: [top node 2 (3 ports), left node 4 (3 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:34:33 0 ports available
-[Node 5] 2023-10-18 09:34:33 available neighbour nodes: [bottom node 8 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:34:43 0 ports available
-[Node 5] 2023-10-18 09:34:43 available neighbour nodes: [bottom node 8 (1 ports), left node 4 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:34:48 0 ports available
-[Node 5] 2023-10-18 09:34:48 available neighbour nodes: [left node 4 (2 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:34:58 0 ports available
-[Node 5] 2023-10-18 09:34:58 available neighbour nodes: [bottom node 8 (1 ports), left node 4 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:35:07 2 ports available
-[Node 5] 2023-10-18 09:35:07 available neighbour nodes: [top node 2 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:35:18 2 ports available
-[Node 5] 2023-10-18 09:35:18 available neighbour nodes: [top node 2 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:35:23 0 ports available
-[Node 5] 2023-10-18 09:35:23 available neighbour nodes: [top node 2 (2 ports), bottom node 8 (3 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:35:38 0 ports available
-[Node 5] 2023-10-18 09:35:38 available neighbour nodes: [left node 4 (1 ports)], no. available neighbours: 1
-[Node 5] 2023-10-18 09:35:43 0 ports available
-[Node 5] 2023-10-18 09:35:43 available neighbour nodes: [bottom node 8 (1 ports), left node 4 (1 ports)], no. available neighbours: 2
-[Node 5] 2023-10-18 09:36:08 0 ports available
+[Node 5] 2023-10-18 16:17:10 4 ports available
+[Node 5] 2023-10-18 16:17:10 available neighbour nodes: [top node 1 (4 ports), bottom node 9 (4 ports), left node 4 (1 ports), right node 6 (4 ports)], no. available neighbours: 4
+[Node 5] 2023-10-18 16:17:15 2 ports available
+[Node 5] 2023-10-18 16:17:15 available neighbour nodes: [right node 6 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-18 16:17:20 0 ports available
+[Node 5] 2023-10-18 16:17:20 available neighbour nodes: [bottom node 9 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-18 16:17:25 0 ports available
+[Node 5] 2023-10-18 16:17:25 available neighbour nodes: [], no. available neighbours: 0
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-18 16:17:25, reporting node: 5 (1, 1), neighbouring nodes: [node 1 (0, 1), node 9 (2, 1), node 4 (1, 0), node 6 (1, 2)], num_neighbours: 4 }
+[Node 5] REPORT MESSAGE: { timestamp: 2023-10-18 16:17:30, no. of available nearby nodes: 2, nearby nodes: [node 0, node 10] }
+[Node 5] 2023-10-18 16:17:35 1 ports available
+[Node 5] 2023-10-18 16:17:35 available neighbour nodes: [], no. available neighbours: 0
+[Node 5] 2023-10-18 16:17:50 1 ports available
+[Node 5] 2023-10-18 16:17:50 available neighbour nodes: [top node 1 (1 ports), left node 4 (1 ports)], no. available neighbours: 2
+[Node 5] 2023-10-18 16:17:55 0 ports available
+[Node 5] 2023-10-18 16:17:55 available neighbour nodes: [left node 4 (1 ports), right node 6 (1 ports)], no. available neighbours: 2
+[Node 5] 2023-10-18 16:18:01 1 ports available
+[Node 5] 2023-10-18 16:18:01 available neighbour nodes: [top node 1 (1 ports), right node 6 (1 ports)], no. available neighbours: 2
+[Node 5] 2023-10-18 16:18:10 0 ports available
+[Node 5] 2023-10-18 16:18:10 available neighbour nodes: [right node 6 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-18 16:18:20 1 ports available
+[Node 5] 2023-10-18 16:18:20 available neighbour nodes: [bottom node 9 (1 ports), left node 4 (1 ports)], no. available neighbours: 2
+[Node 5] 2023-10-18 16:18:25 0 ports available
+[Node 5] 2023-10-18 16:18:25 available neighbour nodes: [top node 1 (1 ports), bottom node 9 (1 ports), left node 4 (1 ports), right node 6 (2 ports)], no. available neighbours: 4
+[Node 5] 2023-10-18 16:18:35 0 ports available
+[Node 5] 2023-10-18 16:18:35 available neighbour nodes: [right node 6 (2 ports)], no. available neighbours: 1
+[Node 5] 2023-10-18 16:18:40 0 ports available
+[Node 5] 2023-10-18 16:18:40 available neighbour nodes: [bottom node 9 (2 ports), left node 4 (1 ports)], no. available neighbours: 2
+[Node 5] 2023-10-18 16:18:50 0 ports available
+[Node 5] 2023-10-18 16:18:50 available neighbour nodes: [top node 1 (2 ports)], no. available neighbours: 1
+[Node 5] 2023-10-18 16:19:20 1 ports available
+[Node 5] 2023-10-20 04:54:10 3 ports available
+[Node 5] 2023-10-20 04:54:10 available neighbour nodes: [top node 1 (4 ports), bottom node 9 (4 ports), left node 4 (4 ports), right node 6 (4 ports)], no. available neighbours: 4
+[Node 5] 2023-10-20 04:54:15 0 ports available
+[Node 5] 2023-10-20 04:54:15 available neighbour nodes: [left node 4 (2 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 04:54:21 1 ports available
+[Node 5] 2023-10-20 04:54:21 available neighbour nodes: [top node 1 (1 ports), left node 4 (2 ports)], no. available neighbours: 2
+[Node 5] 2023-10-20 04:54:30 0 ports available
+[Node 5] 2023-10-20 04:54:30 available neighbour nodes: [right node 6 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 04:54:35 1 ports available
+[Node 5] 2023-10-20 04:54:35 available neighbour nodes: [top node 1 (1 ports), right node 6 (1 ports)], no. available neighbours: 2
+[Node 5] 2023-10-20 04:54:50 0 ports available
+[Node 5] 2023-10-20 04:54:50 available neighbour nodes: [right node 6 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 04:54:56 0 ports available
+[Node 5] 2023-10-20 04:54:56 available neighbour nodes: [bottom node 9 (2 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 04:55:06 0 ports available
+[Node 5] 2023-10-20 04:55:06 available neighbour nodes: [left node 4 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 04:55:21 1 ports available
+[Node 5] 2023-10-20 04:55:21 available neighbour nodes: [], no. available neighbours: 0
+[Node 5] 2023-10-20 04:55:31 0 ports available
+[Node 5] 2023-10-20 04:55:31 available neighbour nodes: [], no. available neighbours: 0
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-20 04:55:31, reporting node: 5 (1, 1), neighbouring nodes: [node 1 (0, 1), node 9 (2, 1), node 4 (1, 0), node 6 (1, 2)], num_neighbours: 4 }
+[Node 5] REPORT MESSAGE: { timestamp: 2023-10-20 04:55:36, no. of available nearby nodes: 1, nearby nodes: [node 7] }
+[Node 5] 2023-10-20 04:55:41 0 ports available
+[Node 5] 2023-10-20 04:55:41 available neighbour nodes: [top node 1 (1 ports), bottom node 9 (1 ports), right node 6 (1 ports)], no. available neighbours: 3
+[Node 5] 2023-10-20 04:55:56 0 ports available
+[Node 5] 2023-10-20 05:06:02 4 ports available
+[Node 5] 2023-10-20 05:06:02 available neighbour nodes: [top node 1 (4 ports), bottom node 9 (4 ports), left node 4 (2 ports), right node 6 (4 ports)], no. available neighbours: 4
+[Node 5] 2023-10-20 05:06:07 1 ports available
+[Node 5] 2023-10-20 05:06:07 available neighbour nodes: [left node 4 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 05:06:12 0 ports available
+[Node 5] 2023-10-20 05:06:12 available neighbour nodes: [top node 1 (1 ports), left node 4 (2 ports)], no. available neighbours: 2
+[Node 5] 2023-10-20 05:06:17 0 ports available
+[Node 5] 2023-10-20 05:06:17 available neighbour nodes: [top node 1 (1 ports), right node 6 (1 ports)], no. available neighbours: 2
+[Node 5] 2023-10-20 05:06:27 0 ports available
+[Node 5] 2023-10-20 05:06:27 available neighbour nodes: [bottom node 9 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 05:06:32 0 ports available
+[Node 5] 2023-10-20 05:06:32 available neighbour nodes: [], no. available neighbours: 0
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-20 05:06:42, reporting node: 5 (1, 1), neighbouring nodes: [node 1 (0, 1), node 9 (2, 1), node 4 (1, 0), node 6 (1, 2)], num_neighbours: 4 }
+[Node 5] REPORT MESSAGE: { timestamp: 2023-10-20 05:06:47, no. of available nearby nodes: 1, nearby nodes: [node 10] }
+[Node 5] 2023-10-20 05:06:52 0 ports available
+[Node 5] 2023-10-20 05:06:52 available neighbour nodes: [bottom node 9 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 05:06:57 1 ports available
+[Node 5] 2023-10-20 05:06:57 available neighbour nodes: [left node 4 (1 ports), right node 6 (1 ports)], no. available neighbours: 2
+[Node 5] 2023-10-20 05:07:07 0 ports available
+[Node 5] 2023-10-20 05:07:07 available neighbour nodes: [bottom node 9 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 05:07:12 0 ports available
+[Node 5] 2023-10-20 05:07:12 available neighbour nodes: [top node 1 (1 ports), bottom node 9 (1 ports), left node 4 (1 ports)], no. available neighbours: 3
+[Node 5] 2023-10-20 05:07:22 0 ports available
+[Node 5] 2023-10-20 05:07:22 available neighbour nodes: [top node 1 (2 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 05:07:32 1 ports available
+[Node 5] 2023-10-20 05:07:32 available neighbour nodes: [right node 6 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 05:07:37 0 ports available
+[Node 5] 2023-10-20 05:07:37 available neighbour nodes: [bottom node 9 (1 ports), left node 4 (2 ports)], no. available neighbours: 2
+[Node 5] 2023-10-20 05:07:42 1 ports available
+[Node 5] 2023-10-20 05:07:42 available neighbour nodes: [top node 1 (1 ports), bottom node 9 (2 ports), right node 6 (1 ports)], no. available neighbours: 3
+[Node 5] 2023-10-20 05:08:07 0 ports available
+[Node 5] 2023-10-20 05:09:32 1 ports available
+[Node 5] 2023-10-20 05:09:32 available neighbour nodes: [top node 2 (3 ports), bottom node 8 (4 ports), left node 4 (4 ports)], no. available neighbours: 3
+[Node 5] 2023-10-20 05:09:37 1 ports available
+[Node 5] 2023-10-20 05:09:37 available neighbour nodes: [], no. available neighbours: 0
+[Node 5] 2023-10-20 05:09:43 0 ports available
+[Node 5] 2023-10-20 05:09:43 available neighbour nodes: [left node 4 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 05:09:48 0 ports available
+[Node 5] 2023-10-20 05:09:48 available neighbour nodes: [], no. available neighbours: 0
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-20 05:09:48, reporting node: 5 (1, 2), neighbouring nodes: [node 2 (0, 2), node 8 (2, 2), node 4 (1, 1)], num_neighbours: 3 }
+[Node 5] REPORT MESSAGE: { timestamp: 2023-10-20 05:09:52, no. of available nearby nodes: 2, nearby nodes: [node 7, node 3] }
+[Node 5] 2023-10-20 05:09:57 0 ports available
+[Node 5] 2023-10-20 05:09:57 available neighbour nodes: [], no. available neighbours: 0
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-20 05:09:57, reporting node: 5 (1, 2), neighbouring nodes: [node 2 (0, 2), node 8 (2, 2), node 4 (1, 1)], num_neighbours: 3 }
+[Node 5] REPORT MESSAGE: { timestamp: 2023-10-20 05:10:02, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 5] 2023-10-20 05:10:07 0 ports available
+[Node 5] 2023-10-20 05:10:07 available neighbour nodes: [], no. available neighbours: 0
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-20 05:10:07, reporting node: 5 (1, 2), neighbouring nodes: [node 2 (0, 2), node 8 (2, 2), node 4 (1, 1)], num_neighbours: 3 }
+[Node 5] REPORT MESSAGE: { timestamp: 2023-10-20 05:10:12, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 5] 2023-10-20 05:10:17 0 ports available
+[Node 5] 2023-10-20 05:10:17 available neighbour nodes: [top node 2 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 05:10:22 1 ports available
+[Node 5] 2023-10-20 05:10:22 available neighbour nodes: [], no. available neighbours: 0
+[Node 5] 2023-10-20 05:10:32 0 ports available
+[Node 5] 2023-10-20 05:10:32 available neighbour nodes: [], no. available neighbours: 0
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-20 05:10:32, reporting node: 5 (1, 2), neighbouring nodes: [node 2 (0, 2), node 8 (2, 2), node 4 (1, 1)], num_neighbours: 3 }
+[Node 5] REPORT MESSAGE: { timestamp: 2023-10-20 05:10:37, no. of available nearby nodes: 0, nearby nodes: [] }
+[Node 5] 2023-10-20 05:10:42 0 ports available
+[Node 5] 2023-10-20 05:10:42 available neighbour nodes: [top node 2 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 05:10:47 0 ports available
+[Node 5] 2023-10-20 05:10:47 available neighbour nodes: [left node 4 (1 ports)], no. available neighbours: 1
+[Node 5] 2023-10-20 05:10:53 0 ports available
+[Node 5] 2023-10-20 05:10:53 available neighbour nodes: [], no. available neighbours: 0
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-20 05:11:02, reporting node: 5 (1, 2), neighbouring nodes: [node 2 (0, 2), node 8 (2, 2), node 4 (1, 1)], num_neighbours: 3 }
+[Node 5] REPORT MESSAGE: { timestamp: 2023-10-20 05:11:07, no. of available nearby nodes: 1, nearby nodes: [node 1] }
+[Node 5] 2023-10-20 05:11:12 0 ports available
+[Node 5] 2023-10-20 05:11:12 available neighbour nodes: [], no. available neighbours: 0
+[Node 5] ALERT MESSAGE = { timestamp: 2023-10-20 05:11:12, reporting node: 5 (1, 2), neighbouring nodes: [node 2 (0, 2), node 8 (2, 2), node 4 (1, 1)], num_neighbours: 3 }
+[Node 5] 2023-10-20 05:11:37 1 ports available

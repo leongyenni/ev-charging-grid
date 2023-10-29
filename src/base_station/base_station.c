@@ -141,7 +141,7 @@ void receive_alert_message(struct BaseStation *base_station)
     }
 
     get_timestamp(currentTimestamp);
-    printf("[Base Station] timestamp %s read %d alert messages\n", currentTimestamp, base_station->num_alert_messages);
+    printf("[Base Station] %s %d alert message(s) is read \n", currentTimestamp, base_station->num_alert_messages);
 }
 
 /* Process received message */
@@ -214,7 +214,7 @@ void process_alert_message(struct BaseStation *base_station, struct AlertMessage
     char currentTimestamp[TIMESTAMP_LEN];
     get_timestamp(currentTimestamp);
 
-    printf("[Base Station] timestamp %s %d ALERT MESSAGES READ. DONE READING.\n", currentTimestamp, base_station->num_alert_messages);
+    printf("[Base Station] timestamp %s %d alert messages read\n", currentTimestamp, base_station->num_alert_messages);
 }
 
 /* Send a list of available nodes to all reporting nodes */
@@ -247,9 +247,8 @@ void send_available_nodes_message(struct BaseStation *base_station)
 
     MPI_Waitall(base_station->num_alert_messages, report_request, report_status);
 
-    strcat(reporting_node_buf, "]");
+    strcat(reporting_node_buf, "]\n");
     log_base_station_event(base_station, reporting_node_buf);
-    log_base_station_event(base_station, "sent report messages to all nodes \n");
 }
 
 /* Send a list of adjacent node to each reporting node */
