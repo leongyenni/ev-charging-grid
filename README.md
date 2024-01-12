@@ -13,19 +13,20 @@ Each node emulates the behaviour of the EV charging node, and each node has <em>
 The base station is responsible for receiving reports, logging data, and providing information about available charging nodes to reporting nodes. Additionally, it issues a termination message to EV charging nodes for proper shutdown during maintenance.
 
 ![image](https://github.com/leongyenni/ev-charging-grid/assets/75636975/b884fc26-5f26-4464-9168-e1b82d232df8)   
-<em>Fig 1. An example of a 3x3 EV charging node grid in WSN </em>
+<p> <em>Fig 1. An example of a 3x3 EV charging node grid in WSN </em> </p>
 
 ![image](https://github.com/leongyenni/ev-charging-grid/assets/75636975/0fe11b3e-82c4-455b-8f1b-82dd08341d1d)    
-<em>Fig 2. Message exchange for each communication </em>
+<p align="center"> <em>Fig 2. Message exchange for each communication </em> </p>
 
 <h2>Architecture Design</h2>
 
-![image](https://github.com/leongyenni/ev-charging-grid/assets/75636975/21477a3a-4782-41bd-8809-a753e14a2540)   
+![image](https://github.com/leongyenni/ev-charging-grid/assets/75636975/f642e523-a5b4-4157-9c1d-9e36946b3a87)
 <p align="center"> <em>Fig 3. Flowchart of the WSN </em> </p>
 
 
-<h2>???</h2>
+<h2>Logging Mechanism</h2>
 
-![image](https://github.com/leongyenni/ev-charging-grid/assets/75636975/20f59f31-75d3-4b0f-b450-203ef730bbe7)
+![image](https://github.com/leongyenni/ev-charging-grid/assets/75636975/20f59f31-75d3-4b0f-b450-203ef730bbe7)   
+<p align="center"> <em>Fig 4. Screenshot of logging text file </em> </p>
 
 
