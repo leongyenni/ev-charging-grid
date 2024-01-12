@@ -23,7 +23,7 @@ The base station is responsible for receiving reports, logging data, and providi
 
 <h2>Architecture Design</h2>
 
-![image](https://github.com/leongyenni/ev-charging-grid/assets/75636975/355bda09-721a-46a2-b7ff-de67284f6f4a)  
+![FIT3143 EV Charging Station - Flow chart](https://github.com/leongyenni/ev-charging-grid/assets/75636975/27119bb9-78db-4bfb-9655-e8ece16ec387)
 <p align="center"> <em>Fig 3. Flowchart of the WSN </em> </p>
 
 
