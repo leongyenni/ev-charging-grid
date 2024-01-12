@@ -13,6 +13,8 @@ Each node emulates the behaviour of the EV charging node, and each node has <em>
 **2. Base Station**   
 The base station is responsible for receiving reports, logging data, and providing information about available charging nodes to reporting nodes. Additionally, it issues a termination message to EV charging nodes for proper shutdown during maintenance.
 
+&nbsp; 
+
 ![image](https://github.com/leongyenni/ev-charging-grid/assets/75636975/b884fc26-5f26-4464-9168-e1b82d232df8)   
 <p align="center"> <em>Fig 1. An example of a 3x3 EV charging node grid in WSN </em> </p>
 
