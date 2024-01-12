@@ -4,7 +4,8 @@ This project aims to simulate a Wireless Sensor Network (WSN) of interconnected 
 
 <h2>Overview</h2>
 The wireless sensor network (WSN) consists of <em> m x n </em> nodes in a cartesian grid, and a base station, forming a comprehensive Electric Vehicle (EV) charging infrastructure.       
-
+<br/>
+<br/>
 **1. Charging Node**    
 Each node emulates the behaviour of the EV charging node, and each node has <em> k </em> numbers of in use or free charging ports. Each node is only able to communicate and exchange data, specifically the number of available ports, with its adjacent nodes. Most importantly, each charging node can exchange data with the base station independently.    
 
