@@ -1,9 +1,9 @@
-#Electric Vehicle Charging Grid Simulation using Distributed Wireless Sensor Network
+<h1>Electric Vehicle Charging Grid Simulation using Distributed Wireless Sensor Network</h1>
 
 This project aims to simulate a Wireless Sensor Network (WSN) of interconnected Electric Vehicle (EV) charging nodes using **C**, incorporating both **Message Passing Interface (MPI) and POSIX threads** for parallel processing. Charging nodes and the base station are represented as MPI processes.
 
 <h2>Overview</h2>
-The wireless sensor network (WSN) consists of m x n nodes in a cartesian grid, and a base station, forming a comprehensive Electric Vehicle (EV) charging infrastructure.
+The wireless sensor network (WSN) consists of *m x n* nodes in a cartesian grid, and a base station, forming a comprehensive Electric Vehicle (EV) charging infrastructure.
 
 **1. Charging Node**
 Each node emulates the behaviour of the EV charging node, and each node has k numbers of in use or free charging ports. Each node is only able to communicate and exchange data, specifically the number of available ports, with its adjacent nodes. Most importantly, each charging node can exchange data with the base station independently.
